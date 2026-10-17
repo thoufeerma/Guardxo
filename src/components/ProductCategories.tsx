@@ -9,10 +9,10 @@ const CATEGORIES = [
     sub: "WET-STATE PRESERVATION",
     title: "In-Can Preservatives",
     image: "/images/category-incan.png",
-    highlightBadge: "Liquid Stability",
+    highlightBadge: "LIQUID STABILITY",
     description:
       "Wet-state protection for water-based formulations. Prevents in-can spoilage, gassing, odour and viscosity loss during production and storage.",
-    tags: ["paints", "emulsions", "Adhesives", "inks"],
+    tags: ["PAINTS", "EMULSIONS", "ADHESIVES", "INKS"],
     bgClass: "bg-[#C6F19D]",
   },
   {
@@ -20,10 +20,10 @@ const CATEGORIES = [
     sub: "PROCESS LOOP DEFENSE",
     title: "Industrial Biocides",
     image: "/images/category-biocides.png",
-    highlightBadge: "Biofilm Eradication",
+    highlightBadge: "BIOFILM ERADICATION",
     description:
       "Fast-acting, broad-spectrum control of bacteria, fungi and algae in process waters, cooling systems and industrial formulations.",
-    tags: ["Water Treatment", "cooling towers", "process system"],
+    tags: ["WATER TREATMENT", "COOLING TOWERS", "PROCESS SYSTEM"],
     bgClass: "bg-[#C6F19D]/30 border border-[#C6F19D]/50",
   },
   {
@@ -31,17 +31,17 @@ const CATEGORIES = [
     sub: "SURFACE ANTIFUNGAL",
     title: "Dry-Film Preservatives",
     image: "/images/category-dryfilm.png",
-    highlightBadge: "Leach Resistant",
+    highlightBadge: "LEACH RESISTANT",
     description:
       "Long-term protection of applied films against fungal and algal growth — engineered for exterior coatings in humid and tropical climates.",
-    tags: ["Exterior Paints", "Renders", "Sealants"],
+    tags: ["EXTERIOR PAINTS", "RENDERS", "SEALANTS"],
     bgClass: "bg-[#C6F19D]/30 border border-[#C6F19D]/50",
   },
 ];
 
 export default function ProductCategories() {
   return (
-    <section id="categories" className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section id="categories" className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
         {/* Section Header Ribbon */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
@@ -75,7 +75,7 @@ export default function ProductCategories() {
               <div className="flex flex-col gap-6">
                 {/* Top Badge & Subtitle */}
                 <div className="flex items-center justify-between">
-                  <span className="bg-[#101E10] text-[#F5F4F2] text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-[#101E10] text-white text-xs font-semibold px-2.5 py-1 rounded-md font-sans">
                     {cat.num}
                   </span>
                   <span className="text-xs font-semibold tracking-wider text-black/80 uppercase">
@@ -97,7 +97,7 @@ export default function ProductCategories() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
-                  <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-bold text-[#101E10] shadow-sm">
+                  <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-bold text-[#101E10] shadow-sm uppercase tracking-wider">
                     {cat.highlightBadge}
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export default function ProductCategories() {
                   {cat.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-white/80 backdrop-blur-xs text-[#101E10] text-xs font-semibold px-2.5 py-1 rounded shadow-xs capitalize"
+                      className="bg-white/85 backdrop-blur-xs text-[#101E10] text-xs font-semibold px-2.5 py-1 rounded shadow-xs uppercase tracking-wider"
                     >
                       {tag}
                     </span>

@@ -5,19 +5,19 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="w-full bg-[#101E10] text-white pt-20 pb-12 border-t border-white/10">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-16">
+      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
         {/* Main 5-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
-          {/* Col 1: Brand & Identity (4 Cols) */}
+          {/* Col 1: Brand & Identity (4 Cols) - Full white GUARDEXO wordmark */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <div className="relative h-10 w-44 flex items-center">
+            <div className="relative h-12 w-52 sm:w-60 flex items-center">
               <Image
-                src="/images/guardxo-logo.png"
-                alt="GuardExo"
-                width={170}
-                height={38}
-                className="object-contain brightness-0 invert"
-                style={{ width: "auto", height: "38px" }}
+                src="/images/guardxo-wordmark-white.svg"
+                alt="GuardExo by Chemtiver Speciality"
+                width={240}
+                height={48}
+                className="object-contain"
+                style={{ width: "auto", height: "44px" }}
               />
             </div>
             <p className="text-xs sm:text-sm text-white/75 font-normal leading-relaxed max-w-sm">
@@ -30,7 +30,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Company (2 Cols) */}
+          {/* Col 2: Company (2 Cols) matching Figma links */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <h4 className="text-xs font-bold tracking-wider uppercase text-[#C6F19D]">
               COMPANY
@@ -42,40 +42,29 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about#journey" className="hover:text-white transition-colors">
-                  Our Journey
+                <Link href="/about#facilities" className="hover:text-white transition-colors">
+                  R&D Facilities
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="hover:text-white transition-colors">
-                  News & Insights
+                <Link href="/about#quality" className="hover:text-white transition-colors">
+                  Quality Control
                 </Link>
               </li>
               <li>
-                <Link href="/news/choosing-between-in-can-and-dry-film-preservatives" className="hover:text-white transition-colors">
-                  Technical Articles
+                <Link href="/about#exports" className="hover:text-white transition-colors">
+                  Global Exports
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
-                  Contact & Support
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/admin/products"
-                  className="text-[#C6F19D] hover:underline transition-colors flex items-center gap-1.5 font-semibold pt-1"
-                >
-                  <span>Product Operations</span>
-                  <span className="text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/90 font-mono">
-                    PostgreSQL
-                  </span>
+                <Link href="/contact#careers" className="hover:text-white transition-colors">
+                  Careers
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Products (2 Cols) */}
+          {/* Col 3: Products (2 Cols) matching Figma links */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             <h4 className="text-xs font-bold tracking-wider uppercase text-[#C6F19D]">
               PRODUCTS
@@ -88,17 +77,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/products/guardexo-bt-20" className="hover:text-white transition-colors">
-                  GuardExo BT-20
+                  Industrial Biocides
                 </Link>
               </li>
               <li>
-                <Link href="/in-can-preservatives#portfolio" className="hover:text-white transition-colors">
-                  Product Portfolio
+                <Link href="/products/guardexo-bt-20" className="hover:text-white transition-colors">
+                  Dry Film Preservatives
                 </Link>
               </li>
               <li>
-                <Link href="/contact#inquiry" className="hover:text-white transition-colors">
-                  Request Samples
+                <Link href="/products/guardexo-bt-20" className="hover:text-white transition-colors">
+                  GuardExo BT Series
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/guardexo-bt-20" className="hover:text-white transition-colors">
+                  GuardExo CMT Series
                 </Link>
               </li>
             </ul>
@@ -111,27 +105,27 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-[13px] text-white/80">
               <li>
-                <Link href="#industries" className="hover:text-white transition-colors">
+                <Link href="/#industries" className="hover:text-white transition-colors">
                   Paints & Coatings
                 </Link>
               </li>
               <li>
-                <Link href="#industries" className="hover:text-white transition-colors">
+                <Link href="/#industries" className="hover:text-white transition-colors">
                   Construction Chemicals
                 </Link>
               </li>
               <li>
-                <Link href="#industries" className="hover:text-white transition-colors">
+                <Link href="/#industries" className="hover:text-white transition-colors">
                   Adhesives & Emulsions
                 </Link>
               </li>
               <li>
-                <Link href="#industries" className="hover:text-white transition-colors">
+                <Link href="/#industries" className="hover:text-white transition-colors">
                   Cooling Water Loops
                 </Link>
               </li>
               <li>
-                <Link href="#industries" className="hover:text-white transition-colors">
+                <Link href="/#industries" className="hover:text-white transition-colors">
                   Agricultural Actives
                 </Link>
               </li>
@@ -158,8 +152,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Legal Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
+        {/* Legal Bottom Bar without divider line matching Figma */}
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/60">
           <p>© 2025 Chemtiver Speciality Pvt. Ltd. All rights reserved. GuardExo™ is an intellectual trademark.</p>
           <div className="flex items-center gap-6">
             <Link href="#" className="hover:text-white transition-colors">

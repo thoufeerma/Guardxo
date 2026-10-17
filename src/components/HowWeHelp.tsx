@@ -1,39 +1,69 @@
 import React from "react";
-import { ShieldCheck } from "lucide-react";
 
 const HELP_CARDS = [
   {
     num: "01",
     title: "Protect Products",
     text: "Prevent microbial contamination in wet-state formulations and applied films.",
-    highlight: false,
   },
   {
     num: "02",
     title: "Extend Shelf Life",
     text: "Improve in-can stability, storage life and product integrity across climates.",
-    highlight: false,
   },
   {
     num: "03",
     title: "Ensure Performance",
     text: "Maintain viscosity, colour, odour and batch-to-batch consistency.",
-    highlight: true,
   },
   {
     num: "04",
     title: "Technical Expertise",
     text: "Recommend the right chemistry, dosage and application protocol for your system.",
-    highlight: false,
   },
 ];
+
+function HexagonPattern({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="380"
+      height="380"
+      viewBox="0 0 380 380"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern
+          id="hex-pattern"
+          width="48"
+          height="83.14"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            d="M24 0 L48 13.86 L48 41.57 L24 55.43 L0 41.57 L0 13.86 Z M24 41.57 L48 55.43 L48 83.14 L24 97 L0 83.14 L0 55.43 Z"
+            stroke="#5AB900"
+            strokeWidth="1.2"
+            strokeOpacity="0.32"
+            fill="none"
+          />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+    </svg>
+  );
+}
 
 export default function HowWeHelp() {
   return (
     <section className="relative w-full bg-[#101E10] text-white py-20 lg:py-28 overflow-hidden">
-      {/* Abstract Molecular Background Watermark Accent */}
-      <div className="absolute -left-20 top-20 w-[480px] h-[480px] rounded-full bg-[#5AB900]/5 blur-3xl pointer-events-none" />
-      <div className="absolute -right-20 bottom-10 w-[480px] h-[480px] rounded-full bg-[#C6F19D]/5 blur-3xl pointer-events-none" />
+      {/* Hexagon Outline Patterns in top-right and bottom-left matching Figma */}
+      <div className="absolute -top-12 -right-12 pointer-events-none opacity-85">
+        <HexagonPattern />
+      </div>
+      <div className="absolute -bottom-12 -left-12 pointer-events-none opacity-85">
+        <HexagonPattern />
+      </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -50,50 +80,34 @@ export default function HowWeHelp() {
               systemic batch recall, gas buildup, viscosity loss, and plant-wide biofilm outbreaks.
             </p>
 
-            {/* Zero Recalls Callout Card */}
+            {/* Zero Recalls Callout Card without shield icon matching Figma */}
             <div className="mt-4 bg-[#F5F4F2] text-[#101E10] rounded-2xl p-6 border border-[#DFD7DD] shadow-sm flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <ShieldCheck size={22} className="text-[#5AB900]" />
-                <h6 className="text-[18px] font-bold tracking-wide">
-                  ZERO RECALLS LOGGED
-                </h6>
-              </div>
+              <h6 className="text-[18px] font-bold tracking-wide">
+                ZERO RECALLS LOGGED
+              </h6>
               <p className="text-sm text-black/75 leading-relaxed font-normal">
                 Consistent chemical assay verification guarantees uninterrupted supply chain security.
               </p>
             </div>
           </div>
 
-          {/* Right Column 2x2 Grid of 4 Cards */}
+          {/* Right Column 2x2 Grid of 4 Cards - All Light Green (#C6F19D) */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {HELP_CARDS.map((card) => (
               <div
                 key={card.num}
-                className={`rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all duration-300 hover:scale-[1.02] shadow-lg ${
-                  card.highlight
-                    ? "bg-[#C6F19D] text-[#101E10]"
-                    : "bg-white text-[#211A2B]"
-                }`}
+                className="bg-[#C6F19D] text-[#101E10] rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all duration-300 hover:scale-[1.02] shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  <span
-                    className={`font-mono font-bold text-sm px-2.5 py-1 rounded-md ${
-                      card.highlight
-                        ? "bg-[#101E10] text-[#C6F19D]"
-                        : "bg-[#101E10]/5 text-[#101E10]"
-                    }`}
-                  >
+                  {/* Number Badge: dark, rounded rectangle with white regular font numbers */}
+                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans">
                     {card.num}
                   </span>
-                  <h5 className="text-[20px] font-bold text-[#211A2B] tracking-tight">
+                  <h5 className="text-[20px] font-bold text-[#101E10] tracking-tight">
                     {card.title}
                   </h5>
                 </div>
-                <p
-                  className={`text-[15px] leading-relaxed ${
-                    card.highlight ? "text-black/85" : "text-black/75"
-                  }`}
-                >
+                <p className="text-[15px] leading-relaxed text-black/85 font-normal">
                   {card.text}
                 </p>
               </div>

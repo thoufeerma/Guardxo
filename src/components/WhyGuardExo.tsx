@@ -52,20 +52,21 @@ export default function WhyGuardExo() {
           {REASONS.map((reason) => (
             <div
               key={reason.num}
-              className="bg-white rounded-[24px] p-8 border border-neutral-200/80 shadow-sm flex flex-col gap-6 hover:shadow-md transition-shadow"
+              className="bg-white rounded-[24px] p-8 border border-neutral-200/80 shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow"
             >
-              <div className="w-10 h-10 rounded-full bg-[#101E10] text-[#C6F19D] flex items-center justify-center font-mono font-bold text-sm">
-                {reason.num}
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
+              {/* Dark rounded rectangle number badge inline with title in regular font */}
+              <div className="flex items-start gap-3">
+                <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans mt-1.5 flex-none">
+                  {reason.num}
+                </span>
+                <h4 className="text-2xl sm:text-[26px] font-bold text-[#101E10] leading-[1.25]">
                   {reason.title}
                 </h4>
-                <p className="text-sm text-black/80 font-normal leading-relaxed">
-                  {reason.text}
-                </p>
               </div>
+
+              <p className="text-sm text-black/80 font-normal leading-relaxed pl-0 sm:pl-9">
+                {reason.text}
+              </p>
             </div>
           ))}
         </div>

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const TESTIMONIALS = [
   {
@@ -35,7 +35,7 @@ export default function Testimonials() {
   const current = TESTIMONIALS[currentIdx];
 
   return (
-    <section className="w-full bg-white py-20 lg:py-28">
+    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Section Header */}
         <div className="flex flex-col gap-3">
@@ -52,8 +52,8 @@ export default function Testimonials() {
           {/* Left: Testimonial Main Card */}
           <div className="lg:col-span-7 bg-[#C6F19D] rounded-[32px] p-8 sm:p-12 flex flex-col justify-between gap-10 shadow-sm">
             <div className="flex flex-col gap-6">
-              <Quote size={40} className="text-[#101E10]/20 -mb-2" />
-              <p className="text-lg sm:text-xl lg:text-[22px] font-medium text-[#211A2B] leading-relaxed">
+              {/* Removed quote icon matching Figma */}
+              <p className="text-lg sm:text-xl lg:text-[22px] font-medium text-[#211A2B] leading-relaxed pt-2">
                 &ldquo;{current.quote}&rdquo;
               </p>
             </div>
@@ -73,18 +73,18 @@ export default function Testimonials() {
                 </div>
               </div>
 
-              {/* Slider Arrows */}
+              {/* Slider Arrows: filled dark circles matching Figma */}
               <div className="flex items-center gap-2">
                 <button
                   onClick={prevTestimonial}
-                  className="w-10 h-10 rounded-full border border-black/20 hover:bg-black/10 flex items-center justify-center text-[#101E10] transition-colors"
+                  className="w-10 h-10 rounded-full bg-[#101E10] hover:bg-[#1c331c] text-white flex items-center justify-center transition-transform active:scale-95 shadow-sm cursor-pointer"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft size={20} />
                 </button>
                 <button
                   onClick={nextTestimonial}
-                  className="w-10 h-10 rounded-full border border-black/20 hover:bg-black/10 flex items-center justify-center text-[#101E10] transition-colors"
+                  className="w-10 h-10 rounded-full bg-[#101E10] hover:bg-[#1c331c] text-white flex items-center justify-center transition-transform active:scale-95 shadow-sm cursor-pointer"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight size={20} />

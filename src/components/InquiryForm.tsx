@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2, AlertCircle, Loader2, Send } from "lucide-react";
+import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export default function InquiryForm() {
   const [formData, setFormData] = useState({
@@ -64,9 +64,10 @@ export default function InquiryForm() {
   };
 
   return (
-    <section id="inquiry" className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section id="inquiry" className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
-        <div className="w-full bg-[#C6F19D] rounded-[36px] lg:rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-xl">
+        {/* Green panel without drop shadow matching Figma */}
+        <div className="w-full bg-[#C6F19D] rounded-[36px] lg:rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-none border-0">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column Narrative & Commitments */}
             <div className="lg:col-span-6 flex flex-col gap-6">
@@ -81,31 +82,31 @@ export default function InquiryForm() {
                 sample evaluation kits, or bulk quote requests. We reply within 24 business hours.
               </p>
 
-              {/* Checkpoints */}
+              {/* Checkpoints with regular font weight matching Figma */}
               <div className="flex flex-col gap-4 pt-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10]" />
-                  <span className="text-sm sm:text-base font-semibold text-[#101E10]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10] flex-none" />
+                  <span className="text-sm sm:text-base font-normal text-[#101E10]">
                     48-Hour Technical Sample Dispatch
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10]" />
-                  <span className="text-sm sm:text-base font-semibold text-[#101E10]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10] flex-none" />
+                  <span className="text-sm sm:text-base font-normal text-[#101E10]">
                     Comprehensive COA & SDS Dossier Included
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10]" />
-                  <span className="text-sm sm:text-base font-semibold text-[#101E10]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-[#101E10] flex-none" />
+                  <span className="text-sm sm:text-base font-normal text-[#101E10]">
                     Non-Disclosure Agreement (NDA) Protected Consultation
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Technical Inquiry Form */}
-            <div className="lg:col-span-6 bg-[#F5F4F2] rounded-[24px] p-8 sm:p-10 shadow-lg border border-[#EDE7EC]">
+            {/* Right Column: White form card without drop shadows matching Figma */}
+            <div className="lg:col-span-6 bg-white rounded-[24px] p-8 sm:p-10 shadow-none border-0">
               {status.type === "success" && (
                 <div className="mb-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 flex items-start gap-3">
                   <CheckCircle2 size={20} className="text-emerald-600 flex-none mt-0.5" />
@@ -131,10 +132,10 @@ export default function InquiryForm() {
                       type="text"
                       name="name"
                       required
-                      placeholder="John Doe"
+                      placeholder="JOHN DOE"
                       value={formData.name}
                       onChange={handleChange}
-                      className="bg-black/5 border border-black/15 focus:border-[#5AB900] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5AB900]/30 transition-all text-[#101E10]"
+                      className="bg-[#F0EFEA] border-0 focus:outline-none focus:ring-1 focus:ring-[#5AB900] rounded-xl px-4 py-3.5 text-sm transition-all text-[#101E10] placeholder:text-neutral-400 placeholder:uppercase"
                     />
                   </div>
 
@@ -146,10 +147,10 @@ export default function InquiryForm() {
                       type="email"
                       name="email"
                       required
-                      placeholder="corporate@company.com"
+                      placeholder="CORPORATE@COMPANY.COM"
                       value={formData.email}
                       onChange={handleChange}
-                      className="bg-black/5 border border-black/15 focus:border-[#5AB900] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5AB900]/30 transition-all text-[#101E10]"
+                      className="bg-[#F0EFEA] border-0 focus:outline-none focus:ring-1 focus:ring-[#5AB900] rounded-xl px-4 py-3.5 text-sm transition-all text-[#101E10] placeholder:text-neutral-400 placeholder:uppercase"
                     />
                   </div>
                 </div>
@@ -164,7 +165,7 @@ export default function InquiryForm() {
                       name="industrySector"
                       value={formData.industrySector}
                       onChange={handleChange}
-                      className="bg-black/5 border border-black/15 focus:border-[#5AB900] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5AB900]/30 transition-all text-[#101E10] cursor-pointer"
+                      className="bg-[#F0EFEA] border-0 focus:outline-none focus:ring-1 focus:ring-[#5AB900] rounded-xl px-4 py-3.5 text-sm transition-all text-[#101E10] cursor-pointer"
                     >
                       <option value="Paints & Coatings">Paints & Coatings</option>
                       <option value="Construction Materials">Construction Materials</option>
@@ -184,10 +185,10 @@ export default function InquiryForm() {
                     <input
                       type="text"
                       name="targetGrade"
-                      placeholder="e.g. GuardExo CMT 15"
+                      placeholder="E.G. GUARDEXO CMT 15"
                       value={formData.targetGrade}
                       onChange={handleChange}
-                      className="bg-black/5 border border-black/15 focus:border-[#5AB900] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5AB900]/30 transition-all text-[#101E10]"
+                      className="bg-[#F0EFEA] border-0 focus:outline-none focus:ring-1 focus:ring-[#5AB900] rounded-xl px-4 py-3.5 text-sm transition-all text-[#101E10] placeholder:text-neutral-400 placeholder:uppercase"
                     />
                   </div>
                 </div>
@@ -200,34 +201,32 @@ export default function InquiryForm() {
                   <textarea
                     rows={4}
                     name="formulationDetails"
-                    placeholder="Describe substrate, pH range, current challenges, or required sample quantity..."
+                    placeholder="DESCRIBE SUBSTRATE, PH RANGE, CURRENT CHALLENGES, OR REQUIRED SAMPLE QUANTITY..."
                     value={formData.formulationDetails}
                     onChange={handleChange}
-                    className="bg-black/5 border border-black/15 focus:border-[#5AB900] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#5AB900]/30 transition-all text-[#101E10] resize-none"
+                    className="bg-[#F0EFEA] border-0 focus:outline-none focus:ring-1 focus:ring-[#5AB900] rounded-xl px-4 py-3.5 text-sm transition-all text-[#101E10] resize-none placeholder:text-neutral-400 placeholder:uppercase"
                   />
                 </div>
 
-                {/* Submit Action */}
+                {/* Submit Action without paper plane icon matching Figma */}
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] py-4 rounded-xl font-bold text-base transition-all transform hover:-translate-y-0.5 shadow-md active:translate-y-0 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] py-4 rounded-xl font-bold text-base transition-all transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed shadow-none"
                 >
                   {loading ? (
                     <>
-                      <Loader2 size={18} className="animate-spin" />
-                      Connecting to Server...
+                      <Loader2 size={18} className="animate-spin mr-2" />
+                      Submitting Requirement...
                     </>
                   ) : (
-                    <>
-                      Submit Technical Inquiry
-                      <Send size={18} />
-                    </>
+                    "Submit Requirement"
                   )}
                 </button>
 
+                {/* Removed • PostgreSQL Database Synchronized matching Figma */}
                 <p className="text-center text-[11px] text-black/60 pt-1">
-                  Protected by Chemtiver Technical Integrity Protocols • PostgreSQL Database Synchronized
+                  Protected by Chemtiver Technical Integrity Protocols
                 </p>
               </form>
             </div>

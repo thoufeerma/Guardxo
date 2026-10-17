@@ -3,51 +3,43 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import {
+  Monitor,
   FlaskConical,
-  Sparkles,
-  Wrench,
-  FileCheck2,
-  Headphones,
-  ArrowUpRight,
+  ShieldCheck,
+  FileText,
+  ArrowRight,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
 
 const SERVICES = [
   {
-    icon: FlaskConical,
+    icon: Monitor,
     title: "Technical Consultation",
     description:
       "One-on-one guidance from chemists who understand your formulation, process and constraints.",
-    highlight: true,
+    isFirst: true,
   },
   {
-    icon: Sparkles,
+    icon: FlaskConical,
     title: "Product Recommendation",
     description:
       "The right grade and dosage for your system, climate and target shelf life.",
-    highlight: false,
+    isFirst: false,
   },
   {
-    icon: Wrench,
+    icon: ShieldCheck,
     title: "Application Support",
     description:
       "Trial protocols, compatibility checks and on-ground troubleshooting at your plant.",
-    highlight: false,
+    isFirst: false,
   },
   {
-    icon: FileCheck2,
+    icon: FileText,
     title: "Regulatory Guidance",
     description:
       "Complete documentation — TDS, SDS and COA — for domestic and export compliance.",
-    highlight: false,
-  },
-  {
-    icon: Headphones,
-    title: "After-Sales Support",
-    description:
-      "Responsive follow-up on performance, reorders and every technical query.",
-    highlight: false,
+    isFirst: false,
   },
 ];
 
@@ -67,8 +59,8 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="w-full bg-[#F5F4F2] py-20 lg:py-28">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+    <section id="services" className="w-full bg-white py-20 lg:py-28">
+      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-3xl">
@@ -84,64 +76,38 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
-            <Link
-              href="#inquiry"
-              className="hidden sm:inline-flex items-center gap-2 text-base font-bold text-[#101E10] hover:text-[#5AB900] group mr-4"
-            >
-              View all services
-              <ArrowUpRight
-                size={18}
-                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </Link>
-
-            {/* Navigation Buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={scrollLeft}
-                className="w-12 h-12 rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 flex items-center justify-center text-[#101E10] shadow-sm active:scale-95 transition-all"
-                aria-label="Previous service"
-              >
-                <ChevronLeft size={22} />
-              </button>
-              <button
-                onClick={scrollRight}
-                className="w-12 h-12 rounded-full border border-neutral-300 bg-white hover:bg-neutral-100 flex items-center justify-center text-[#101E10] shadow-sm active:scale-95 transition-all"
-                aria-label="Next service"
-              >
-                <ChevronRight size={22} />
-              </button>
-            </div>
-          </div>
+          <Link
+            href="#inquiry"
+            className="hidden sm:inline-flex items-center gap-2 text-base font-bold text-[#101E10] hover:text-[#5AB900] group"
+          >
+            View all services
+            <ArrowRight
+              size={18}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
         </div>
 
-        {/* Horizontal Carousel Track */}
+        {/* 4 Service Cards Grid / Carousel */}
         <div
           ref={scrollContainerRef}
-          className="flex items-stretch gap-6 overflow-x-auto custom-scrollbar pb-6 pt-2 snap-x snap-mandatory"
+          className="flex items-stretch gap-6 overflow-x-auto custom-scrollbar pb-4 pt-2 snap-x snap-mandatory"
         >
-          {SERVICES.map((srv, idx) => {
+          {SERVICES.map((srv) => {
             const Icon = srv.icon;
             return (
               <div
                 key={srv.title}
-                className={`flex-none w-[310px] sm:w-[350px] rounded-[24px] p-7 flex flex-col justify-between gap-10 snap-start transition-transform duration-300 hover:-translate-y-1 ${
-                  srv.highlight
-                    ? "bg-[#C6F19D] text-[#101E10] shadow-md"
-                    : "bg-white text-[#101E10] border border-neutral-200/70 shadow-sm"
+                className={`flex-none w-[300px] sm:w-[340px] lg:flex-1 rounded-[24px] p-7 flex flex-col justify-between gap-8 snap-start transition-transform duration-300 hover:-translate-y-1 ${
+                  srv.isFirst
+                    ? "bg-[#C6F19D] text-[#101E10] shadow-sm"
+                    : "bg-[#EAF8DC] text-[#101E10] border-0 shadow-none"
                 }`}
               >
                 <div className="flex flex-col gap-6">
-                  {/* Icon Box */}
-                  <div
-                    className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                      srv.highlight
-                        ? "bg-[#101E10] text-[#C6F19D]"
-                        : "bg-[#F5F4F2] text-[#101E10]"
-                    }`}
-                  >
-                    <Icon size={24} />
+                  {/* White line icon inside black square */}
+                  <div className="w-12 h-12 rounded-xl bg-[#101E10] flex items-center justify-center text-white flex-none">
+                    <Icon size={22} className="text-white" strokeWidth={2} />
                   </div>
 
                   <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
@@ -155,17 +121,35 @@ export default function Services() {
 
                 <Link
                   href="#inquiry"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#101E10] hover:underline group"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group pt-2"
                 >
-                  Know more
-                  <ArrowUpRight
+                  View details
+                  <ArrowRight
                     size={16}
-                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="transition-transform group-hover:translate-x-1"
                   />
                 </Link>
               </div>
             );
           })}
+        </div>
+
+        {/* Carousel arrows moved to bottom-right below the cards as filled dark circles matching Figma */}
+        <div className="flex items-center justify-end gap-3 pt-2">
+          <button
+            onClick={scrollLeft}
+            className="w-11 h-11 rounded-full bg-[#101E10] hover:bg-[#1c331c] text-white flex items-center justify-center shadow-md active:scale-95 transition-all cursor-pointer"
+            aria-label="Previous service"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={scrollRight}
+            className="w-11 h-11 rounded-full bg-[#101E10] hover:bg-[#1c331c] text-white flex items-center justify-center shadow-md active:scale-95 transition-all cursor-pointer"
+            aria-label="Next service"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </div>
     </section>

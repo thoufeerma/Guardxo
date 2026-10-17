@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, MessageSquare } from "lucide-react";
+import { MessageSquare, Plus, Minus } from "lucide-react";
 
 export const PRODUCT_FAQS = [
   {
@@ -57,28 +57,33 @@ export default function ProductFAQ() {
               </p>
             </div>
 
-            <div className="flex flex-col divide-y divide-neutral-200 border-y border-neutral-200">
+            {/* Closed questions: no background box, no border, simple plus icon */}
+            {/* Open question: inside light grey box */}
+            <div className="flex flex-col gap-3">
               {PRODUCT_FAQS.map((faq, idx) => {
                 const isOpen = openIndex === idx;
                 return (
-                  <div key={idx} className="py-5 sm:py-6">
+                  <div
+                    key={idx}
+                    className={`transition-all duration-200 ${
+                      isOpen
+                        ? "bg-[#F5F4F2] rounded-2xl p-6"
+                        : "bg-transparent border-0 p-4 sm:p-5"
+                    }`}
+                  >
                     <button
                       type="button"
                       onClick={() => toggle(idx)}
                       className="w-full flex items-center justify-between gap-4 text-left font-bold text-lg sm:text-xl text-[#101E10] hover:text-[#5AB900] transition-colors cursor-pointer"
                     >
                       <span>{faq.question}</span>
-                      <div
-                        className={`w-8 h-8 rounded-full bg-[#F5F4F2] flex items-center justify-center flex-none transition-transform duration-200 ${
-                          isOpen ? "rotate-180 bg-[#C6F19D]" : ""
-                        }`}
-                      >
-                        <ChevronDown size={18} className="text-[#101E10]" />
-                      </div>
+                      <span className="flex-none text-[#101E10]">
+                        {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+                      </span>
                     </button>
 
                     {isOpen && (
-                      <div className="pt-4 text-sm sm:text-base text-black/75 font-normal leading-relaxed pr-6">
+                      <div className="pt-4 text-sm sm:text-base text-black/75 font-normal leading-relaxed animate-in fade-in duration-200">
                         {faq.answer}
                       </div>
                     )}

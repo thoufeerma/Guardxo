@@ -15,10 +15,21 @@ export default function Glance() {
   return (
     <section id="glance" className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-16">
-        {/* 2-Column Editorial Layout */}
+        {/* 2-Column Editorial Layout matching Figma: Visual on Left, Text on Right */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Narrative */}
-          <div className="flex flex-col gap-6">
+          {/* Left Visual Frame (Factory / Technical Assay Laboratory Visual) */}
+          <div className="relative w-full h-[360px] sm:h-[462px] rounded-[24px] overflow-hidden bg-[#101E10] shadow-xl order-2 lg:order-1">
+            <Image
+              src="/images/glance-assay.png"
+              alt="GuardExo Technical Assay Laboratory Visual"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+
+          {/* Right Narrative */}
+          <div className="flex flex-col gap-6 order-1 lg:order-2">
             <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
               GuardExo at a Glance
             </span>
@@ -46,17 +57,6 @@ export default function Glance() {
                 />
               </Link>
             </div>
-          </div>
-
-          {/* Right Visual Frame */}
-          <div className="relative w-full h-[360px] sm:h-[462px] rounded-[24px] overflow-hidden bg-[#101E10] shadow-xl">
-            <Image
-              src="/images/glance-assay.png"
-              alt="GuardExo Technical Assay Laboratory Visual"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
           </div>
         </div>
 

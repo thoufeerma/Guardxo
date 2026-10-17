@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronDown, Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -45,7 +45,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Support Info & Contact Card */}
@@ -78,27 +78,33 @@ export default function FAQ() {
             </div>
           </div>
 
-          {/* Right Column: 5 Accordion Items */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          {/* Right Column: Accordion Items matching Figma */}
+          {/* Closed questions: no background box, no border, simple plus icon */}
+          {/* Open question: inside light grey box */}
+          <div className="lg:col-span-7 flex flex-col gap-3">
             {FAQS.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <div
                   key={faq.question}
-                  className="bg-[#F5F4F2] border border-neutral-300/80 rounded-2xl overflow-hidden transition-all duration-200"
+                  className={`transition-all duration-200 ${
+                    isOpen
+                      ? "bg-[#F5F4F2] rounded-2xl p-6"
+                      : "bg-transparent border-0 p-4 sm:p-5"
+                  }`}
                 >
                   <button
                     onClick={() => toggle(idx)}
-                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-lg sm:text-[20px] text-[#101E10] hover:text-[#5AB900] transition-colors cursor-pointer"
+                    className="w-full text-left flex items-center justify-between gap-4 font-bold text-lg sm:text-[20px] text-[#101E10] hover:text-[#5AB900] transition-colors cursor-pointer"
                   >
                     <span>{faq.question}</span>
-                    <span className="flex-none w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#101E10] shadow-xs">
-                      {isOpen ? <Minus size={18} /> : <Plus size={18} />}
+                    <span className="flex-none text-[#101E10]">
+                      {isOpen ? <Minus size={20} /> : <Plus size={20} />}
                     </span>
                   </button>
 
                   {isOpen && (
-                    <div className="px-6 pb-6 text-sm sm:text-base text-black/80 font-normal leading-relaxed border-t border-neutral-200/50 pt-4 animate-in fade-in duration-200">
+                    <div className="pt-4 text-sm sm:text-base text-black/80 font-normal leading-relaxed animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}
