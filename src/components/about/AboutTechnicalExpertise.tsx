@@ -61,17 +61,17 @@ export default function AboutTechnicalExpertise() {
             {PILLARS.map((p) => (
               <div
                 key={p.num}
-                className="bg-[#F5F4F2] text-[#101E10] rounded-2xl p-6 sm:p-7 flex flex-col gap-3 shadow-md border border-neutral-300/80 transition-transform duration-200 hover:-translate-x-1"
+                className="bg-white text-[#101E10] rounded-2xl p-6 sm:p-7 flex flex-col gap-3 shadow-md border border-neutral-200 transition-transform duration-200 hover:-translate-x-1"
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-sm font-mono font-bold text-black/50">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
                     {p.num}
                   </span>
                   <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">
                     {p.title}
                   </h4>
                 </div>
-                <p className="text-sm sm:text-[15px] text-black/80 font-normal leading-relaxed pl-8">
+                <p className="text-sm sm:text-[15px] text-black/80 font-normal leading-relaxed pl-0 sm:pl-9">
                   {p.text}
                 </p>
               </div>

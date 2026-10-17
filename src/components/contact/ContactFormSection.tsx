@@ -121,7 +121,7 @@ export default function ContactFormSection() {
           {/* Left Column: Direct Info Card & Chemist Image Card */}
           <div className="lg:col-span-5 flex flex-col gap-6 justify-between">
             {/* Info Box */}
-            <div className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-8 flex flex-col gap-6 border border-neutral-200">
+            <div className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col gap-6 border border-neutral-200 shadow-xs">
               {/* Telephone */}
               <a
                 href="tel:+918130016160"
@@ -222,7 +222,7 @@ export default function ContactFormSection() {
                     placeholder="e.g. Dr. Rajesh Sharma"
                     value={formData.name}
                     onChange={handleChange}
-                    className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
+                    className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -235,7 +235,7 @@ export default function ContactFormSection() {
                     placeholder="e.g. Apex Polymer Coatings"
                     value={formData.company}
                     onChange={handleChange}
-                    className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
+                    className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
                   />
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function ContactFormSection() {
                     placeholder="r.sharma@domain.com"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
+                    className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -267,7 +267,7 @@ export default function ContactFormSection() {
                     placeholder="+91 81300 00000"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
+                    className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10]"
                   />
                 </div>
               </div>
@@ -281,7 +281,7 @@ export default function ContactFormSection() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10] cursor-pointer"
+                  className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10] cursor-pointer"
                 >
                   <option value="General Question">General Question</option>
                   <option value="Product Formulation Inquiry">Product Formulation Inquiry</option>
@@ -303,7 +303,7 @@ export default function ContactFormSection() {
                   placeholder="Outline your inquiry, volume requirements or regulatory queries..."
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10] resize-none"
+                  className="bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#101E10]/20 text-[#101E10] resize-none"
                 />
               </div>
 

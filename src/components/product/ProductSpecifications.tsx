@@ -66,7 +66,7 @@ export default function ProductSpecifications() {
           </div>
 
           {/* Table Bottom Download Bar */}
-          <div className="bg-[#F5F4F2] p-6 sm:p-7 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="bg-neutral-50 p-6 sm:p-7 border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-black/70">
               <ShieldAlert size={16} className="text-[#5AB900] flex-none" />
               <span>Full compliance dossiers and ISO Certificate of Analysis available for every production batch.</span>

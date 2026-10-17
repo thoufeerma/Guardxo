@@ -89,7 +89,7 @@ export default function FAQ() {
                   key={faq.question}
                   className={`transition-all duration-200 ${
                     isOpen
-                      ? "bg-[#F5F4F2] rounded-2xl p-6"
+                      ? "bg-white rounded-2xl p-6 border border-neutral-200/90 shadow-sm"
                       : "bg-transparent border-0 p-4 sm:p-5"
                   }`}
                 >

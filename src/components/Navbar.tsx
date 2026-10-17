@@ -125,7 +125,7 @@ export default function Navbar({ activePage }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#F5F4F2] border-b border-[#EDE7EC] px-6 py-6 shadow-xl animate-in slide-in-from-top">
+        <div className="lg:hidden bg-white border-b border-[#EDE7EC] px-6 py-6 shadow-xl animate-in slide-in-from-top">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link

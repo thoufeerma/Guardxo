@@ -41,19 +41,24 @@ const MILESTONES = [
 
 export default function OurJourney() {
   return (
-    <section id="journey" className="w-full bg-[#F5F4F2] py-20 lg:py-28 border-t border-[#EDE7EC]">
+    <section id="journey" className="w-full bg-white py-20 lg:py-28 border-t border-[#EDE7EC]">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
-        {/* Header */}
+        {/* Header with dark rounded rectangle number badge inline */}
         <div className="flex flex-col gap-3 max-w-3xl">
-          <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
-            OUR JOURNEY
-          </span>
+          <div className="flex items-center gap-2.5">
+            <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-[#101E10] text-[#C6F19D] text-xs font-semibold font-sans">
+              01
+            </span>
+            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+              OUR JOURNEY
+            </span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
             From a chemicals manufacturer to a specialised biocides partner.
           </h2>
         </div>
 
-        {/* 5 Milestone Cards (Horizontal Responsive Grid) */}
+        {/* 5 Milestone Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
           {MILESTONES.map((m) => (
             <div
@@ -65,18 +70,16 @@ export default function OurJourney() {
               }`}
             >
               <div className="flex flex-col gap-3">
-                {/* Milestone Tag & Dark rounded rectangle number badge inline matching Figma */}
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-bold tracking-widest text-[#5AB900] uppercase">
-                    {m.tag}
-                  </span>
-                  <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans">
+                <span className="text-[11px] font-bold tracking-widest text-[#5AB900] uppercase">
+                  {m.tag}
+                </span>
+
+                {/* Dark rounded rectangle number badge placed inline with the card title */}
+                <h4 className="text-lg sm:text-[19px] font-bold text-[#101E10] leading-snug flex items-center gap-2.5">
+                  <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
                     {m.num}
                   </span>
-                </div>
-
-                <h4 className="text-lg sm:text-[19px] font-bold text-[#101E10] leading-snug">
-                  {m.title}
+                  <span>{m.title}</span>
                 </h4>
               </div>
 

@@ -69,9 +69,14 @@ export default function HowWeHelp() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column Narrative & Recall Guarantee */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-white/90">
-              How We Help
-            </span>
+            <div className="flex items-center gap-2.5">
+              <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#233523] text-[#C6F19D] text-xs font-semibold font-sans">
+                01
+              </span>
+              <span className="text-[14px] font-semibold tracking-wider uppercase text-white/90">
+                How We Help
+              </span>
+            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-white leading-tight">
               From first trial to final batch
             </h2>
@@ -80,8 +85,8 @@ export default function HowWeHelp() {
               systemic batch recall, gas buildup, viscosity loss, and plant-wide biofilm outbreaks.
             </p>
 
-            {/* Zero Recalls Callout Card without shield icon matching Figma */}
-            <div className="mt-4 bg-[#F5F4F2] text-[#101E10] rounded-2xl p-6 border border-[#DFD7DD] shadow-sm flex flex-col gap-2">
+            {/* Zero Recalls Callout Card (white card, no shield icon) matching Figma */}
+            <div className="mt-4 bg-white text-[#101E10] rounded-2xl p-6 border border-neutral-200 shadow-sm flex flex-col gap-2">
               <h6 className="text-[18px] font-bold tracking-wide">
                 ZERO RECALLS LOGGED
               </h6>
@@ -99,8 +104,8 @@ export default function HowWeHelp() {
                 className="bg-[#C6F19D] text-[#101E10] rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all duration-300 hover:scale-[1.02] shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  {/* Number Badge: dark, rounded rectangle with white regular font numbers */}
-                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans">
+                  {/* Number Badge: dark, rounded rectangle with white regular font numbers inline with title */}
+                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
                     {card.num}
                   </span>
                   <h5 className="text-[20px] font-bold text-[#101E10] tracking-tight">

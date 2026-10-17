@@ -61,7 +61,7 @@ export default function InCanFAQ() {
                     key={idx}
                     className={`transition-all duration-200 ${
                       isOpen
-                        ? "bg-[#F5F4F2] rounded-2xl p-6"
+                        ? "bg-neutral-50 rounded-2xl p-6 border border-neutral-200/60"
                         : "bg-transparent border-0 p-4 sm:p-5"
                     }`}
                   >

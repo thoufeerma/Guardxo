@@ -53,7 +53,7 @@ export default function ArticleBody() {
               </p>
 
               {/* Checkpoint Cards */}
-              <div className="flex flex-col gap-3.5 bg-[#F5F4F2] p-6 rounded-2xl border border-neutral-200/80">
+              <div className="flex flex-col gap-3.5 bg-neutral-50 p-6 rounded-2xl border border-neutral-200">
                 <div className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-[#5AB900] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={12} strokeWidth={3} />
@@ -102,7 +102,7 @@ export default function ArticleBody() {
               </p>
 
               {/* Technical Note Alert */}
-              <div className="bg-[#F5F4F2] border border-neutral-300 rounded-xl p-5 flex items-start gap-3.5">
+              <div className="bg-neutral-50 border border-neutral-300 rounded-xl p-5 flex items-start gap-3.5">
                 <Info size={20} className="text-[#5AB900] flex-none mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
@@ -119,7 +119,7 @@ export default function ArticleBody() {
               </div>
 
               {/* Safe Handling Alert */}
-              <div className="bg-[#F5F4F2] border border-neutral-300 rounded-xl p-5 flex items-start gap-3.5">
+              <div className="bg-neutral-50 border border-neutral-300 rounded-xl p-5 flex items-start gap-3.5">
                 <AlertTriangle size={20} className="text-amber-600 flex-none mt-0.5" />
                 <div className="flex flex-col gap-1">
                   <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
@@ -303,7 +303,7 @@ export default function ArticleBody() {
             </div>
 
             {/* Helpful Feedback Widget */}
-            <div className="bg-[#F5F4F2] rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200 mt-4">
+            <div className="bg-white rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200 mt-4 shadow-xs">
               <span className="text-sm sm:text-base font-bold text-[#101E10]">
                 Was this article helpful to your formulation work?
               </span>
@@ -339,7 +339,7 @@ export default function ArticleBody() {
           {/* Sticky Sidebar (4 Cols) */}
           <aside className="lg:col-span-4 lg:sticky lg:top-28 flex flex-col gap-6">
             {/* Ask to Team Card */}
-            <div className="bg-[#F5F4F2] border border-neutral-300 rounded-[24px] p-6 sm:p-8 flex flex-col gap-5 shadow-xs">
+            <div className="bg-white border border-neutral-200 rounded-[24px] p-6 sm:p-8 flex flex-col gap-5 shadow-sm">
               <div className="w-10 h-10 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none">
                 <HelpCircle size={22} />
               </div>

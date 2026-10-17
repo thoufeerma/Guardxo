@@ -36,7 +36,7 @@ export default function InCanHero() {
 
             {/* 3 Metric Value Badges */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              <div className="bg-[#F5F4F2] border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
                   <Clock size={18} />
                 </div>
@@ -46,7 +46,7 @@ export default function InCanHero() {
                 </div>
               </div>
 
-              <div className="bg-[#F5F4F2] border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
                   <Sparkles size={18} />
                 </div>
@@ -56,7 +56,7 @@ export default function InCanHero() {
                 </div>
               </div>
 
-              <div className="bg-[#F5F4F2] border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
+              <div className="bg-neutral-50 border border-neutral-200 rounded-xl p-4 flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
                   <Award size={18} />
                 </div>
@@ -87,7 +87,7 @@ export default function InCanHero() {
           </div>
 
           {/* Right Column: Visual Stage */}
-          <div className="lg:col-span-5 relative w-full h-[360px] sm:h-[460px] lg:h-[500px] rounded-[28px] overflow-hidden bg-[#F5F4F2] border border-neutral-200/80 shadow-lg">
+          <div className="lg:col-span-5 relative w-full h-[360px] sm:h-[460px] lg:h-[500px] rounded-[28px] overflow-hidden bg-white border border-neutral-200/80 shadow-lg">
             <Image
               src="/images/product-bt20-canister.jpg"
               alt="GuardExo In-Can Preservatives Canister Drums"

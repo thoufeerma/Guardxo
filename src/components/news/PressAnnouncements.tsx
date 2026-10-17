@@ -82,7 +82,7 @@ export default function PressAnnouncements() {
             {PRESS_RELEASES.map((press, idx) => (
               <div
                 key={idx}
-                className="group bg-[#F5F4F2] hover:bg-[#F0EFEA] border border-neutral-200/80 rounded-2xl p-6 sm:p-7 flex items-start gap-6 transition-all hover:shadow-sm"
+                className="group bg-white hover:bg-neutral-50 border border-neutral-200/90 rounded-2xl p-6 sm:p-7 flex items-start gap-6 transition-all shadow-2xs hover:shadow-sm"
               >
                 {/* Date Box */}
                 <div className="flex flex-col items-center justify-center bg-white rounded-xl px-4 py-3 min-w-[72px] sm:min-w-[84px] border border-neutral-200 flex-none shadow-xs">

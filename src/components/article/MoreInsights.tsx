@@ -63,7 +63,7 @@ export default function MoreInsights() {
           {MORE_INSIGHTS_DATA.map((item, idx) => (
             <div
               key={idx}
-              className="bg-[#F5F4F2] hover:bg-[#F0EFEA] rounded-[24px] p-7 flex flex-col justify-between gap-6 border border-neutral-200/80 transition-all hover:shadow-sm group"
+              className="bg-white hover:bg-neutral-50 rounded-[24px] p-7 flex flex-col justify-between gap-6 border border-neutral-200/80 transition-all hover:shadow-sm group"
             >
               <div className="flex flex-col gap-3.5">
                 <div className="flex items-center justify-between gap-2">

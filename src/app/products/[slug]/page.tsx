@@ -111,7 +111,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
       <Navbar activePage="Product Detail" />
 
       {/* 02 Breadcrumb Ribbon */}
-      <section className="w-full bg-[#F5F4F2] border-b border-[#EDE7EC] py-3.5 px-6 lg:px-12 text-xs">
+      <section className="w-full bg-white border-b border-[#EDE7EC] py-3.5 px-6 lg:px-12 text-xs">
         <div className="max-w-[1520px] mx-auto flex items-center gap-2 text-[#101E10]/60">
           <Link href="/" className="hover:text-[#101E10]">
             Home
@@ -224,7 +224,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
       </section>
 
       {/* 04 Technical Characteristics Bento */}
-      <section className="w-full bg-[#F5F4F2] py-20 px-6 lg:px-12">
+      <section className="w-full bg-white py-20 px-6 lg:px-12 border-t border-[#EDE7EC]">
         <div className="max-w-[1520px] mx-auto flex flex-col gap-12">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#5AB900]">
@@ -237,7 +237,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-2xl border border-[#EDE7EC] shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F5F4F2] flex items-center justify-center text-[#5AB900]">
+              <div className="w-10 h-10 rounded-xl bg-[#101E10] flex items-center justify-center text-[#C6F19D]">
                 <FlaskConical size={20} />
               </div>
               <span className="text-xs font-semibold text-[#101E10]/50 uppercase">
@@ -252,7 +252,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-[#EDE7EC] shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F5F4F2] flex items-center justify-center text-[#5AB900]">
+              <div className="w-10 h-10 rounded-xl bg-[#101E10] flex items-center justify-center text-[#C6F19D]">
                 <Thermometer size={20} />
               </div>
               <span className="text-xs font-semibold text-[#101E10]/50 uppercase">
@@ -267,7 +267,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-[#EDE7EC] shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F5F4F2] flex items-center justify-center text-[#5AB900]">
+              <div className="w-10 h-10 rounded-xl bg-[#101E10] flex items-center justify-center text-[#C6F19D]">
                 <ShieldCheck size={20} />
               </div>
               <span className="text-xs font-semibold text-[#101E10]/50 uppercase">
@@ -282,7 +282,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-[#EDE7EC] shadow-sm flex flex-col gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F5F4F2] flex items-center justify-center text-[#5AB900]">
+              <div className="w-10 h-10 rounded-xl bg-[#101E10] flex items-center justify-center text-[#C6F19D]">
                 <Boxes size={20} />
               </div>
               <span className="text-xs font-semibold text-[#101E10]/50 uppercase">

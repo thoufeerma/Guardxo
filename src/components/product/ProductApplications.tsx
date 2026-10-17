@@ -102,7 +102,7 @@ export default function ProductApplications() {
   const current = APPLICATIONS_LIST[selectedApp];
 
   return (
-    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-3xl">
@@ -136,7 +136,7 @@ export default function ProductApplications() {
                   }`}
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4">
-                    <span className="text-xs font-mono font-bold text-black/50">
+                    <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
                       {app.num}
                     </span>
                     <span className="text-sm sm:text-base">
@@ -184,7 +184,7 @@ export default function ProductApplications() {
               </p>
 
               {/* Dosage Metric Box */}
-              <div className="bg-[#F5F4F2] rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200">
+              <div className="bg-neutral-50 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200">
                 <div className="flex flex-col gap-0.5">
                   <span className="text-xs font-bold uppercase tracking-wider text-black/60">
                     TYPICAL INDUSTRY DOSAGE

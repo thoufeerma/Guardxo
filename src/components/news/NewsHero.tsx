@@ -79,7 +79,7 @@ export default function NewsHero({
                   placeholder="Search articles, press and updates..."
                   value={searchQuery}
                   onChange={(e) => onSearchChange(e.target.value)}
-                  className="w-full bg-[#F5F4F2] border border-black/20 focus:border-[#101E10] rounded-xl pl-12 pr-4 py-3.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#101E10]/15 text-[#101E10] placeholder:text-black/40 transition-all"
+                  className="w-full bg-white border border-neutral-300 focus:border-[#101E10] rounded-xl pl-12 pr-4 py-3.5 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#101E10]/15 text-[#101E10] placeholder:text-black/40 transition-all shadow-2xs"
                 />
               </div>
 
@@ -92,10 +92,10 @@ export default function NewsHero({
                       key={cat}
                       type="button"
                       onClick={() => onSelectCategory(cat)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer ${
+                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all cursor-pointer border ${
                         isActive
-                          ? "bg-[#C6F19D] text-[#101E10] shadow-sm font-bold"
-                          : "bg-[#F5F4F2] hover:bg-neutral-200/70 text-black/80"
+                          ? "bg-[#C6F19D] text-[#101E10] border-[#A8E272] shadow-xs font-bold"
+                          : "bg-white hover:bg-neutral-50 text-black/80 border-neutral-200"
                       }`}
                     >
                       {cat}

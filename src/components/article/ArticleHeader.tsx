@@ -55,7 +55,7 @@ export default function ArticleHeader() {
         </div>
 
         {/* Author & Share Bar */}
-        <div className="bg-[#F5F4F2] border border-neutral-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-4xl">
+        <div className="bg-white border border-neutral-200/90 shadow-2xs rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-4xl">
           {/* Author Details */}
           <div className="flex items-center gap-3.5">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border border-black/10 flex-none bg-[#C6F19D]">

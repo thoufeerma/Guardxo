@@ -40,7 +40,7 @@ export default function WhatIsInCan() {
   ];
 
   return (
-    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
         {/* Header & Narrative */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">

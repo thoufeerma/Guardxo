@@ -61,7 +61,7 @@ export default function Glance() {
         </div>
 
         {/* 5-Metric Counter Strip */}
-        <div className="pt-10 border-t border-[#F5F4F2] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="pt-10 border-t border-neutral-200 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {METRICS.map((m) => (
             <div key={m.label} className="flex flex-col gap-1">
               <span className="text-3xl sm:text-4xl font-bold text-[#101E10] tracking-tight">

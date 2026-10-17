@@ -144,8 +144,8 @@ export default function InCanProductRange() {
               key={prod.id}
               className={`rounded-[28px] p-6 sm:p-8 lg:p-10 border transition-all flex flex-col lg:flex-row lg:items-center justify-between gap-8 ${
                 prod.isFeatured
-                  ? "bg-[#F5F4F2] border-[#C6F19D] shadow-md ring-1 ring-[#C6F19D]"
-                  : "bg-white border-neutral-200/90 hover:bg-[#FAF9F7] shadow-xs"
+                  ? "bg-white border-2 border-[#5AB900] shadow-md ring-1 ring-[#5AB900]/20"
+                  : "bg-white border-neutral-200/90 hover:bg-neutral-50 shadow-xs"
               }`}
             >
               {/* Product Info */}
@@ -219,7 +219,7 @@ export default function InCanProductRange() {
 
                   <a
                     href="#inquiry"
-                    className="w-full text-center inline-flex items-center justify-center gap-1.5 bg-[#F5F4F2] hover:bg-neutral-200 text-[#101E10] py-2.5 rounded-xl font-bold text-xs transition-colors"
+                    className="w-full text-center inline-flex items-center justify-center gap-1.5 bg-white hover:bg-neutral-100 text-[#101E10] border border-neutral-200 py-2.5 rounded-xl font-bold text-xs transition-colors"
                   >
                     Request Sample Kit
                   </a>

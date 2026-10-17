@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakarta.variable} ${dmSans.variable} ${spaceGrotesk.variable} scroll-smooth`}
     >
-      <body className="antialiased min-h-screen bg-[#F5F4F2] text-[#101E10] flex flex-col font-sans">
+      <body className="antialiased min-h-screen bg-white text-[#101E10] flex flex-col font-sans">
         {children}
       </body>
     </html>

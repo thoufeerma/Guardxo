@@ -61,10 +61,10 @@ export default function DirectContactWays() {
               return (
                 <div
                   key={way.num}
-                  className="bg-[#F5F4F2] rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200/80 hover:shadow-sm transition-shadow"
+                  className="bg-white rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200/80 shadow-xs hover:shadow-sm transition-shadow"
                 >
                   <div className="flex items-center gap-4 sm:gap-5">
-                    <span className="text-sm font-mono font-bold text-black/50">
+                    <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
                       {way.num}
                     </span>
                     <div className="w-12 h-12 rounded-2xl bg-[#C6F19D] flex items-center justify-center text-[#101E10] flex-none">

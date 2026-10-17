@@ -53,7 +53,7 @@ export default function ProductHero() {
           {/* Left Column: Product Gallery */}
           <div className="lg:col-span-6 flex flex-col gap-4">
             {/* Main Stage */}
-            <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#F5F4F2] border border-neutral-200/80 shadow-md">
+            <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-white border border-neutral-200/80 shadow-md">
               <Image
                 src={gallery[activeImage].src}
                 alt={gallery[activeImage].alt}
@@ -76,7 +76,7 @@ export default function ProductHero() {
                   key={idx}
                   type="button"
                   onClick={() => setActiveImage(idx)}
-                  className={`relative h-20 sm:h-24 rounded-xl overflow-hidden border-2 transition-all cursor-pointer bg-[#F5F4F2] ${
+                  className={`relative h-20 sm:h-24 rounded-xl overflow-hidden border-2 transition-all cursor-pointer bg-white ${
                     activeImage === idx
                       ? "border-[#101E10] ring-2 ring-[#C6F19D]"
                       : "border-neutral-200 hover:border-black/40 opacity-80 hover:opacity-100"
@@ -101,7 +101,7 @@ export default function ProductHero() {
               <span className="bg-[#C6F19D] text-[#101E10] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md">
                 IN-CAN PRESERVATIVE
               </span>
-              <span className="text-xs font-mono font-bold text-black/60 bg-[#F5F4F2] px-3 py-1 rounded-md border border-neutral-200">
+              <span className="text-xs font-mono font-bold text-black/60 bg-neutral-100 px-3 py-1 rounded-md border border-neutral-200">
                 CAS 2634-33-5
               </span>
             </div>
@@ -124,7 +124,7 @@ export default function ProductHero() {
             </p>
 
             {/* Dosage & Properties Metric Box */}
-            <div className="bg-[#F5F4F2] border border-neutral-300 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="bg-white border border-neutral-300 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
               <div className="flex flex-col gap-1">
                 <span className="text-xs font-bold uppercase tracking-wider text-black/60">
                   TYPICAL INDUSTRY DOSAGE
@@ -168,21 +168,21 @@ export default function ProductHero() {
             <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-bold text-[#101E10]">
               <a
                 href="#specs"
-                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-[#F5F4F2] border border-neutral-200"
+                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-white border border-neutral-200 shadow-2xs"
               >
                 <Download size={14} />
                 Download TDS (PDF)
               </a>
               <a
                 href="#specs"
-                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-[#F5F4F2] border border-neutral-200"
+                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-white border border-neutral-200 shadow-2xs"
               >
                 <FileText size={14} />
                 Download SDS (PDF)
               </a>
               <a
                 href="#specs"
-                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-[#F5F4F2] border border-neutral-200"
+                className="inline-flex items-center gap-1.5 hover:text-[#5AB900] transition-colors p-2 rounded-lg bg-white border border-neutral-200 shadow-2xs"
               >
                 <ShieldCheck size={14} />
                 Download COA

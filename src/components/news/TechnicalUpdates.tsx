@@ -110,7 +110,7 @@ export default function TechnicalUpdates() {
                   {col.items.map((item, itemIdx) => (
                     <div
                       key={itemIdx}
-                      className="bg-[#F5F4F2] rounded-2xl p-6 flex flex-col justify-between gap-4 text-[#101E10] hover:bg-white transition-colors group shadow-sm"
+                      className="bg-white/95 rounded-2xl p-6 flex flex-col justify-between gap-4 text-[#101E10] hover:bg-white transition-colors group shadow-sm"
                     >
                       <div className="flex flex-col gap-2">
                         <span className="text-xs font-semibold text-black/60 uppercase tracking-wide">

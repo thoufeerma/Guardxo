@@ -7,18 +7,6 @@ import MoleculeVisual from "@/components/MoleculeVisual";
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-white pt-8 pb-16 lg:pt-14 lg:pb-20">
-      {/* Background Hero Photography with Subtle Gradient Overlay */}
-      <div className="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-multiply">
-        <Image
-          src="/images/hero-bg.png"
-          alt="Molecular biocide laboratory synthesis"
-          fill
-          sizes="100vw"
-          className="object-cover object-right-top"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
-      </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-8 lg:gap-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

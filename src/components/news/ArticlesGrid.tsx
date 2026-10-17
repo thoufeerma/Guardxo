@@ -121,7 +121,7 @@ export default function ArticlesGrid({
   });
 
   return (
-    <section id="articles" className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section id="articles" className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Header Ribbon */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 pb-2">

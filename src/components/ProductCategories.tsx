@@ -73,23 +73,23 @@ export default function ProductCategories() {
               className={`${cat.bgClass} rounded-[24px] p-8 flex flex-col justify-between gap-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl`}
             >
               <div className="flex flex-col gap-6">
-                {/* Top Badge & Subtitle */}
+                {/* Top Subtitle */}
                 <div className="flex items-center justify-between">
-                  <span className="bg-[#101E10] text-white text-xs font-semibold px-2.5 py-1 rounded-md font-sans">
-                    {cat.num}
-                  </span>
                   <span className="text-xs font-semibold tracking-wider text-black/80 uppercase">
                     {cat.sub}
                   </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl sm:text-[32px] font-bold text-[#101E10] leading-tight">
-                  {cat.title}
+                {/* Title with inline dark rounded rectangle number badge */}
+                <h3 className="text-2xl sm:text-[32px] font-bold text-[#101E10] leading-tight flex items-center gap-3">
+                  <span className="bg-[#101E10] text-white text-xs font-semibold px-2.5 py-1 rounded-md font-sans flex-none">
+                    {cat.num}
+                  </span>
+                  <span>{cat.title}</span>
                 </h3>
 
                 {/* Visual Frame with Image & Floating Badge */}
-                <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-[#F5F4F2]">
+                <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-white">
                   <Image
                     src={cat.image}
                     alt={cat.title}
