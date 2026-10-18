@@ -16,15 +16,15 @@ export default function ProductHero() {
 
   const gallery = [
     {
-      src: "/images/product-bt20-canister.jpg",
+      src: "/in-can-preservatives/can image.png",
       alt: "GuardExo BT 20 front canister view",
     },
     {
-      src: "/images/product-bt20-canister.jpg",
+      src: "/in-can-preservatives/can image.png",
       alt: "GuardExo BT 20 angle view",
     },
     {
-      src: "/images/product-bt20-canister.jpg",
+      src: "/in-can-preservatives/can image.png",
       alt: "GuardExo BT 20 warehouse view",
     },
   ];

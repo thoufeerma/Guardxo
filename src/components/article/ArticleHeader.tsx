@@ -135,7 +135,7 @@ export default function ArticleHeader() {
         {/* Hero Image */}
         <div className="relative w-full h-[360px] sm:h-[500px] lg:h-[620px] rounded-[24px] sm:rounded-[32px] overflow-hidden shadow-xl bg-[#101E10] border border-neutral-200/80">
           <Image
-            src="/images/article-hero.jpg"
+            src="/article/hero article.jpg"
             alt="Chemical manufacturing facility tanks and reactors"
             fill
             sizes="100vw"

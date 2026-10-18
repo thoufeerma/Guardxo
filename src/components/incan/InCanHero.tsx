@@ -89,8 +89,8 @@ export default function InCanHero() {
           {/* Right Column: Visual Stage */}
           <div className="lg:col-span-5 relative w-full h-[360px] sm:h-[460px] lg:h-[500px] rounded-[28px] overflow-hidden bg-white border border-neutral-200/80 shadow-lg">
             <Image
-              src="/images/product-bt20-canister.jpg"
-              alt="GuardExo In-Can Preservatives Canister Drums"
+              src="/in-can-preservatives/can image.png"
+              alt="GuardExo BT 20P In-Can Preservatives Canister"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"

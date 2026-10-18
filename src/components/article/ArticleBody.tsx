@@ -136,7 +136,7 @@ export default function ArticleBody() {
               {/* Microbiology Image */}
               <div className="relative w-full h-[320px] sm:h-[420px] rounded-2xl overflow-hidden shadow-md bg-[#101E10] border border-neutral-200 mt-2">
                 <Image
-                  src="/images/article-petri-dish.jpg"
+                  src="/article/mobility attack.jpg"
                   alt="Microbial challenge test and bacterial culture assay"
                   fill
                   sizes="(max-width: 1024px) 100vw, 66vw"

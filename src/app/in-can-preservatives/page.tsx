@@ -40,7 +40,7 @@ export default function InCanPreservativesPage() {
       <InCanProductRange />
 
       {/* 05 One Brand. Seven Demanding Industries */}
-      <Industries />
+      <Industries videoSrc="/in-can-preservatives/industries we serve.mp4" />
 
       {/* 06 In-Can Preservation FAQs */}
       <InCanFAQ />

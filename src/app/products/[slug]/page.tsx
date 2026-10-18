@@ -62,7 +62,7 @@ async function getProductBySlug(slug: string) {
       temperature_limit: "Up to 80°C",
       appearance: "Clear to pale yellow liquid",
       packaging: "25kg carboys / 200kg drums / 1,000kg IBCs",
-      image_url: "/images/product-bt20-canister.jpg",
+      image_url: "/in-can-preservatives/can image.png",
       badge: fallback.badge || "Standard Grade",
     };
   }
@@ -211,7 +211,7 @@ export default async function DynamicProductDetailPage({ params }: Props) {
             <div className="relative w-full max-w-md aspect-square rounded-3xl bg-white/5 border border-white/10 p-8 flex items-center justify-center backdrop-blur-md shadow-2xl">
               <div className="relative w-full h-full">
                 <Image
-                  src={product.image_url || "/images/product-bt20-canister.jpg"}
+                  src={product.image_url || "/in-can-preservatives/can image.png"}
                   alt={product.grade}
                   fill
                   className="object-contain"

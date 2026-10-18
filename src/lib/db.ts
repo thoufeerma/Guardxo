@@ -142,7 +142,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 60°C",
           appearance: "Clear, pale yellow liquid",
           packaging: "25kg carboys / 200kg drums / 1,000kg IBCs",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Eco-Compliant",
           is_featured: true
         },
@@ -167,7 +167,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 50°C",
           appearance: "Light green-amber aqueous liquid",
           packaging: "25kg carboys / 200kg drums / 1,000kg IBC",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Rapid Knockdown",
           is_featured: true
         },
@@ -192,7 +192,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 65°C",
           appearance: "Amber clear liquid",
           packaging: "250kg drums / 1,200kg IBCs",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Heavy Duty",
           is_featured: true
         },
@@ -217,7 +217,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 100°C",
           appearance: "Clear yellow to amber liquid",
           packaging: "25kg carboys / 200kg drums / 1,000kg IBC",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Zero VOC",
           is_featured: true
         },
@@ -242,7 +242,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 100°C",
           appearance: "Clear amber viscous solution",
           packaging: "25kg jerrycans / 200kg HDPE drums / 1,000kg IBC",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Flagship Grade",
           is_featured: true
         },
@@ -267,7 +267,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 80°C",
           appearance: "Off-white milky liquid dispersion",
           packaging: "25kg carboys / 1,000kg IBCs",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Solvent Free",
           is_featured: true
         },
@@ -292,7 +292,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 75°C",
           appearance: "Cream colored stable fluid emulsion",
           packaging: "25kg carboys / 200kg drums / 1,000kg IBC",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Anti-Algae & Mold",
           is_featured: true
         },
@@ -317,7 +317,7 @@ export async function initializeDatabase() {
           temperature_limit: "Up to 55°C",
           appearance: "Clear amber to reddish liquid",
           packaging: "200kg drums / 1,000kg IBC",
-          image_url: "/images/product-bt20-canister.jpg",
+          image_url: "/in-can-preservatives/can image.png",
           badge: "Slime Control",
           is_featured: true
         }

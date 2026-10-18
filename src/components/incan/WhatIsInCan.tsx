@@ -68,6 +68,29 @@ export default function WhatIsInCan() {
           </div>
         </div>
 
+        {/* Wet-State Preservation Laboratory Video Showcase */}
+        <div className="relative w-full h-[320px] sm:h-[420px] lg:h-[480px] rounded-[28px] overflow-hidden bg-[#101E10] shadow-xl border border-neutral-200">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source
+              src="/in-can-preservatives/incan preservative wet state preservative.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#5AB900] animate-pulse" />
+            <span className="text-xs sm:text-sm font-bold text-[#101E10] uppercase tracking-wide">
+              Wet-State Preservation & Active Microbial Inhibition
+            </span>
+          </div>
+        </div>
+
         {/* 4 Failure Modes */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between">

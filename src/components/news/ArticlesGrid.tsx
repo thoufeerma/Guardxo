@@ -23,7 +23,7 @@ export interface Article {
 export const ARTICLES_DATA: Article[] = [
   {
     id: "in-can-vs-dry-film",
-    image: "/images/news-article-1.png",
+    image: "/news insight/Choosing between incan and dryfilm preservatives.jpg",
     category: "FORMULATION",
     filterCategory: "Technical Insights",
     date: "18 Mar 2025",
@@ -34,7 +34,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "cmit-mit-bit-paints",
-    image: "/images/news-article-2.png",
+    image: "/news insight/CMITMIT and BIT in water-based.jpg",
     category: "FORMULATION",
     filterCategory: "Technical Insights",
     date: "11 Mar 2025",
@@ -45,7 +45,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "emulsion-paint-preservative-protection",
-    image: "/images/news-article-3.png",
+    image: "/news insight/Signs your emulsion paint is losing.jpg",
     category: "QUALITY ASSURANCE",
     filterCategory: "Technical Insights",
     date: "02 Mar 2025",
@@ -56,7 +56,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "coa-tds-sds-batch-analysis",
-    image: "/images/news-article-4.png",
+    image: "/news insight/What a COA, TDS and SDS tell you about a batch.jpg",
     category: "REGULATORY",
     filterCategory: "Regulatory",
     date: "24 Feb 2025",
@@ -67,7 +67,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "construction-chemicals-microbial-growth",
-    image: "/images/news-article-5.png",
+    image: "/news insight/Preventing microbial growth in.jpg",
     category: "APPLICATIONS",
     filterCategory: "Industry News",
     date: "16 Feb 2025",
@@ -78,7 +78,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "dosage-basics-in-can-preservation",
-    image: "/images/news-article-6.png",
+    image: "/news insight/Dosage basics for in-can.jpg",
     category: "TECHNICAL GUIDE",
     filterCategory: "Technical Insights",
     date: "08 Feb 2025",

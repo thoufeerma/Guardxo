@@ -202,7 +202,7 @@ export async function POST(req: NextRequest) {
       temperature_limit?.trim() || "Up to 80°C",
       appearance?.trim() || "Clear liquid",
       packaging?.trim() || "25kg carboys / 200kg drums / 1,000kg IBCs",
-      image_url?.trim() || "/images/product-bt20-canister.jpg",
+      image_url?.trim() || "/in-can-preservatives/can image.png",
       tds_url?.trim() || null,
       msds_url?.trim() || null,
       badge?.trim() || null,

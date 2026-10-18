@@ -115,7 +115,7 @@ export default function AdminProductsPage() {
   const [formTempLimit, setFormTempLimit] = useState("Up to 80°C");
   const [formAppearance, setFormAppearance] = useState("Clear amber liquid");
   const [formPackaging, setFormPackaging] = useState("25kg carboys / 200kg drums / 1,000kg IBCs");
-  const [formImageUrl, setFormImageUrl] = useState("/images/product-bt20-canister.jpg");
+  const [formImageUrl, setFormImageUrl] = useState("/in-can-preservatives/can image.png");
   const [formBadge, setFormBadge] = useState("");
   const [formStatus, setFormStatus] = useState("active");
   const [formSubmitting, setFormSubmitting] = useState(false);
@@ -188,7 +188,7 @@ export default function AdminProductsPage() {
       setFormTempLimit(product.temperature_limit || "Up to 80°C");
       setFormAppearance(product.appearance || "Clear liquid");
       setFormPackaging(product.packaging || "25kg carboys / 200kg drums / 1,000kg IBCs");
-      setFormImageUrl(product.image_url || "/images/product-bt20-canister.jpg");
+      setFormImageUrl(product.image_url || "/in-can-preservatives/can image.png");
       setFormBadge(product.badge || "");
       setFormStatus(product.status || "active");
     } else {
@@ -205,7 +205,7 @@ export default function AdminProductsPage() {
       setFormTempLimit("Up to 100°C");
       setFormAppearance("Clear amber solution");
       setFormPackaging("25kg carboys / 200kg drums / 1,000kg IBC");
-      setFormImageUrl("/images/product-bt20-canister.jpg");
+      setFormImageUrl("/in-can-preservatives/can image.png");
       setFormBadge("New Formulation");
       setFormStatus("active");
     }
@@ -681,7 +681,7 @@ export default function AdminProductsPage() {
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 relative rounded-lg bg-[#F5F4F2] border border-[#EDE7EC] flex-none overflow-hidden flex items-center justify-center p-1">
                             <Image
-                              src={prod.image_url || "/images/product-bt20-canister.jpg"}
+                              src={prod.image_url || "/in-can-preservatives/can image.png"}
                               alt={prod.grade}
                               fill
                               className="object-contain"
@@ -1188,7 +1188,7 @@ export default function AdminProductsPage() {
                       </button>
                       <button
                         type="button"
-                        onClick={() => setFormImageUrl("/images/product-bt20-canister.jpg")}
+                        onClick={() => setFormImageUrl("/in-can-preservatives/can image.png")}
                         className="text-xs text-[#5AB900] hover:underline font-semibold"
                       >
                         Use GuardXO Canister

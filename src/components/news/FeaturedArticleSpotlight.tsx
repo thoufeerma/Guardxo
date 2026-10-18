@@ -12,7 +12,7 @@ export default function FeaturedArticleSpotlight() {
           {/* Left Column: Big Editorial Photography */}
           <div className="lg:col-span-6 relative w-full h-[360px] sm:h-[460px] rounded-[24px] overflow-hidden shadow-lg bg-[#101E10]">
             <Image
-              src="/images/news-featured-hero.png"
+              src="/news insight/featured article.jpg"
               alt="Technical laboratory testing and biocide formulation"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

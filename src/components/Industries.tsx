@@ -63,7 +63,13 @@ const INDUSTRIES: IndustryItem[] = [
   },
 ];
 
-export default function Industries() {
+interface IndustriesProps {
+  videoSrc?: string;
+}
+
+export default function Industries({
+  videoSrc = "/Home-page/industries we serve.mp4",
+}: IndustriesProps = {}) {
   const [selectedIdx, setSelectedIdx] = useState(2); // Default Construction Chemicals (index 2)
   const activeIndustry = INDUSTRIES[selectedIdx];
 
@@ -131,13 +137,14 @@ export default function Industries() {
           {/* Right Column: Video Preview Card with Centered Caption */}
           <div className="lg:col-span-6 relative w-full h-[420px] sm:h-[480px] rounded-[28px] overflow-hidden shadow-lg bg-[#101E10]">
             <video
+              key={videoSrc}
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-full object-cover"
             >
-              <source src="/Home-page/industries we serve.mp4" type="video/mp4" />
+              <source src={videoSrc} type="video/mp4" />
             </video>
             {/* Dark gradient for text readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
