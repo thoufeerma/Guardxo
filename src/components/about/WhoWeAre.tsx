@@ -45,7 +45,7 @@ export default function WhoWeAre() {
           {/* Right QA Manager Photo */}
           <div className="lg:col-span-6 relative w-full h-[360px] sm:h-[460px] rounded-[24px] overflow-hidden shadow-xl bg-[#101E10]">
             <Image
-              src="/images/about-qa-manager.png"
+              src="/About/who we are.jpg"
               alt="Chemical Plant Quality Assurance Manager in Gurugram Synthesis Plant"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

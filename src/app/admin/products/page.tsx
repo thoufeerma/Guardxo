@@ -421,12 +421,12 @@ export default function AdminProductsPage() {
             <Link href="/" className="flex items-center gap-3">
               <div className="relative h-8 w-36 flex items-center">
                 <Image
-                  src="/images/guardxo-logo.png"
+                  src="/logo/guardxo-logo.svg"
                   alt="GuardExo"
-                  width={150}
-                  height={32}
+                  width={143}
+                  height={22}
                   className="object-contain brightness-0 invert"
-                  style={{ width: "auto", height: "32px" }}
+                  style={{ width: "auto", height: "26px" }}
                 />
               </div>
             </Link>

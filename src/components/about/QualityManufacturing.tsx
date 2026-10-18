@@ -17,7 +17,7 @@ export default function QualityManufacturing() {
           {/* Left Laboratory Quality Photo */}
           <div className="lg:col-span-6 relative w-full h-[360px] sm:h-[460px] rounded-[24px] overflow-hidden shadow-xl bg-[#101E10]">
             <Image
-              src="/images/about-quality-lab.png"
+              src="/About/quality and manufacturing.jpg"
               alt="Quality Control Testing and Active Concentration Assay Lab"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"

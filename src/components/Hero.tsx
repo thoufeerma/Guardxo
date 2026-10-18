@@ -1,17 +1,27 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
-import MoleculeVisual from "@/components/MoleculeVisual";
 
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-white pt-8 pb-16 lg:pt-14 lg:pb-20">
+      {/* Background Video from Figma */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center lg:justify-end">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover lg:object-contain lg:object-right opacity-90 lg:opacity-100"
+        >
+          <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
+        </video>
+      </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-8 lg:gap-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
           {/* Left Column Narrative */}
-          <div className="lg:col-span-7 flex flex-col gap-6 lg:gap-8">
+          <div className="lg:col-span-7 flex flex-col gap-6 lg:gap-8 bg-white/70 lg:bg-transparent backdrop-blur-xs lg:backdrop-blur-none p-4 sm:p-6 lg:p-0 rounded-2xl">
             {/* Tag Pill */}
             <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C4EF9C]/40 border border-[#B9AEFF]/30 w-fit backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-[#101E10] animate-pulse" />
@@ -35,13 +45,8 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right Column: 3D Molecule Animation matching Figma */}
-          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end">
-            <MoleculeVisual
-              size="lg"
-              className="w-[320px] h-[300px] sm:w-[440px] sm:h-[380px] lg:w-[480px] lg:h-[420px]"
-            />
-          </div>
+          {/* Right Column: Empty column allowing the rotating molecule video to take center stage */}
+          <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
         </div>
 
         {/* Buttons placed at bottom-right of the Hero section matching Figma */}

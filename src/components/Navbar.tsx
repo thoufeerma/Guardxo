@@ -61,16 +61,15 @@ export default function Navbar({ activePage }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full glass-nav transition-all duration-200">
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 h-20 flex items-center justify-between">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 group flex-none">
-          <div className="relative h-12 sm:h-14 w-52 sm:w-60 flex items-center">
+        <Link href="/" className="flex items-center group flex-none">
+          <div className="relative flex items-center">
             <Image
-              src="/images/guardxo-wordmark-dark.svg"
-              alt="GuardExo by Chemtiver Speciality"
-              width={240}
-              height={48}
-              className="object-contain"
-              style={{ width: "auto", height: "46px" }}
+              src="/logo/Link - Logo.svg"
+              alt="GuardXO by Chemtiver Speciality"
+              width={143}
+              height={22}
               priority
+              className="object-contain h-[26px] sm:h-7 md:h-[30px] w-auto"
             />
           </div>
         </Link>

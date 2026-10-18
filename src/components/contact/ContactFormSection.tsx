@@ -177,7 +177,7 @@ export default function ContactFormSection() {
             {/* Chemist Photography Card */}
             <div className="relative w-full h-[280px] sm:h-[320px] rounded-[24px] overflow-hidden shadow-md bg-[#101E10]">
               <Image
-                src="/images/contact-chemist.png"
+                src="/Contact/contact image.jpg"
                 alt="Professional Chemist in Laboratory Office Setting"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

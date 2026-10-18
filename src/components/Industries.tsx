@@ -128,17 +128,19 @@ export default function Industries() {
             })}
           </div>
 
-          {/* Right Column: Photographic Preview Card with Centered Caption */}
+          {/* Right Column: Video Preview Card with Centered Caption */}
           <div className="lg:col-span-6 relative w-full h-[420px] sm:h-[480px] rounded-[28px] overflow-hidden shadow-lg bg-[#101E10]">
-            <Image
-              src="/images/industry-chemicals.png"
-              alt={activeIndustry.name}
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-all duration-500"
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/Home-page/industries we serve.mp4" type="video/mp4" />
+            </video>
             {/* Dark gradient for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
             {/* Centered Caption Card (without SECTOR FOCUS label) matching Figma */}
             <div className="absolute inset-x-6 bottom-6 p-6 sm:p-7 rounded-2xl glass-card shadow-2xl flex flex-col items-center text-center gap-2">

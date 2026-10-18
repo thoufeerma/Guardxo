@@ -9,6 +9,7 @@ const CATEGORIES = [
     sub: "WET-STATE PRESERVATION",
     title: "In-Can Preservatives",
     image: "/images/category-incan.png",
+    video: "/Home-page/explore our product solutions/In-Can Preservatives.mp4",
     highlightBadge: "LIQUID STABILITY",
     description:
       "Wet-state protection for water-based formulations. Prevents in-can spoilage, gassing, odour and viscosity loss during production and storage.",
@@ -20,6 +21,7 @@ const CATEGORIES = [
     sub: "PROCESS LOOP DEFENSE",
     title: "Industrial Biocides",
     image: "/images/category-biocides.png",
+    video: "/Home-page/explore our product solutions/industrial biocide.mp4",
     highlightBadge: "BIOFILM ERADICATION",
     description:
       "Fast-acting, broad-spectrum control of bacteria, fungi and algae in process waters, cooling systems and industrial formulations.",
@@ -31,6 +33,7 @@ const CATEGORIES = [
     sub: "SURFACE ANTIFUNGAL",
     title: "Dry-Film Preservatives",
     image: "/images/category-dryfilm.png",
+    video: "/Home-page/explore our product solutions/dry film pesticides.mp4",
     highlightBadge: "LEACH RESISTANT",
     description:
       "Long-term protection of applied films against fungal and algal growth — engineered for exterior coatings in humid and tropical climates.",
@@ -88,15 +91,27 @@ export default function ProductCategories() {
                   <span>{cat.title}</span>
                 </h3>
 
-                {/* Visual Frame with Image & Floating Badge */}
+                {/* Visual Frame with Video & Floating Badge */}
                 <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-white">
-                  <Image
-                    src={cat.image}
-                    alt={cat.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
-                  />
+                  {cat.video ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    >
+                      <source src={cat.video} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <Image
+                      src={cat.image}
+                      alt={cat.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  )}
                   <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded text-xs font-bold text-[#101E10] shadow-sm uppercase tracking-wider">
                     {cat.highlightBadge}
                   </div>

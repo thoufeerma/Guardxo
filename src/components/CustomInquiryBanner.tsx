@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import MoleculeVisual from "@/components/MoleculeVisual";
 
 export default function CustomInquiryBanner() {
   return (
@@ -30,12 +29,19 @@ export default function CustomInquiryBanner() {
             </div>
           </div>
 
-          {/* Right Column: 3D Molecule Animation matching Figma */}
+          {/* Right Column: Hero Video Loop */}
           <div className="lg:col-span-5 flex items-center justify-center lg:justify-end z-10">
-            <MoleculeVisual
-              size="md"
-              className="w-[280px] h-[260px] sm:w-[360px] sm:h-[320px]"
-            />
+            <div className="relative w-[280px] h-[220px] sm:w-[360px] sm:h-[260px] rounded-2xl overflow-hidden bg-white/80 shadow-md">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>

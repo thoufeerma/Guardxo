@@ -20,7 +20,7 @@ export default function Glance() {
           {/* Left Visual Frame (Factory / Technical Assay Laboratory Visual) */}
           <div className="relative w-full h-[360px] sm:h-[462px] rounded-[24px] overflow-hidden bg-[#101E10] shadow-xl order-2 lg:order-1">
             <Image
-              src="/images/glance-assay.png"
+              src="/Home-page/speciality chemistry guardexo at a glance.jpg"
               alt="GuardExo Technical Assay Laboratory Visual"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
