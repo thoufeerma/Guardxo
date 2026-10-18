@@ -31,14 +31,14 @@ export default function Hero() {
             </div>
 
             {/* Main Headline - breaks exactly into 2 lines matching Figma */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[66px] font-extrabold text-[#101E10] leading-[1.14] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[66px] font-extrabold text-[#101E10] leading-[1.24] tracking-tight">
               Protection engineered at<br />
-              the <span className="relative inline-block px-2 sm:px-3 py-0.5 mx-1 bg-[#C6F19D] rounded-xl text-[#101E10]">molecular</span> level.
+              the <span className="relative inline-block px-2.5 sm:px-3.5 py-0.5 mx-1 bg-[#C6F19D] rounded-xl text-[#101E10] translate-y-0.5">molecular</span> level.
             </h1>
 
             {/* Subtitle Narrative */}
             <p className="text-base sm:text-lg lg:text-[18px] text-black/80 max-w-2xl leading-relaxed font-normal">
-              <strong className="font-semibold text-[#101E10]">GuardExo</strong> — the biocides & preservatives brand of{" "}
+              <strong className="font-black text-[#101E10] tracking-tight">GuardExo</strong> — the biocides & preservatives brand of{" "}
               <strong className="font-semibold text-[#101E10]">Chemtiver Speciality</strong> — safeguards paints, coatings,
               construction chemicals and water systems against microbial attack, so every batch performs exactly as it was
               formulated to.

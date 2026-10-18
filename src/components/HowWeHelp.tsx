@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const HELP_CARDS = [
   {
@@ -23,46 +24,18 @@ const HELP_CARDS = [
   },
 ];
 
-function HexagonPattern({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      width="380"
-      height="380"
-      viewBox="0 0 380 380"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        <pattern
-          id="hex-pattern"
-          width="48"
-          height="83.14"
-          patternUnits="userSpaceOnUse"
-        >
-          <path
-            d="M24 0 L48 13.86 L48 41.57 L24 55.43 L0 41.57 L0 13.86 Z M24 41.57 L48 55.43 L48 83.14 L24 97 L0 83.14 L0 55.43 Z"
-            stroke="#5AB900"
-            strokeWidth="1.2"
-            strokeOpacity="0.32"
-            fill="none"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#hex-pattern)" />
-    </svg>
-  );
-}
-
 export default function HowWeHelp() {
   return (
     <section className="relative w-full bg-[#101E10] text-white py-20 lg:py-28 overflow-hidden">
-      {/* Hexagon Outline Patterns in top-right and bottom-left matching Figma */}
-      <div className="absolute -top-12 -right-12 pointer-events-none opacity-85">
-        <HexagonPattern />
-      </div>
-      <div className="absolute -bottom-12 -left-12 pointer-events-none opacity-85">
-        <HexagonPattern />
+      {/* Background Honeycomb Chemistry Visual provided by user */}
+      <div className="absolute inset-0 pointer-events-none">
+        <Image
+          src="/Home-page/how we help background.png"
+          alt="How We Help Background"
+          fill
+          className="object-cover object-center opacity-90"
+          priority
+        />
       </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12">
@@ -70,10 +43,7 @@ export default function HowWeHelp() {
           {/* Left Column Narrative & Recall Guarantee */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <div className="flex items-center gap-2.5">
-              <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#233523] text-[#C6F19D] text-xs font-semibold font-sans">
-                01
-              </span>
-              <span className="text-[14px] font-semibold tracking-wider uppercase text-white/90">
+              <span className="text-[14px] font-semibold tracking-wider uppercase text-[#C6F19D]">
                 How We Help
               </span>
             </div>

@@ -78,14 +78,9 @@ export default function Industries({
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Section Header */}
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2.5">
-            <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-[#101E10] text-[#C6F19D] text-xs font-semibold font-sans">
-              07
-            </span>
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
-              Industries We Serve
-            </span>
-          </div>
+          <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+            Industries We Serve
+          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
             One brand. Seven demanding industries.
           </h2>
