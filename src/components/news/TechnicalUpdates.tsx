@@ -73,14 +73,15 @@ export default function TechnicalUpdates() {
       {/* Decorative ambient glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5AB900]/10 rounded-full blur-3xl pointer-events-none" />
 
-      {/* Hexagon pattern at top-right */}
-      <div className="absolute -top-12 -right-12 w-80 h-80 pointer-events-none opacity-25">
+      {/* Hexagon pattern at top-right matching Figma & shared artwork */}
+      <div className="absolute -top-20 sm:-top-28 lg:-top-36 -right-16 sm:-right-20 lg:-right-16 w-[480px] sm:w-[580px] lg:w-[680px] xl:w-[720px] pointer-events-none select-none z-0 opacity-75">
         <Image
-          src="/images/technical-expertise-hexagons.svg"
+          src="/images/updates-hexagons.svg"
           alt="Hexagon pattern"
-          width={320}
-          height={320}
-          className="w-full h-full object-contain"
+          width={650}
+          height={631}
+          className="w-full h-auto object-contain"
+          priority
         />
       </div>
 
