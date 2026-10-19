@@ -66,7 +66,7 @@ export default function FeaturedProductsTable() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-white border-b border-[#DFD7DD] text-xs font-semibold tracking-wider text-black/60 uppercase">
-                  <th className="py-5 px-6 w-16">#</th>
+                  <th className="py-5 pl-7 pr-3 w-16 font-[family-name:var(--font-heading)]">#</th>
                   <th className="py-5 px-6">GRADE / CHEMISTRY</th>
                   <th className="py-5 px-6">PRODUCT FAMILY</th>
                   <th className="py-5 px-6">PRIMARY TARGET / APPLICATION</th>
@@ -97,8 +97,8 @@ export default function FeaturedProductsTable() {
                         key={prod.id}
                         className="hover:bg-[#C6F19D]/10 transition-colors group"
                       >
-                        {/* Number in regular font */}
-                        <td className="py-5 px-6 font-sans text-xs font-semibold text-black/60">
+                        {/* Number styled to match Figma design (Plus Jakarta Sans, text-sm, font-medium) */}
+                        <td className="py-5 pl-7 pr-3 w-16 font-[family-name:var(--font-heading)] text-sm sm:text-[15px] font-medium text-[#101E10]/80">
                           {prod.num}
                         </td>
 

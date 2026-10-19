@@ -25,7 +25,7 @@ export default function CustomInquiryBanner() {
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
         <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#EDF9DF] p-8 sm:p-12 lg:p-16 min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] flex items-center">
           {/* Background Rotating Molecule Video matching Figma */}
-          <div className="absolute right-0 top-0 bottom-0 w-full sm:w-3/4 lg:w-3/5 h-full z-0 pointer-events-none overflow-hidden flex items-center justify-end">
+          <div className="absolute inset-0 w-full h-full z-0 pointer-events-none overflow-hidden flex items-center justify-end">
             <video
               ref={videoRef}
               autoPlay
@@ -34,8 +34,9 @@ export default function CustomInquiryBanner() {
               playsInline
               preload="auto"
               poster="/images/custom-inquiry-figma-bg.png"
-              className="w-full h-full object-cover object-right mix-blend-multiply opacity-80 sm:opacity-100 pointer-events-none"
+              className="w-full h-full object-cover object-right pointer-events-none"
             >
+              <source src="/Home-page/inquiry-molecule.mp4" type="video/mp4" />
               <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
             </video>
           </div>
