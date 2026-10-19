@@ -93,12 +93,12 @@ export default function ArticleBody() {
               </h2>
 
               <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
-                Bacterial contamination in the wet state is predominantly driven by Gram-negative
-                motile rods such as <span className="italic font-semibold">Pseudomonas aeruginosa</span>,{" "}
+                Bacterial contamination in wet formulations predominantly originates from
+                Gram-negative species such as <span className="italic font-semibold">Pseudomonas aeruginosa</span>,{" "}
                 <span className="italic font-semibold">Burkholderia cepacia</span>, and{" "}
                 <span className="italic font-semibold">Enterobacter</span>. In conditions of poor
-                plant hygiene, these microbes degrade cellulosic thickeners within 48 hours, causing
-                catastrophic viscosity drops and foul sulfurous off-gassing.
+                ventilation or fluctuating ambient storage temperatures, moisture condenses on the
+                container ceiling, producing an unpreserved aqueous micro-zone.
               </p>
 
               {/* Technical Note Alert */}
@@ -179,101 +179,86 @@ export default function ArticleBody() {
               </h2>
 
               <p className="text-base text-black/80 font-normal leading-relaxed">
-                Global regulatory authorities require strict adherence to maximum active substance
-                thresholds to prevent consumer sensitization while sustaining full microbial
-                inhibition:
+                Global regulatory shifts under EU BPR Regulation 528/2012 and BIS national
+                guidelines mandate stringent classification thresholds for sensitisers like MIT
+                (&lt;15 ppm requires H317 hazard warnings). Formulators must pivot toward
+                synergistic combinations:
               </p>
 
-              {/* Table */}
+              {/* Table matching Figma */}
               <div className="w-full overflow-x-auto rounded-2xl border border-neutral-200/80 shadow-xs">
                 <table className="w-full text-left text-xs sm:text-sm">
                   <thead className="bg-[#101E10] text-[#C6F19D] uppercase text-[11px] font-bold tracking-wider">
                     <tr>
-                      <th className="py-4 px-5">Chemistry Active</th>
-                      <th className="py-4 px-5">Target Microorganisms</th>
-                      <th className="py-4 px-5">Recommended Phase</th>
-                      <th className="py-4 px-5">Regulatory Status</th>
+                      <th className="py-4 px-5">CHEMISTRY ACTIVE</th>
+                      <th className="py-4 px-5">TARGET MICROORGANISMS</th>
+                      <th className="py-4 px-5">RECOMMENDED PHASE</th>
+                      <th className="py-4 px-5">REGULATORY STATUS</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-neutral-200 bg-white">
                     <tr className="hover:bg-[#F5F4F2] transition-colors">
                       <td className="py-4 px-5 font-bold text-[#101E10]">
-                        BIT (1,2-benzisothiazolin-3-one)
+                        BIT (1,2-Benzisothiazolin-3-one)
                       </td>
                       <td className="py-4 px-5 text-black/80">
-                        Gram-negative & Gram-positive bacteria
+                        Gram+ and Gram- Bacteria
                       </td>
                       <td className="py-4 px-5">
-                        <span className="bg-[#C6F19D]/60 text-[#101E10] font-semibold px-2 py-0.5 rounded text-xs">
-                          Wet-State (In-Can)
+                        <span className="bg-[#C6F19D]/60 text-[#101E10] font-semibold px-2.5 py-1 rounded text-xs">
+                          Wet In-Can (Bulk)
                         </span>
                       </td>
                       <td className="py-4 px-5 text-black/75">
-                        REACH / BPR Compliant, VOC-Free
+                        Approved PT 6, PT 13
                       </td>
                     </tr>
                     <tr className="hover:bg-[#F5F4F2] transition-colors">
                       <td className="py-4 px-5 font-bold text-[#101E10]">
-                        CMIT/MIT (3:1 aqueous)
+                        CMIT/MIT (3:1 blend)
                       </td>
                       <td className="py-4 px-5 text-black/80">
-                        Rapid broad-spectrum bacteria & yeasts
+                        Broad Spectrum Shock Kill
                       </td>
                       <td className="py-4 px-5">
-                        <span className="bg-[#C6F19D]/60 text-[#101E10] font-semibold px-2 py-0.5 rounded text-xs">
-                          Wet-State (Process)
+                        <span className="bg-[#C6F19D]/60 text-[#101E10] font-semibold px-2.5 py-1 rounded text-xs">
+                          Wet In-Can / Process
                         </span>
                       </td>
                       <td className="py-4 px-5 text-black/75">
-                        Sensitizer limit applies (&lt;15 ppm)
+                        &lt;15 ppm sens. limit
                       </td>
                     </tr>
                     <tr className="hover:bg-[#F5F4F2] transition-colors">
                       <td className="py-4 px-5 font-bold text-[#101E10]">
-                        OIT (2-n-octyl-4-isothiazolin-3-one)
+                        OIT (2-n-Octyl-4-isothiazolin-3-one)
                       </td>
                       <td className="py-4 px-5 text-black/80">
-                        Fungi, mold & mildew species
+                        Fungi, Moulds, Mildew
                       </td>
                       <td className="py-4 px-5">
-                        <span className="bg-[#DFF4C8] text-[#101E10] font-semibold px-2 py-0.5 rounded text-xs">
-                          Applied Dry-Film
+                        <span className="bg-[#DFF4C8] text-[#101E10] font-semibold px-2.5 py-1 rounded text-xs">
+                          Cured Dry-Film
                         </span>
                       </td>
                       <td className="py-4 px-5 text-black/75">
-                        Low water leaching, UV photostable
+                        Approved PT 7, PT 9, PT 10
                       </td>
                     </tr>
                     <tr className="hover:bg-[#F5F4F2] transition-colors">
                       <td className="py-4 px-5 font-bold text-[#101E10]">
-                        IPBC (Carbamate Fungicide)
+                        IPBC + Terbutryn
                       </td>
                       <td className="py-4 px-5 text-black/80">
-                        Broad antimycotic wood & masonry
+                        Deep Fungal & Green Algae
                       </td>
                       <td className="py-4 px-5">
-                        <span className="bg-[#DFF4C8] text-[#101E10] font-semibold px-2 py-0.5 rounded text-xs">
-                          Dry-Film & Sealants
-                        </span>
-                      </td>
-                      <td className="py-4 px-5 text-black/75">
-                        pH sensitive (&gt;9.0 alkaline check)
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-[#F5F4F2] transition-colors">
-                      <td className="py-4 px-5 font-bold text-[#101E10]">
-                        Zinc Pyrithione / Terbutryn
-                      </td>
-                      <td className="py-4 px-5 text-black/80">
-                        Algae & exterior surface lichen
-                      </td>
-                      <td className="py-4 px-5">
-                        <span className="bg-[#DFF4C8] text-[#101E10] font-semibold px-2 py-0.5 rounded text-xs">
+                        <span className="bg-[#DFF4C8] text-[#101E10] font-semibold px-2.5 py-1 rounded text-xs">
                           Exterior Dry-Film
                         </span>
                       </td>
                       <td className="py-4 px-5 text-black/75">
-                        Synergistic dual-active blends
+                        Low VOC compliant
                       </td>
                     </tr>
                   </tbody>
