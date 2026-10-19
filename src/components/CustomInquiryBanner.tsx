@@ -1,19 +1,52 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function CustomInquiryBanner() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.defaultMuted = true;
+      video.muted = true;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Fallback if browser requires interaction
+        });
+      }
+    }
+  }, []);
+
   return (
-    <section className="w-full bg-white py-8 lg:py-12">
+    <section className="w-full bg-white py-10 lg:py-14">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
-        <div className="relative w-full rounded-[28px] overflow-hidden bg-[#DFF4C8]/50 p-8 sm:p-12 lg:p-14 border border-[#C6F19D]/60 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Column: Heading, Subtitle, and Contact Us Button below matching Figma */}
-          <div className="lg:col-span-7 flex flex-col gap-6 z-10">
-            <div className="flex flex-col gap-3 max-w-xl">
-              <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-[#101E10] leading-snug">
-                Have an inquiry or a custom requirement?
+        <div className="relative w-full rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#EDF9DF] p-8 sm:p-12 lg:p-16 min-h-[300px] sm:min-h-[340px] lg:min-h-[360px] flex items-center">
+          {/* Background Rotating Molecule Video matching Figma */}
+          <div className="absolute right-0 top-0 bottom-0 w-full sm:w-3/4 lg:w-3/5 h-full z-0 pointer-events-none overflow-hidden flex items-center justify-end">
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              poster="/images/custom-inquiry-figma-bg.png"
+              className="w-full h-full object-cover object-right mix-blend-multiply opacity-80 sm:opacity-100 pointer-events-none"
+            >
+              <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Foreground Narrative */}
+          <div className="relative z-10 flex flex-col gap-6 sm:gap-7 max-w-xl lg:max-w-2xl">
+            <div className="flex flex-col gap-3">
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-[#101E10] leading-[1.15] tracking-tight">
+                Have an inquiry or a<br className="hidden sm:inline" /> custom requirement?
               </h2>
-              <p className="text-sm sm:text-base text-black/80 font-normal leading-relaxed">
+              <p className="text-sm sm:text-base text-[#101E10]/80 font-normal leading-relaxed max-w-xl">
                 Tell us about your formulation — our technical team responds within one working day.
               </p>
             </div>
@@ -21,26 +54,10 @@ export default function CustomInquiryBanner() {
             <div>
               <Link
                 href="#inquiry"
-                className="inline-flex items-center gap-2 bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] px-7 py-3.5 rounded-xl font-bold text-base transition-all transform hover:-translate-y-0.5 shadow-md active:translate-y-0"
+                className="inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1a301a] text-[#C2EC9A] px-7 sm:px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base transition-all shadow-xs active:scale-95"
               >
                 Contact Us
-                <ArrowRight size={18} />
               </Link>
-            </div>
-          </div>
-
-          {/* Right Column: Hero Video Loop */}
-          <div className="lg:col-span-5 flex items-center justify-center lg:justify-end z-10">
-            <div className="relative w-[280px] h-[220px] sm:w-[360px] sm:h-[260px] rounded-2xl overflow-hidden bg-white/80 shadow-md">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
-              </video>
             </div>
           </div>
         </div>

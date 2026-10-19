@@ -1,69 +1,67 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, FileText } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-8 pb-16 lg:pt-14 lg:pb-20">
-      {/* Background Video from Figma */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center lg:justify-end">
+    <section className="relative w-full overflow-hidden bg-white pt-6 pb-12 sm:pb-16 lg:pt-10 lg:pb-16 xl:pt-12 xl:pb-20">
+      {/* Background Molecule Animation & Image */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-end">
         <video
           autoPlay
           loop
           muted
           playsInline
+          poster="/images/hero-bg.png"
           className="w-full h-full object-cover lg:object-contain lg:object-right opacity-90 lg:opacity-100"
         >
           <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
         </video>
       </div>
 
-      <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-8 lg:gap-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[360px] sm:min-h-[420px] lg:min-h-[460px]">
-          {/* Left Column Narrative */}
-          <div className="lg:col-span-7 flex flex-col gap-6 lg:gap-8 bg-white/70 lg:bg-transparent backdrop-blur-xs lg:backdrop-blur-none p-4 sm:p-6 lg:p-0 rounded-2xl">
-            {/* Tag Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#C4EF9C]/40 border border-[#B9AEFF]/30 w-fit backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-[#101E10] animate-pulse" />
-              <span className="text-xs sm:text-[13px] font-semibold tracking-wider uppercase text-[#101E10]">
-                SPECIALITY CHEMICAL SOLUTIONS
-              </span>
-            </div>
-
-            {/* Main Headline - breaks exactly into 2 lines matching Figma */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[60px] xl:text-[66px] font-extrabold text-[#101E10] leading-[1.24] tracking-tight">
-              Protection engineered at<br />
-              the <span className="relative inline-block px-2.5 sm:px-3.5 py-0.5 mx-1 bg-[#C6F19D] rounded-xl text-[#101E10] translate-y-0.5">molecular</span> level.
-            </h1>
-
-            {/* Subtitle Narrative */}
-            <p className="text-base sm:text-lg lg:text-[18px] text-black/80 max-w-2xl leading-relaxed font-normal">
-              <strong className="font-black text-[#101E10] tracking-tight">GuardExo</strong> — the biocides & preservatives brand of{" "}
-              <strong className="font-semibold text-[#101E10]">Chemtiver Speciality</strong> — safeguards paints, coatings,
-              construction chemicals and water systems against microbial attack, so every batch performs exactly as it was
-              formulated to.
-            </p>
+      <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col justify-between min-h-[440px] sm:min-h-[480px] lg:min-h-[500px] xl:min-h-[530px]">
+        {/* Content Container */}
+        <div className="flex flex-col gap-4 sm:gap-5 lg:gap-6 max-w-3xl">
+          {/* Tag Pill */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E7F9D7] border border-[#D5ECC4] w-fit">
+            <span className="w-2 h-2 rounded-full bg-[#172516]" />
+            <span className="text-xs sm:text-[12.5px] font-semibold tracking-wider uppercase text-[#172516]">
+              SPECIALITY CHEMICAL SOLUTIONS
+            </span>
           </div>
 
-          {/* Right Column: Empty column allowing the rotating molecule video to take center stage */}
-          <div className="hidden lg:block lg:col-span-5 pointer-events-none" />
+          {/* Main Headline - exactly 2 lines matching reference design */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[62px] xl:text-[68px] 2xl:text-[74px] font-extrabold text-[#101E10] leading-[1.1] tracking-tight">
+            <span className="block whitespace-normal sm:whitespace-nowrap">
+              Protection engineered at
+            </span>
+            <span className="block mt-1 sm:mt-1.5">
+              the{" "}
+              <span className="inline-block px-2.5 sm:px-3 py-0.5 mx-0.5 bg-[#C5F09C] rounded-lg text-[#101E10] align-baseline">
+                molecular
+              </span>{" "}
+              level.
+            </span>
+          </h1>
+
+          {/* Subtitle Narrative - clean normal weight font matching reference */}
+          <p className="text-[14px] sm:text-[15px] lg:text-[16px] text-[#222222] max-w-[480px] lg:max-w-[500px] leading-relaxed font-normal">
+            GuardExo — the biocides & preservatives brand of Chemtiver Speciality — safeguards paints, coatings, construction chemicals and water systems against microbial attack, so every batch performs exactly as it was formulated to.
+          </p>
         </div>
 
-        {/* Buttons placed at bottom-right of the Hero section matching Figma */}
-        <div className="flex flex-wrap items-center justify-start lg:justify-end gap-4 pt-2">
+        {/* Buttons placed at bottom-right of the Hero section matching reference design */}
+        <div className="flex flex-wrap items-center justify-start lg:justify-end gap-3.5 pt-8 lg:pt-0">
           <Link
             href="#featured-products"
-            className="inline-flex items-center justify-center gap-2 bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] px-7 py-3.5 rounded-xl font-bold text-base transition-all transform hover:-translate-y-0.5 shadow-lg active:translate-y-0"
+            className="inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1a301a] text-[#C2EC9A] px-6 sm:px-7 py-3 rounded-xl font-bold text-sm sm:text-[15px] tracking-wide transition-all shadow-xs active:scale-95"
           >
             Explore Products
-            <ArrowRight size={18} />
           </Link>
 
           <Link
             href="#inquiry"
-            className="inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-50 text-[#211A2B] border border-[#DFD7DD] px-6 py-3.5 rounded-xl font-bold text-base transition-all shadow-sm hover:shadow"
+            className="inline-flex items-center justify-center bg-white hover:bg-neutral-50 text-[#101E10] border border-neutral-300 px-6 sm:px-7 py-3 rounded-xl font-bold text-sm sm:text-[15px] tracking-wide transition-all shadow-xs active:scale-95"
           >
-            <FileText size={18} className="text-[#101E10]/70" />
             Request a Quote
           </Link>
         </div>

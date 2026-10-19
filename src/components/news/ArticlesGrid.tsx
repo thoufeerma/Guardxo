@@ -56,7 +56,7 @@ export const ARTICLES_DATA: Article[] = [
   },
   {
     id: "coa-tds-sds-batch-analysis",
-    image: "/news insight/What a COA, TDS and SDS tell you about a batch.jpg",
+    image: "/news insight/What a COA, TDS and SDS tell you.jpg",
     category: "REGULATORY",
     filterCategory: "Regulatory",
     date: "24 Feb 2025",

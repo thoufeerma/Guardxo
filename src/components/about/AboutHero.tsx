@@ -51,7 +51,7 @@ export default function AboutHero() {
           </div>
         </div>
 
-        {/* Large Facility Photography / Video Banner with Gurugram Badge */}
+        {/* Large Facility Photography / Video Banner */}
         <div className="relative w-full h-[360px] sm:h-[480px] lg:h-[544px] rounded-[24px] overflow-hidden shadow-xl bg-[#101E10]">
           <video
             autoPlay
@@ -64,14 +64,6 @@ export default function AboutHero() {
           </video>
           {/* Subtle gradient for depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-
-          {/* Floating Pill Badge at bottom left */}
-          <div className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#5AB900]" />
-            <span className="text-xs sm:text-sm font-bold text-[#101E10]">
-              Biocides & preservatives, made in Gurugram
-            </span>
-          </div>
         </div>
       </div>
     </section>

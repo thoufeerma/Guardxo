@@ -89,8 +89,8 @@ export default function FAQ() {
                   key={faq.question}
                   className={`transition-all duration-200 ${
                     isOpen
-                      ? "bg-white rounded-2xl p-6 border border-neutral-200/90 shadow-sm"
-                      : "bg-transparent border-0 p-4 sm:p-5"
+                      ? "bg-[#F5F4F2] rounded-2xl p-6 sm:p-7"
+                      : "bg-transparent border-0 p-5 sm:p-6"
                   }`}
                 >
                   <button
@@ -104,7 +104,7 @@ export default function FAQ() {
                   </button>
 
                   {isOpen && (
-                    <div className="pt-4 text-sm sm:text-base text-black/80 font-normal leading-relaxed animate-in fade-in duration-200">
+                    <div className="pt-4 text-sm sm:text-base text-neutral-700 font-normal leading-relaxed animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}

@@ -10,14 +10,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
           {/* Col 1: Brand & Identity (4 Cols) - Full white GUARDEXO wordmark */}
           <div className="lg:col-span-4 flex flex-col gap-6">
-            <div className="relative h-12 w-52 sm:w-60 flex items-center">
+            <div className="relative flex items-center">
               <Image
-                src="/images/guardxo-wordmark-white.svg"
+                src="/logo/Link - Logo.svg"
                 alt="GuardExo by Chemtiver Speciality"
-                width={240}
-                height={48}
-                className="object-contain"
-                style={{ width: "auto", height: "44px" }}
+                width={160}
+                height={26}
+                className="object-contain h-[28px] sm:h-[32px] w-auto brightness-0 invert"
               />
             </div>
             <p className="text-xs sm:text-sm text-white/75 font-normal leading-relaxed max-w-sm">

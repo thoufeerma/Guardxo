@@ -1,6 +1,6 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const PILLARS = [
   {
@@ -28,8 +28,17 @@ const PILLARS = [
 export default function AboutTechnicalExpertise() {
   return (
     <section className="relative w-full bg-[#101E10] text-white py-20 lg:py-28 overflow-hidden">
-      {/* Background Molecular Watermark */}
-      <div className="absolute -left-20 bottom-10 w-[500px] h-[500px] rounded-full bg-[#5AB900]/5 blur-3xl pointer-events-none" />
+      {/* Bottom-left Honeycomb Chemistry Hexagons directly from Figma node 12:14596 */}
+      <div className="absolute -left-10 sm:-left-14 bottom-[-30px] sm:bottom-[-50px] w-[380px] sm:w-[480px] lg:w-[560px] pointer-events-none select-none z-0">
+        <Image
+          src="/images/technical-expertise-hexagons.svg"
+          alt="Technical Expertise Chemistry Structure"
+          width={578}
+          height={561}
+          className="w-full h-auto object-contain opacity-85"
+          priority
+        />
+      </div>
 
       <div className="relative z-10 max-w-[1520px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -47,11 +56,10 @@ export default function AboutTechnicalExpertise() {
             </p>
             <div className="pt-2">
               <Link
-                href="/#services"
-                className="inline-flex items-center gap-2 bg-[#C2EC9A] hover:bg-[#b0e67e] text-[#101E10] px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-md active:scale-95"
+                href="/#featured-products"
+                className="inline-flex items-center justify-center bg-[#C2EC9A] hover:bg-[#b0e67e] text-[#101E10] px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-md active:scale-95"
               >
                 Explore Solutions & Expertise
-                <ArrowRight size={18} />
               </Link>
             </div>
           </div>
@@ -61,17 +69,17 @@ export default function AboutTechnicalExpertise() {
             {PILLARS.map((p) => (
               <div
                 key={p.num}
-                className="bg-white text-[#101E10] rounded-2xl p-6 sm:p-7 flex flex-col gap-3 shadow-md border border-neutral-200 transition-transform duration-200 hover:-translate-x-1"
+                className="bg-white text-[#101E10] rounded-2xl p-6 sm:p-7 flex flex-col gap-2.5 shadow-sm border border-neutral-200/80 transition-transform duration-200 hover:-translate-x-1"
               >
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
+                  <span className="text-base sm:text-lg font-semibold text-neutral-500 font-sans flex-none">
                     {p.num}
                   </span>
-                  <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">
+                  <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
                     {p.title}
                   </h4>
                 </div>
-                <p className="text-sm sm:text-[15px] text-black/80 font-normal leading-relaxed pl-0 sm:pl-9">
+                <p className="text-sm sm:text-[15px] text-neutral-600 font-normal leading-relaxed">
                   {p.text}
                 </p>
               </div>

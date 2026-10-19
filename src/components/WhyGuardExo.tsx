@@ -37,16 +37,11 @@ export default function WhyGuardExo() {
   return (
     <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
-        {/* Section Header with inline dark rounded rectangle number badge */}
+        {/* Section Header */}
         <div className="flex flex-col gap-3">
-          <div className="flex items-center gap-2.5">
-            <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-[#101E10] text-[#C6F19D] text-xs font-semibold font-sans">
-              02
-            </span>
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
-              COMPETITIVE VALUE
-            </span>
-          </div>
+          <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+            COMPETITIVE VALUE
+          </span>
           <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight uppercase">
             WHY GUARDEXO
           </h2>
@@ -57,19 +52,19 @@ export default function WhyGuardExo() {
           {REASONS.map((reason) => (
             <div
               key={reason.num}
-              className="bg-white rounded-[24px] p-8 border border-neutral-200/80 shadow-sm flex flex-col gap-5 hover:shadow-md transition-shadow"
+              className="bg-white rounded-[24px] p-7 sm:p-8 border border-neutral-200/70 shadow-xs flex flex-col gap-3.5 hover:shadow-md transition-shadow"
             >
               {/* Dark rounded rectangle number badge placed inline with the card title in regular font */}
               <div className="flex items-start gap-3">
-                <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans mt-1.5 flex-none">
+                <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans mt-1 flex-none">
                   {reason.num}
                 </span>
-                <h4 className="text-2xl sm:text-[26px] font-bold text-[#101E10] leading-[1.25]">
+                <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
                   {reason.title}
                 </h4>
               </div>
 
-              <p className="text-sm text-black/80 font-normal leading-relaxed pl-0 sm:pl-9">
+              <p className="text-[15px] sm:text-base text-neutral-600 font-normal leading-relaxed">
                 {reason.text}
               </p>
             </div>

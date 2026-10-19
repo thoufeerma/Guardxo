@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const TESTIMONIALS = [
@@ -35,7 +36,7 @@ export default function Testimonials() {
   const current = TESTIMONIALS[currentIdx];
 
   return (
-    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
+    <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Section Header */}
         <div className="flex flex-col gap-3">
@@ -94,8 +95,19 @@ export default function Testimonials() {
           </div>
 
           {/* Right: Chemtiver Speciality Profile Card */}
-          <div className="lg:col-span-5 bg-[#101E10] text-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between gap-8 shadow-xl">
-            <div className="flex flex-col gap-4">
+          <div className="relative overflow-hidden lg:col-span-5 bg-[#101E10] text-white rounded-[32px] p-8 sm:p-10 flex flex-col justify-between gap-8 shadow-xl">
+            {/* Background Image provided by user */}
+            <div className="absolute inset-0 pointer-events-none">
+              <Image
+                src="/Home-page/manufacturing partner.png"
+                alt="Manufacturing Partner Background"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+
+            <div className="relative z-10 flex flex-col gap-4">
               <span className="text-xs font-semibold tracking-wider text-[#C6F19D] uppercase">
                 MANUFACTURING PARTNER
               </span>
@@ -126,7 +138,7 @@ export default function Testimonials() {
 
             <Link
               href="#inquiry"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#C6F19D] hover:underline group"
+              className="relative z-10 inline-flex items-center gap-2 text-sm font-bold text-[#C6F19D] hover:underline group"
             >
               Read all report
               <ArrowUpRight

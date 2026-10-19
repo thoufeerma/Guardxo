@@ -15,14 +15,14 @@ const INDUSTRIES: IndustryItem[] = [
   {
     num: "01",
     name: "Paints & Coatings",
-    headline: "Paints & Architectural Coatings",
+    headline: "Paints & Coatings",
     description:
       "Water-based paints require rigorous in-can bio-stabilizers to prevent fungal bloom, viscosity decay, and foul odors across humid distribution channels.",
   },
   {
     num: "02",
     name: "Construction Materials",
-    headline: "Construction Materials & Plasters",
+    headline: "Construction Materials",
     description:
       "Exterior facades, renders, and joint compounds demand leach-resistant dry-film fungicides capable of withstanding intense monsoon weathering.",
   },
@@ -36,28 +36,28 @@ const INDUSTRIES: IndustryItem[] = [
   {
     num: "04",
     name: "Adhesives",
-    headline: "Polymer Adhesives & Sealants",
+    headline: "Adhesives",
     description:
       "High-solids PVA slurries, starch resins, and latex glues require low-odor, zero-VOC biocides that ensure long open times and bond integrity.",
   },
   {
     num: "05",
     name: "Agriculture",
-    headline: "Agricultural Formulations",
+    headline: "Agriculture",
     description:
       "Agrochemical suspensions and seed treatment concentrates benefit from selective bactericides that protect active ingredients without phytotoxic reactions.",
   },
   {
     num: "06",
     name: "Inks",
-    headline: "Printing Inks & Resins",
+    headline: "Inks",
     description:
       "Flexographic and packaging inks need swift antimicrobial protection that won't disrupt dye solubility, drying rate, or fountain solution pH balance.",
   },
   {
     num: "07",
     name: "Water Treatment",
-    headline: "Industrial Recirculating Water",
+    headline: "Water Treatment",
     description:
       "Rapid-action non-oxidizing microbiocides prevent sulfate-reducing bacterial fouling, algae growth, and corrosive biofilm buildup in cooling systems.",
   },
@@ -88,40 +88,44 @@ export default function Industries({
 
         {/* 2-Column Interactive Display */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Column: List of 7 Industry Rows */}
-          <div className="lg:col-span-6 flex flex-col gap-3">
+          {/* Left Column: List of 7 Industry Rows in Rounded Boxes matching Figma */}
+          <div className="lg:col-span-6 flex flex-col gap-2.5 sm:gap-3">
             {INDUSTRIES.map((ind, idx) => {
               const isSelected = selectedIdx === idx;
-              const isConstructionChemicals = ind.name === "Construction Chemicals";
-              const labelColor =
-                isSelected && isConstructionChemicals
-                  ? "text-[#5AB900]"
-                  : isSelected
-                  ? "text-[#101E10]"
-                  : "text-black";
 
               return (
                 <button
                   key={ind.num}
+                  type="button"
                   onClick={() => setSelectedIdx(idx)}
-                  className={`w-full flex items-center justify-between p-4 px-5 rounded-2xl text-left transition-all duration-200 cursor-pointer border ${
+                  className={`w-full flex items-center justify-between py-3.5 px-5 sm:px-6 rounded-2xl text-left transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? "bg-[#C6F19D] border-[#A8E272] shadow-xs font-bold"
-                      : "bg-white border-neutral-200/80 hover:bg-neutral-50 text-black shadow-2xs"
+                      ? "bg-[#E2F7C5] shadow-xs"
+                      : "bg-[#F4F3F0] hover:bg-[#EAE8E3]"
                   }`}
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4">
-                    <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
+                    <span
+                      className={`text-sm font-medium w-6 flex-none ${
+                        isSelected ? "text-[#5AB900]" : "text-neutral-400"
+                      }`}
+                    >
                       {ind.num}
                     </span>
-                    <span className={`text-base sm:text-lg font-semibold ${labelColor}`}>
+                    <span
+                      className={`text-[15px] sm:text-base ${
+                        isSelected
+                          ? "font-bold text-[#5AB900]"
+                          : "font-semibold text-black"
+                      }`}
+                    >
                       {ind.name}
                     </span>
                   </div>
                   <ArrowRight
                     size={18}
                     className={`flex-none transition-transform ${
-                      isSelected ? "text-[#101E10] translate-x-1" : "text-black/40"
+                      isSelected ? "text-[#5AB900] translate-x-1" : "text-black"
                     }`}
                   />
                 </button>
@@ -129,7 +133,7 @@ export default function Industries({
             })}
           </div>
 
-          {/* Right Column: Video Preview Card with Centered Caption */}
+          {/* Right Column: Photo/Video with Centered Caption Card matching Figma */}
           <div className="lg:col-span-6 relative w-full h-[420px] sm:h-[480px] rounded-[28px] overflow-hidden shadow-lg bg-[#101E10]">
             <video
               key={videoSrc}
@@ -137,21 +141,24 @@ export default function Industries({
               loop
               muted
               playsInline
+              poster="/images/industry-chemicals.png"
               className="w-full h-full object-cover"
             >
               <source src={videoSrc} type="video/mp4" />
             </video>
-            {/* Dark gradient for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            {/* Subtle overlay for depth */}
+            <div className="absolute inset-0 bg-black/20" />
 
             {/* Centered Caption Card (without SECTOR FOCUS label) matching Figma */}
-            <div className="absolute inset-x-6 bottom-6 p-6 sm:p-7 rounded-2xl glass-card shadow-2xl flex flex-col items-center text-center gap-2">
-              <h5 className="text-xl sm:text-2xl font-bold text-[#101E10]">
-                {activeIndustry.headline}
-              </h5>
-              <p className="text-sm text-black/85 leading-relaxed font-normal max-w-lg">
-                {activeIndustry.description}
-              </p>
+            <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-8 pointer-events-none">
+              <div className="bg-white/70 backdrop-blur-md rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 shadow-xl border border-white/50 flex flex-col items-start text-left gap-2.5 max-w-md w-full">
+                <h5 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
+                  {activeIndustry.headline}
+                </h5>
+                <p className="text-xs sm:text-[14px] text-neutral-800 leading-relaxed font-normal">
+                  {activeIndustry.description}
+                </p>
+              </div>
             </div>
           </div>
         </div>

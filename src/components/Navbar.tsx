@@ -30,30 +30,29 @@ export default function Navbar({ activePage }: NavbarProps) {
     return pathname === href || pathname.startsWith(href + "/");
   };
 
-  // List of all 7 pages created for GuardXO
+  // Nav links matching reference design exactly
   const navLinks = [
     { name: "Home", href: "/", active: isLinkActive("Home", "/") },
-    { name: "About", href: "/about", active: isLinkActive("About", "/about") },
     {
       name: "In-Can Preservatives",
       href: "/in-can-preservatives",
       active: isLinkActive("In-Can Preservatives", "/in-can-preservatives"),
     },
+    { name: "Biocides", href: "/#featured-products", active: false },
     {
-      name: "Product Detail",
-      href: "/products/guardexo-bt-20",
-      active: isLinkActive("Product Detail", "/products/guardexo-bt-20"),
-    },
-    {
-      name: "News & Insights",
-      href: "/news",
-      active: isLinkActive("News & Insights", "/news"),
-    },
-    {
-      name: "Article",
+      name: "Dry-Film",
       href: "/news/choosing-between-in-can-and-dry-film-preservatives",
       active: isLinkActive("Article", "/news/choosing-between-in-can-and-dry-film-preservatives"),
     },
+    { name: "Industries", href: "/#industries", active: false },
+    { name: "Applications", href: "/#categories", active: false },
+    { name: "Solutions/Expertise", href: "/#services", active: false },
+    {
+      name: "Resources",
+      href: "/news",
+      active: isLinkActive("News & Insights", "/news") || isLinkActive("Resources", "/news"),
+    },
+    { name: "About", href: "/about", active: isLinkActive("About", "/about") },
     { name: "Contact", href: "/contact", active: isLinkActive("Contact", "/contact") },
   ];
 
@@ -69,44 +68,35 @@ export default function Navbar({ activePage }: NavbarProps) {
               width={143}
               height={22}
               priority
-              className="object-contain h-[26px] sm:h-7 md:h-[30px] w-auto"
+              className="object-contain h-[23px] sm:h-[25px] md:h-[27px] w-auto"
             />
           </div>
         </Link>
 
-        {/* Desktop Navigation Links - all 7 created pages */}
-        <nav className="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-8 text-[13px] xl:text-[14px] font-semibold text-[#101E10]">
+        {/* Desktop Navigation Links - exactly matching reference design */}
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-6 text-[13px] xl:text-[13.5px] 2xl:text-[14px] font-medium text-[#101E10]">
           {navLinks.map((link) => (
             <div key={link.name} className="relative flex flex-col items-center py-2">
               <Link
                 href={link.href}
                 className={`transition-colors hover:text-[#5AB900] whitespace-nowrap ${
-                  link.active ? "text-[#101E10] font-bold" : "text-[#101E10]/80"
+                  link.active ? "text-[#101E10] font-semibold" : "text-[#101E10]/80"
                 }`}
               >
                 {link.name}
               </Link>
               {link.active && (
-                <div className="absolute bottom-0 w-full min-w-[28px] max-w-[40px] h-[2px] bg-[#101E10] rounded-full" />
+                <div className="absolute bottom-0 w-full min-w-[24px] h-[2px] bg-[#101E10]" />
               )}
             </div>
           ))}
         </nav>
 
-        {/* Right CTA Action */}
-        <div className="hidden sm:flex items-center gap-2.5 xl:gap-3 flex-none">
-          <Link
-            href="/admin/products"
-            title="Product & Category Operations (Node.js + PostgreSQL)"
-            className="inline-flex items-center gap-1.5 bg-[#101E10]/5 hover:bg-[#101E10]/10 text-[#101E10] px-3 py-2 rounded-lg text-xs font-bold transition-colors border border-[#101E10]/10"
-          >
-            <Database size={14} className="text-[#5AB900]" />
-            <span className="hidden xl:inline">Manage Products</span>
-          </Link>
-
+        {/* Right CTA Action - GET ENQUIRY only matching reference image */}
+        <div className="hidden sm:flex items-center flex-none">
           <Link
             href="/contact#inquiry"
-            className="inline-flex items-center justify-center bg-[#C2EC9A] hover:bg-[#b0e67e] text-[#101E10] px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-transform active:scale-95 shadow-sm whitespace-nowrap"
+            className="inline-flex items-center justify-center bg-[#C2EC9A] hover:bg-[#b0e67e] text-[#101E10] px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all active:scale-95 shadow-xs whitespace-nowrap"
           >
             GET ENQUIRY
           </Link>

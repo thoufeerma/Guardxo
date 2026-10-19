@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { PRODUCTS_CATALOGUE, ProductGrade } from "@/lib/products-data";
 
 export default function FeaturedProductsTable() {
@@ -53,19 +53,19 @@ export default function FeaturedProductsTable() {
             className="inline-flex items-center gap-2 text-base font-bold text-[#101E10] hover:text-[#5AB900] group"
           >
             View all products
-            <ArrowUpRight
+            <ArrowRight
               size={18}
-              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="transition-transform group-hover:translate-x-1"
             />
           </Link>
         </div>
 
         {/* Technical Catalogue Matrix Table without filters and search box matching Figma */}
-        <div className="w-full bg-white rounded-[24px] border border-[#DFD7DD] shadow-sm overflow-hidden">
+        <div className="w-full bg-white rounded-[24px] border border-[#DFD7DD] shadow-xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-[#FAF8FA]/80 border-b border-[#DFD7DD] text-xs font-semibold tracking-wider text-black/70 uppercase">
+                <tr className="bg-white border-b border-[#DFD7DD] text-xs font-semibold tracking-wider text-black/60 uppercase">
                   <th className="py-5 px-6 w-16">#</th>
                   <th className="py-5 px-6">GRADE / CHEMISTRY</th>
                   <th className="py-5 px-6">PRODUCT FAMILY</th>
@@ -75,8 +75,23 @@ export default function FeaturedProductsTable() {
               </thead>
               <tbody className="divide-y divide-[#EDE7EC] text-sm">
                 {products.length > 0 ? (
-                  products.map((prod) => {
-                    const isInCan = prod.family === "In-Can Preservatives";
+                  products.slice(0, 8).map((prod) => {
+                    const familyLower = (prod.family || "").toLowerCase();
+                    const isIndustrialBiocide =
+                      familyLower.includes("biocide") ||
+                      prod.grade === "GuardExo CMT 14" ||
+                      prod.grade === "GuardExo BT 20";
+
+                    // Normalize family display text exactly as shown in Figma
+                    let familyDisplay = prod.family;
+                    if (familyLower.includes("in-can")) {
+                      familyDisplay = "In-Can Preservative";
+                    } else if (familyLower.includes("biocide")) {
+                      familyDisplay = "Industrial Biocide";
+                    } else if (familyLower.includes("dry film")) {
+                      familyDisplay = "Dry Film Preservatives";
+                    }
+
                     return (
                       <tr
                         key={prod.id}
@@ -92,7 +107,7 @@ export default function FeaturedProductsTable() {
                           <div className="flex items-center gap-3">
                             <span
                               className={`w-2.5 h-2.5 rounded-full flex-none ${
-                                isInCan ? "bg-black" : "bg-[#C6F19D]"
+                                isIndustrialBiocide ? "bg-[#C6F19D]" : "bg-black"
                               }`}
                             />
                             <span className="font-bold text-[#101E10] text-[16px]">
@@ -102,8 +117,8 @@ export default function FeaturedProductsTable() {
                         </td>
 
                         {/* Product Family as plain text matching Figma */}
-                        <td className="py-5 px-6 text-black/80 font-medium">
-                          {prod.family}
+                        <td className="py-5 px-6 text-black/80 font-normal">
+                          {familyDisplay}
                         </td>
 
                         {/* Application */}

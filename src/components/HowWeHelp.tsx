@@ -33,7 +33,7 @@ export default function HowWeHelp() {
           src="/Home-page/how we help background.png"
           alt="How We Help Background"
           fill
-          className="object-cover object-center opacity-90"
+          className="object-cover object-center opacity-100"
           priority
         />
       </div>
@@ -43,7 +43,7 @@ export default function HowWeHelp() {
           {/* Left Column Narrative & Recall Guarantee */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <div className="flex items-center gap-2.5">
-              <span className="text-[14px] font-semibold tracking-wider uppercase text-[#C6F19D]">
+              <span className="text-[13px] sm:text-[14px] font-semibold tracking-wider uppercase text-white">
                 How We Help
               </span>
             </div>
@@ -74,8 +74,8 @@ export default function HowWeHelp() {
                 className="bg-[#C6F19D] text-[#101E10] rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all duration-300 hover:scale-[1.02] shadow-sm"
               >
                 <div className="flex items-center gap-3">
-                  {/* Number Badge: dark, rounded rectangle with white regular font numbers inline with title */}
-                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
+                  {/* Number Badge: dark rounded rectangle with card-green numbers matching Figma */}
+                  <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-[#C6F19D] text-xs font-bold font-sans flex-none">
                     {card.num}
                   </span>
                   <h5 className="text-[20px] font-bold text-[#101E10] tracking-tight">

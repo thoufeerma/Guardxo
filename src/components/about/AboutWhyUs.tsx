@@ -12,11 +12,11 @@ export default function AboutWhyUs() {
     <section className="w-full bg-white py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
         {/* Header */}
-        <div className="flex flex-col gap-3 max-w-3xl">
+        <div className="flex flex-col gap-3">
           <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
             WHY GUARDEXO
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-[#101E10] leading-tight">
             Why manufacturers choose to work with us.
           </h2>
         </div>

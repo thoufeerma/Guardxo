@@ -2,7 +2,7 @@ export interface ProductGrade {
   id: string;
   num: string;
   grade: string;
-  family: "In-Can Preservatives" | "Industrial Biocides" | "Dry Film Preservatives";
+  family: string;
   targetApplication: string;
   badge?: string;
   description: string;
@@ -14,7 +14,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-01",
     num: "01",
     grade: "GuardExo FMT",
-    family: "In-Can Preservatives",
+    family: "In-Can Preservative",
     targetApplication: "Emulsions, PVA slurries, formaldehyde-free matrix",
     description: "Advanced formaldehyde-free wet-state preservation designed specifically for polymer emulsions and architectural coatings.",
     slug: "guardexo-fmt"
@@ -23,7 +23,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-02",
     num: "02",
     grade: "GuardExo CMT 15",
-    family: "In-Can Preservatives",
+    family: "In-Can Preservative",
     targetApplication: "CMIT/MIT 1.5% aqueous solution, high shock resistance",
     description: "Broad-spectrum microbicide providing rapid kill kinetics and robust headspace protection in aqueous manufacturing environments.",
     slug: "guardexo-cmt-15"
@@ -32,7 +32,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-03",
     num: "03",
     grade: "GuardExo CMT 14",
-    family: "Industrial Biocides",
+    family: "Industrial Biocide",
     targetApplication: "Recirculating industrial cooling water, broad pH 2-9",
     description: "Engineered biocide for cooling towers and industrial loop defense, preventing aggressive slime and biofilm accumulation.",
     slug: "guardexo-cmt-14"
@@ -41,7 +41,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-04",
     num: "04",
     grade: "GuardExo BT 20P",
-    family: "In-Can Preservatives",
+    family: "In-Can Preservative",
     targetApplication: "BIT 20% in propylene glycol, zero VOC compliance",
     description: "High-purity Benzisothiazolinone formulated in glycol for eco-compliant zero-VOC paints, slurries, and adhesives.",
     slug: "guardexo-bt-20p"
@@ -50,7 +50,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-05",
     num: "05",
     grade: "GuardExo BT 20",
-    family: "Industrial Biocides",
+    family: "Industrial Biocide",
     targetApplication: "Standard dipropylene glycol biocide for plant systems",
     description: "Dependable long-term preservation for industrial fluid reservoirs, process waters, and alkaline chemical systems.",
     slug: "guardexo-bt-20"
@@ -59,7 +59,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-06",
     num: "06",
     grade: "GuardExo BT 20D",
-    family: "In-Can Preservatives",
+    family: "In-Can Preservative",
     targetApplication: "Aqueous dispersion BIT for alkaline construction pastes",
     description: "Specialized water-based BIT dispersion for plaster, tile adhesives, cementitious mortars, and high-pH construction products.",
     slug: "guardexo-bt-20d"
@@ -77,7 +77,7 @@ export const PRODUCTS_CATALOGUE: ProductGrade[] = [
     id: "prod-08",
     num: "08",
     grade: "GuardExo MBT",
-    family: "Industrial Biocides",
+    family: "In-Can Preservative",
     targetApplication: "Methylene bis-thiocyanate fast broad-spectrum bactericide",
     description: "Ultra-fast contact biocide for acute shock dosing against anaerobic sulfate-reducing bacteria in process loops.",
     slug: "guardexo-mbt"
