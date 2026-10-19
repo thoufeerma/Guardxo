@@ -25,7 +25,16 @@ export default function AboutWhyUs() {
         {/* Bento Grid Layout (3 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Featured Large Card (Spans 2 columns on lg) matching Figma */}
-          <div className="lg:col-span-2 bg-[#101E10] text-white rounded-[24px] p-8 sm:p-12 flex flex-col justify-between gap-8 shadow-xl relative overflow-hidden">
+          <div className="lg:col-span-2 bg-[#101E10] text-white rounded-[24px] p-8 sm:p-12 flex flex-col justify-between gap-8 shadow-xl relative overflow-hidden min-h-[300px]">
+            {/* Shared Background Image with Hexagons */}
+            <Image
+              src="/images/technical-depth-bg.png"
+              alt="Technical Depth Graphic"
+              fill
+              className="object-cover object-right pointer-events-none select-none z-0"
+              priority
+            />
+
             <div className="relative z-10 flex items-center justify-between">
               <div className="w-12 h-12 rounded-xl bg-[#C6F19D] text-[#101E10] flex items-center justify-center font-bold">
                 <FlaskConical size={24} strokeWidth={2} />
@@ -43,17 +52,6 @@ export default function AboutWhyUs() {
                 Chemists who understand your formulation, process and constraints from the ground up,
                 guaranteeing optimal dosage and protection without formulation drift.
               </p>
-            </div>
-
-            {/* Honeycomb Hexagon Graphic matching Figma */}
-            <div className="absolute right-0 bottom-0 pointer-events-none select-none z-0 translate-x-4 translate-y-4 sm:translate-x-0 sm:translate-y-0">
-              <Image
-                src="/images/why-us-hexagons.svg"
-                alt="Chemistry Hexagons"
-                width={360}
-                height={230}
-                className="w-[260px] sm:w-[320px] lg:w-[360px] h-auto object-contain opacity-95"
-              />
             </div>
           </div>
 
