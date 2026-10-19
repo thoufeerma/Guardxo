@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 import {
   FlaskConical,
-  Headphones,
-  FileCheck,
-  Truck,
+  LifeBuoy,
+  ShieldCheck,
+  Clock,
   Lightbulb,
 } from "lucide-react";
 
@@ -23,11 +24,11 @@ export default function AboutWhyUs() {
 
         {/* Bento Grid Layout (3 Columns) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Featured Large Card (Spans 2 columns on lg) */}
+          {/* Featured Large Card (Spans 2 columns on lg) matching Figma */}
           <div className="lg:col-span-2 bg-[#101E10] text-white rounded-[24px] p-8 sm:p-12 flex flex-col justify-between gap-8 shadow-xl relative overflow-hidden">
             <div className="relative z-10 flex items-center justify-between">
-              <div className="w-12 h-12 rounded-xl bg-black border border-white/20 text-white flex items-center justify-center font-bold">
-                <FlaskConical size={24} />
+              <div className="w-12 h-12 rounded-xl bg-[#C6F19D] text-[#101E10] flex items-center justify-center font-bold">
+                <FlaskConical size={24} strokeWidth={2} />
               </div>
               <span className="text-xs font-bold tracking-widest text-[#C6F19D] uppercase">
                 CORE VALUE
@@ -44,14 +45,22 @@ export default function AboutWhyUs() {
               </p>
             </div>
 
-            {/* Subtle glow accent */}
-            <div className="absolute right-0 bottom-0 w-80 h-80 rounded-full bg-[#5AB900]/10 blur-3xl pointer-events-none" />
+            {/* Honeycomb Hexagon Graphic matching Figma */}
+            <div className="absolute right-0 bottom-0 pointer-events-none select-none z-0 translate-x-4 translate-y-4 sm:translate-x-0 sm:translate-y-0">
+              <Image
+                src="/images/why-us-hexagons.svg"
+                alt="Chemistry Hexagons"
+                width={360}
+                height={230}
+                className="w-[260px] sm:w-[320px] lg:w-[360px] h-auto object-contain opacity-95"
+              />
+            </div>
           </div>
 
-          {/* Card 2: Customer Support */}
-          <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
-              <Headphones size={24} />
+          {/* Card 2: Customer Support (LifeBuoy icon matching Figma) */}
+          <div className="bg-[#EEFBE2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
+              <LifeBuoy size={24} strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-2">
               <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">
@@ -64,10 +73,10 @@ export default function AboutWhyUs() {
             </div>
           </div>
 
-          {/* Card 3: Regulatory Expertise */}
-          <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
-              <FileCheck size={24} />
+          {/* Card 3: Regulatory Expertise (ShieldCheck icon matching Figma) */}
+          <div className="bg-[#EEFBE2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
+              <ShieldCheck size={24} strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-2">
               <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">
@@ -80,10 +89,10 @@ export default function AboutWhyUs() {
             </div>
           </div>
 
-          {/* Card 4: Supply Reliability */}
-          <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
-              <Truck size={24} />
+          {/* Card 4: Supply Reliability (Clock icon matching Figma) */}
+          <div className="bg-[#EEFBE2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
+              <Clock size={24} strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-2">
               <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">
@@ -96,10 +105,10 @@ export default function AboutWhyUs() {
             </div>
           </div>
 
-          {/* Card 5: Innovation Capability */}
-          <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
-              <Lightbulb size={24} />
+          {/* Card 5: Innovation Capability (Lightbulb icon matching Figma) */}
+          <div className="bg-[#EEFBE2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
+              <Lightbulb size={24} strokeWidth={2} />
             </div>
             <div className="flex flex-col gap-2">
               <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10]">

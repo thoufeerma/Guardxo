@@ -2,20 +2,21 @@ import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  Award,
+  LifeBuoy,
   FlaskConical,
   FileText,
-  CheckCircle2,
+  BadgeCheck,
   Globe,
+  CheckCircle2,
 } from "lucide-react";
 
 const CERTIFICATES = [
-  { icon: Award, title: "ISO Certification" },
-  { icon: FlaskConical, title: "REACH Readiness" },
-  { icon: FileText, title: "Documentation" },
-  { icon: CheckCircle2, title: "Quality Management" },
-  { icon: Globe, title: "Export Documentation" },
-  { icon: CheckCircle2, title: "Other Accreditations" },
+  { icon: LifeBuoy, line1: "ISO", line2: "Certification" },
+  { icon: FlaskConical, line1: "REACH", line2: "Readiness" },
+  { icon: FileText, line1: "Documentation", line2: "" },
+  { icon: BadgeCheck, line1: "Quality", line2: "Management" },
+  { icon: Globe, line1: "Export", line2: "Documentation" },
+  { icon: CheckCircle2, line1: "Other", line2: "Accreditations" },
 ];
 
 export default function CertificationsCompliance() {
@@ -56,14 +57,20 @@ export default function CertificationsCompliance() {
                 const Icon = cert.icon;
                 return (
                   <div
-                    key={cert.title}
-                    className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3.5 shadow-xs border border-transparent hover:shadow-md transition-shadow"
+                    key={cert.line1 + cert.line2}
+                    className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center text-center gap-3.5 shadow-xs border border-transparent hover:shadow-md transition-shadow min-h-[140px]"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
-                      <Icon size={24} />
+                    <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none">
+                      <Icon size={22} strokeWidth={2} />
                     </div>
                     <span className="text-xs sm:text-[13px] font-semibold text-[#101E10] leading-snug">
-                      {cert.title}
+                      {cert.line1}
+                      {cert.line2 && (
+                        <>
+                          <br />
+                          {cert.line2}
+                        </>
+                      )}
                     </span>
                   </div>
                 );
