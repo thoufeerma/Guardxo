@@ -42,12 +42,12 @@ export default function CustomInquiryBanner() {
           </div>
 
           {/* Foreground Narrative */}
-          <div className="relative z-10 flex flex-col gap-6 sm:gap-7 max-w-xl lg:max-w-2xl">
+          <div className="relative z-10 flex flex-col gap-6 sm:gap-7 max-w-full">
             <div className="flex flex-col gap-3">
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-bold text-[#101E10] leading-[1.15] tracking-tight">
                 Have an inquiry or a<br className="hidden sm:inline" /> custom requirement?
               </h2>
-              <p className="text-sm sm:text-base text-[#101E10]/80 font-normal leading-relaxed max-w-xl">
+              <p className="text-sm sm:text-base text-[#101E10]/80 font-normal leading-relaxed whitespace-normal sm:whitespace-nowrap">
                 Tell us about your formulation — our technical team responds within one working day.
               </p>
             </div>
