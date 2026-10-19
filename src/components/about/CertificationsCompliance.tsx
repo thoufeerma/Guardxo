@@ -3,20 +3,19 @@ import Link from "next/link";
 import {
   ArrowRight,
   Award,
-  Globe2,
+  FlaskConical,
   FileText,
-  ShieldCheck,
-  PlaneTakeoff,
-  BadgeCheck,
+  CheckCircle2,
+  Globe,
 } from "lucide-react";
 
 const CERTIFICATES = [
   { icon: Award, title: "ISO Certification" },
-  { icon: Globe2, title: "REACH Readiness" },
+  { icon: FlaskConical, title: "REACH Readiness" },
   { icon: FileText, title: "Documentation" },
-  { icon: ShieldCheck, title: "Quality Management" },
-  { icon: PlaneTakeoff, title: "Export Documentation" },
-  { icon: BadgeCheck, title: "Other Accreditations" },
+  { icon: CheckCircle2, title: "Quality Management" },
+  { icon: Globe, title: "Export Documentation" },
+  { icon: CheckCircle2, title: "Other Accreditations" },
 ];
 
 export default function CertificationsCompliance() {
@@ -63,7 +62,7 @@ export default function CertificationsCompliance() {
                     <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
                       <Icon size={24} />
                     </div>
-                    <span className="text-sm font-bold text-[#101E10] leading-snug">
+                    <span className="text-xs sm:text-[13px] font-semibold text-[#101E10] leading-snug">
                       {cert.title}
                     </span>
                   </div>

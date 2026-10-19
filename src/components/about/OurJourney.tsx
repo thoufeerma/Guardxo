@@ -5,36 +5,35 @@ const MILESTONES = [
     num: "01",
     tag: "MILESTONE",
     title: "Founded as Chemtiver Speciality",
-    detail: "Established core chemical synthesis facility in Gurugram.",
+    year: "2018", // Client to confirm year
     highlight: false,
   },
   {
     num: "02",
     tag: "MILESTONE",
     title: "Entry into Biocides & Preservatives",
-    detail: "Developed initial isothiazolinone & BIT formulations.",
+    year: "2020", // Client to confirm year
     highlight: false,
   },
   {
     num: "03",
     tag: "MILESTONE",
     title: "GuardExo Brand Launched",
-    detail: "Dedicated brand engineered for industrial preservation.",
+    year: "2022", // Client to confirm year
     highlight: false,
   },
   {
     num: "04",
     tag: "MILESTONE",
     title: "Expansion into Export Markets",
-    detail: "Certified REACH-ready grades dispatched to 12+ countries.",
+    year: "2024", // Client to confirm year
     highlight: false,
   },
   {
     num: "05",
     tag: "MILESTONE",
     title: "Proven Market Leadership",
-    detail: "Active Operations across 7 demanding manufacturing sectors.",
-    statusBadge: "Active Operations",
+    year: "ACTIVE OPERATIONS",
     highlight: true,
   },
 ];
@@ -64,7 +63,7 @@ export default function OurJourney() {
 
               {/* Milestone Card */}
               <div
-                className={`flex-1 rounded-2xl p-6 flex flex-col justify-between gap-6 transition-all duration-300 hover:shadow-md ${
+                className={`flex-1 rounded-2xl p-6 flex flex-col justify-between gap-6 transition-all duration-300 hover:shadow-md min-h-[190px] sm:min-h-[210px] ${
                   m.highlight
                     ? "bg-[#C6F19D] text-[#101E10] shadow-sm border border-[#5AB900]/40"
                     : "bg-white text-[#101E10] border border-neutral-200/80 shadow-2xs"
@@ -79,16 +78,20 @@ export default function OurJourney() {
                   </h4>
                 </div>
 
-                <div className="flex flex-col gap-2 pt-4 border-t border-black/10">
-                  <p className="text-xs sm:text-[13px] text-black/75 leading-relaxed font-normal">
-                    {m.detail}
-                  </p>
-                  {m.statusBadge && (
-                    <span className="w-fit text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-[#101E10] text-[#C6F19D] font-sans">
-                      {m.statusBadge}
+                {/* Bottom line: year for 01-04 with divider line, card 05 as plain text without divider line or black badge */}
+                {m.num === "05" ? (
+                  <div className="pt-2">
+                    <span className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-[#101E10]">
+                      {m.year}
                     </span>
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <div className="pt-3 border-t border-black/10">
+                    <span className="text-xs sm:text-[13px] font-semibold text-black/60 tracking-wider">
+                      {m.year}
+                    </span>
+                  </div>
+                )}
               </div>
             </div>
           ))}

@@ -29,13 +29,13 @@ export default function AboutTechnicalExpertise() {
   return (
     <section className="relative w-full bg-[#101E10] text-white py-20 lg:py-28 overflow-hidden">
       {/* Bottom-left Honeycomb Chemistry Hexagons directly from Figma node 12:14596 */}
-      <div className="absolute -left-10 sm:-left-14 bottom-[-30px] sm:bottom-[-50px] w-[380px] sm:w-[480px] lg:w-[560px] pointer-events-none select-none z-0">
+      <div className="absolute left-0 bottom-0 -translate-x-8 sm:-translate-x-12 translate-y-8 sm:translate-y-12 w-[340px] sm:w-[440px] lg:w-[520px] pointer-events-none select-none z-0">
         <Image
           src="/images/technical-expertise-hexagons.svg"
           alt="Technical Expertise Chemistry Structure"
           width={578}
           height={561}
-          className="w-full h-auto object-contain opacity-85"
+          className="w-full h-auto object-contain opacity-90"
           priority
         />
       </div>

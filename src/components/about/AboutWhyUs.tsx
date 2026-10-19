@@ -26,7 +26,7 @@ export default function AboutWhyUs() {
           {/* Featured Large Card (Spans 2 columns on lg) */}
           <div className="lg:col-span-2 bg-[#101E10] text-white rounded-[24px] p-8 sm:p-12 flex flex-col justify-between gap-8 shadow-xl relative overflow-hidden">
             <div className="relative z-10 flex items-center justify-between">
-              <div className="w-12 h-12 rounded-xl bg-[#C6F19D] text-[#101E10] flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-xl bg-black border border-white/20 text-white flex items-center justify-center font-bold">
                 <FlaskConical size={24} />
               </div>
               <span className="text-xs font-bold tracking-widest text-[#C6F19D] uppercase">
@@ -50,7 +50,7 @@ export default function AboutWhyUs() {
 
           {/* Card 2: Customer Support */}
           <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-white shadow-xs text-[#101E10] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
               <Headphones size={24} />
             </div>
             <div className="flex flex-col gap-2">
@@ -66,7 +66,7 @@ export default function AboutWhyUs() {
 
           {/* Card 3: Regulatory Expertise */}
           <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-white shadow-xs text-[#101E10] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
               <FileCheck size={24} />
             </div>
             <div className="flex flex-col gap-2">
@@ -82,7 +82,7 @@ export default function AboutWhyUs() {
 
           {/* Card 4: Supply Reliability */}
           <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-white shadow-xs text-[#101E10] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
               <Truck size={24} />
             </div>
             <div className="flex flex-col gap-2">
@@ -98,7 +98,7 @@ export default function AboutWhyUs() {
 
           {/* Card 5: Innovation Capability */}
           <div className="bg-[#C6F19D]/20 border border-[#C6F19D]/40 rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-6 hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 rounded-xl bg-white shadow-xs text-[#101E10] flex items-center justify-center">
+            <div className="w-12 h-12 rounded-xl bg-[#101E10] text-white flex items-center justify-center">
               <Lightbulb size={24} />
             </div>
             <div className="flex flex-col gap-2">

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Compass, Target } from "lucide-react";
+import { ArrowUpRight, Shield, Globe } from "lucide-react";
 
 export default function WhoWeAre() {
   return (
@@ -59,7 +59,7 @@ export default function WhoWeAre() {
           {/* Mission Card */}
           <div className="bg-[#C6F19D]/50 rounded-[20px] p-8 sm:p-10 flex flex-col gap-4 border border-[#C6F19D] shadow-sm">
             <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
-              <Target size={24} />
+              <Shield size={24} />
             </div>
             <h3 className="text-2xl sm:text-[32px] font-bold text-[#0B2B12] leading-tight">
               Our Mission
@@ -74,7 +74,7 @@ export default function WhoWeAre() {
           {/* Vision Card */}
           <div className="bg-[#C6F19D]/50 rounded-[20px] p-8 sm:p-10 flex flex-col gap-4 border border-[#C6F19D] shadow-sm">
             <div className="w-12 h-12 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center">
-              <Compass size={24} />
+              <Globe size={24} />
             </div>
             <h3 className="text-2xl sm:text-[32px] font-bold text-[#0B2B12] leading-tight">
               Our Vision
