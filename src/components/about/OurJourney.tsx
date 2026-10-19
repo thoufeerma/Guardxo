@@ -43,12 +43,12 @@ export default function OurJourney() {
     <section id="journey" className="w-full bg-[#F5F4F2] py-20 lg:py-28 border-t border-neutral-200/60">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
         {/* Section Header */}
-        <div className="flex flex-col gap-3 max-w-3xl">
+        <div className="flex flex-col gap-3 max-w-4xl">
           <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
             OUR JOURNEY
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
-            From a chemicals manufacturer to a specialised biocides partner.
+          <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight tracking-tight">
+            From a chemicals manufacturer to<br className="hidden sm:inline" /> a specialised biocides partner.
           </h2>
         </div>
 
