@@ -67,7 +67,7 @@ export default function RelatedProducts() {
           {RELATED_PRODUCTS_DATA.map((product, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 border border-neutral-200 shadow-xs hover:shadow-md transition-all group"
+              className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-md transition-all group"
             >
               <div className="flex flex-col gap-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-black/60">

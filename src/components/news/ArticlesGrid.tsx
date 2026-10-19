@@ -24,7 +24,7 @@ export const ARTICLES_DATA: Article[] = [
   {
     id: "in-can-vs-dry-film",
     image: "/news insight/Choosing between incan and dryfilm preservatives.jpg",
-    category: "FORMULATION",
+    category: "TECHNICAL INSIGHTS",
     filterCategory: "Technical Insights",
     date: "18 Mar 2025",
     readTime: "6 min read",
@@ -190,7 +190,7 @@ export default function ArticlesGrid({
             {sortedArticles.map((article) => (
               <article
                 key={article.id}
-                className="group bg-white rounded-[24px] overflow-hidden border border-neutral-200/80 shadow-xs hover:shadow-lg transition-all flex flex-col justify-between"
+                className="group bg-[#EEFBE2] rounded-[24px] overflow-hidden border-0 shadow-none hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div>
                   {/* Image Container with Badge */}
@@ -202,7 +202,7 @@ export default function ArticlesGrid({
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-bold tracking-wider text-[#101E10] uppercase shadow-xs">
+                    <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-bold tracking-wider text-[#101E10] uppercase shadow-xs">
                       {article.category}
                     </div>
                   </div>
@@ -212,7 +212,7 @@ export default function ArticlesGrid({
                     <span className="text-xs font-semibold text-black/60 uppercase tracking-wide">
                       {article.date} · {article.readTime}
                     </span>
-                    <h3 className="text-xl font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors line-clamp-2">
+                    <h3 className="text-xl sm:text-[22px] lg:text-[24px] font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors line-clamp-2">
                       {article.title}
                     </h3>
                     <p className="text-sm text-black/75 font-normal leading-relaxed line-clamp-3">

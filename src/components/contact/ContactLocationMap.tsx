@@ -19,7 +19,7 @@ export default function ContactLocationMap() {
         {/* 2-Column Location Display */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           {/* Left Column Address & Logistics Details */}
-          <div className="lg:col-span-6 bg-white rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-8 border border-neutral-200/80 shadow-sm">
+          <div className="lg:col-span-6 bg-[#F5F4F2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-8">
             <div className="flex flex-col gap-6">
               {/* Facility Badge */}
               <div className="w-fit bg-[#C6F19D]/50 border border-[#C6F19D] px-3 py-1 rounded-md text-xs font-bold text-[#101E10] uppercase tracking-wider">
@@ -40,7 +40,7 @@ export default function ContactLocationMap() {
               </div>
 
               {/* Logistics & Freight Connectivity Box */}
-              <div className="bg-neutral-50 rounded-xl p-5 flex items-start gap-3.5 border border-neutral-200/60">
+              <div className="bg-white rounded-xl p-5 flex items-start gap-3.5 border border-neutral-200/60">
                 <div className="w-8 h-8 rounded-lg bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none">
                   <Truck size={18} />
                 </div>
@@ -72,19 +72,6 @@ export default function ContactLocationMap() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
-
-            {/* Location Pin Badge */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-neutral-200">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#5AB900] animate-ping" />
-              <div className="flex flex-col">
-                <span className="text-xs font-bold text-[#101E10]">
-                  Chemtiver Speciality
-                </span>
-                <span className="text-[11px] text-black/60">
-                  Sector 18, Gurugram
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

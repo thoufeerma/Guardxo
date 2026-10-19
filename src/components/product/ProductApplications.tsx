@@ -12,16 +12,14 @@ export const APPLICATIONS_LIST = [
     image: "/images/product-application-paint.jpg",
     description:
       "Emulsion paints, primers, distempers, putty, and texture finishes. BT 20 stops malodour, headspace gas build-up, and viscosity loss in the can even when stored across humid tropical seasons. Highly stable during high-speed pigment grinding cycles.",
-    dosage: "0.10% – 0.25% w/w",
   },
   {
     id: "emulsions",
     num: "02",
     name: "Polymer emulsions and latex",
-    image: "/images/industry-chemicals.png",
+    image: "/images/product-application-paint.jpg",
     description:
       "Pure acrylic, styrene-acrylic, VAE, and PVAc binder emulsions. Eliminates anaerobic bacterial degradation that causes coagulum formation and viscosity collapse in bulk storage vessels.",
-    dosage: "0.05% – 0.15% w/w",
   },
   {
     id: "adhesives",
@@ -30,16 +28,14 @@ export const APPLICATIONS_LIST = [
     image: "/images/product-application-paint.jpg",
     description:
       "Starch-based, dextrin, PVA, and synthetic dispersion glues. Guards against enzymatic hydrolysis of organic thickeners and microbial putrefaction in sealed packaging.",
-    dosage: "0.10% – 0.20% w/w",
   },
   {
     id: "construction",
     num: "04",
     name: "Construction chemicals",
-    image: "/images/industry-chemicals.png",
+    image: "/images/product-application-paint.jpg",
     description:
       "Concrete admixtures, tile grouts, ready-to-use skim coats, and joint compounds. Retains sustained bactericidal efficacy in elevated calcium hydroxide environments up to pH 12.0.",
-    dosage: "0.08% – 0.20% w/w",
   },
   {
     id: "inks",
@@ -48,16 +44,14 @@ export const APPLICATIONS_LIST = [
     image: "/images/product-application-paint.jpg",
     description:
       "Water-based flexographic and gravure inks. Prevents bacterial slime formation in closed inking loops and protects fountain solution reservoirs from fungal slime.",
-    dosage: "0.05% – 0.15% w/w",
   },
   {
     id: "paper",
     num: "06",
     name: "Paper and pulp coatings",
-    image: "/images/industry-chemicals.png",
+    image: "/images/product-application-paint.jpg",
     description:
       "Starch slurries, calcium carbonate dispersions, and pigmented paper topcoats. Stable under continuous high-shear pumping and elevated mill temperatures.",
-    dosage: "0.05% – 0.12% w/w",
   },
   {
     id: "cleaners",
@@ -66,16 +60,14 @@ export const APPLICATIONS_LIST = [
     image: "/images/product-application-paint.jpg",
     description:
       "Neutral to alkaline liquid detergents, fabric softeners, and surface cleaners. Compatible with anionic, non-ionic, and amphoteric surfactant systems.",
-    dosage: "0.05% – 0.10% w/w",
   },
   {
     id: "metalworking",
     num: "08",
     name: "Metalworking fluids",
-    image: "/images/industry-chemicals.png",
+    image: "/images/product-application-paint.jpg",
     description:
       "Water-soluble cutting oils and semi-synthetic machining emulsions. Prevents bacterial biomass clogging of coolant nozzles and suppresses hydrogen sulfide off-gassing.",
-    dosage: "0.10% – 0.25% w/w",
   },
   {
     id: "textiles",
@@ -84,16 +76,14 @@ export const APPLICATIONS_LIST = [
     image: "/images/product-application-paint.jpg",
     description:
       "Spin finishes, textile sizing agents, and leather fatliquor emulsions. Neutral color ensures zero discoloration on sensitive white and pastel substrates.",
-    dosage: "0.08% – 0.18% w/w",
   },
   {
     id: "agrochemicals",
     num: "10",
     name: "Agrochemical slurries",
-    image: "/images/industry-chemicals.png",
+    image: "/images/product-application-paint.jpg",
     description:
       "Suspension concentrates (SC) and flowable seed treatment formulations. Preserves organic suspension aids and xanthan gum rheology modifiers over multi-year warehouse storage.",
-    dosage: "0.05% – 0.15% w/w",
   },
 ];
 
@@ -102,7 +92,7 @@ export default function ProductApplications() {
   const current = APPLICATIONS_LIST[selectedApp];
 
   return (
-    <section className="w-full bg-white py-20 lg:py-28">
+    <section className="w-full bg-white py-20 lg:py-28 border-t border-neutral-200/80">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-3xl">
@@ -113,15 +103,15 @@ export default function ProductApplications() {
             Wherever a water–based product needs to stay fresh.
           </h2>
           <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
-            GuardExo BT 20 is specified globally across demanding continuous chemical facilities.
-            Select an industry below to review dosage norms and product synergy:
+            GuardExo BT 20 is specified globally across demanding chemical formulations.
+            Select an industry below to review compatibility and performance:
           </p>
         </div>
 
         {/* 2-Column Interactive Navigator */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left: 10 Selectable Buttons */}
-          <div className="lg:col-span-6 flex flex-col gap-2">
+          {/* Left: Light grey filled rows, semibold black text, black arrows, green selected row label */}
+          <div className="lg:col-span-6 flex flex-col gap-2.5">
             {APPLICATIONS_LIST.map((app, idx) => {
               const isSelected = selectedApp === idx;
               return (
@@ -129,81 +119,56 @@ export default function ProductApplications() {
                   key={app.id}
                   type="button"
                   onClick={() => setSelectedApp(idx)}
-                  className={`w-full text-left p-4 sm:p-5 rounded-2xl flex items-center justify-between gap-4 border transition-all cursor-pointer ${
-                    isSelected
-                      ? "bg-[#C6F19D] border-[#A8E272] text-[#101E10] font-bold shadow-xs"
-                      : "bg-white border-neutral-200/90 hover:bg-[#FAF9F7] text-black/80 font-medium"
-                  }`}
+                  className="w-full flex items-center justify-between py-3.5 px-5 sm:px-6 rounded-2xl text-left bg-[#F5F4F2] hover:bg-[#ECEBE8] transition-all cursor-pointer"
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4">
-                    <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
+                    <span
+                      className={`text-sm font-medium w-6 flex-none ${
+                        isSelected ? "text-[#5AB900] font-bold" : "text-neutral-400"
+                      }`}
+                    >
                       {app.num}
                     </span>
-                    <span className="text-sm sm:text-base">
+                    <span
+                      className={`text-[15px] sm:text-base ${
+                        isSelected
+                          ? "font-bold text-[#5AB900]"
+                          : "font-semibold text-[#101E10]"
+                      }`}
+                    >
                       {app.name}
                     </span>
                   </div>
 
                   <ArrowRight
                     size={18}
-                    className={`transition-transform flex-none ${
-                      isSelected ? "translate-x-1 text-[#101E10]" : "text-black/30"
-                    }`}
+                    className="flex-none text-[#101E10]"
                   />
                 </button>
               );
             })}
           </div>
 
-          {/* Right: Dynamic Application Card */}
-          <div className="lg:col-span-6 lg:sticky lg:top-28 bg-white rounded-[28px] overflow-hidden border border-neutral-200 shadow-md flex flex-col">
-            {/* Visual Header */}
-            <div className="relative w-full h-[280px] sm:h-[320px] bg-[#101E10]">
+          {/* Right: Paint-brush photo inside light grey container with frosted caption card without APPLICATION FOCUS */}
+          <div className="lg:col-span-6 lg:sticky lg:top-28 bg-[#F5F4F2] rounded-[28px] p-4 sm:p-5 shadow-xs">
+            <div className="relative w-full h-[420px] sm:h-[480px] rounded-[22px] overflow-hidden bg-[#101E10]">
               <Image
-                src={current.image}
+                src="/images/product-application-paint.jpg"
                 alt={current.name}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 text-white flex flex-col gap-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#C6F19D]">
-                  Application Focus
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
+              <div className="absolute inset-0 bg-black/20" />
+
+              {/* Frosted Caption Card Positioned Over Photo */}
+              <div className="absolute inset-x-5 bottom-5 sm:inset-x-6 sm:bottom-6 bg-white/80 backdrop-blur-md rounded-[20px] p-6 shadow-xl border border-white/60 flex flex-col items-start text-left gap-2 pointer-events-none">
+                <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
                   {current.name}
-                </h3>
-              </div>
-            </div>
-
-            {/* Description & Dosage Info */}
-            <div className="p-7 sm:p-8 flex flex-col gap-6">
-              <p className="text-sm sm:text-base text-black/80 font-normal leading-relaxed">
-                {current.description}
-              </p>
-
-              {/* Dosage Metric Box */}
-              <div className="bg-neutral-50 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200">
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-black/60">
-                    TYPICAL INDUSTRY DOSAGE
-                  </span>
-                  <span className="text-2xl font-extrabold text-[#101E10]">
-                    {current.dosage}
-                  </span>
-                </div>
-
-                <a
-                  href="#inquiry"
-                  className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors w-fit group"
-                >
-                  Discuss this application
-                  <ArrowRight
-                    size={16}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
-                </a>
+                </h4>
+                <p className="text-xs sm:text-[14px] text-neutral-800 leading-relaxed font-normal">
+                  {current.description}
+                </p>
               </div>
             </div>
           </div>

@@ -52,10 +52,10 @@ export default function ArticleBody() {
                 multi-year exterior cycles.
               </p>
 
-              {/* Checkpoint Cards */}
-              <div className="flex flex-col gap-3.5 bg-neutral-50 p-6 rounded-2xl border border-neutral-200">
+              {/* Checkpoint Items */}
+              <div className="flex flex-col gap-3.5 py-2">
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#5AB900] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={12} strokeWidth={3} />
                   </div>
                   <p className="text-sm sm:text-base font-semibold text-[#101E10]">
@@ -65,7 +65,7 @@ export default function ArticleBody() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#5AB900] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={12} strokeWidth={3} />
                   </div>
                   <p className="text-sm sm:text-base font-semibold text-[#101E10]">
@@ -76,9 +76,9 @@ export default function ArticleBody() {
               </div>
 
               {/* Pull Quote */}
-              <div className="relative bg-[#C6F19D]/30 border-l-4 border-[#5AB900] rounded-r-2xl p-6 sm:p-8 flex items-start gap-4">
-                <Quote size={28} className="text-[#5AB900] flex-none mt-1" />
-                <p className="text-base sm:text-lg font-bold text-[#101E10] italic leading-relaxed">
+              <div className="bg-[#F5F4F2] rounded-2xl p-6 sm:p-8 flex items-start gap-4">
+                <Quote size={24} className="text-[#101E10]/50 flex-none mt-1" />
+                <p className="text-base sm:text-lg font-bold text-[#101E10] leading-relaxed">
                   &ldquo;Preservation is not merely a biocidal barrier; it is an active kinetic
                   equilibrium tailored to the vessel headspace, binder chemistry, and long-term film
                   exposure.&rdquo;
@@ -86,10 +86,10 @@ export default function ArticleBody() {
               </div>
             </div>
 
-            {/* 02. Microbiological Threats & Headspace */}
+            {/* 02. Microbial Attack Vectors & In-Can Spoilage */}
             <div id="section-02" className="flex flex-col gap-6 scroll-mt-28">
               <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
-                02. Microbiological Threats & Headspace Protection
+                02. Microbial Attack Vectors & In-Can Spoilage
               </h2>
 
               <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
@@ -303,7 +303,7 @@ export default function ArticleBody() {
             </div>
 
             {/* Helpful Feedback Widget */}
-            <div className="bg-white rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200 mt-4 shadow-xs">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-6 border-t border-neutral-200 mt-4">
               <span className="text-sm sm:text-base font-bold text-[#101E10]">
                 Was this article helpful to your formulation work?
               </span>
@@ -360,46 +360,6 @@ export default function ArticleBody() {
                 Ask to team
                 <ArrowRight size={16} />
               </a>
-            </div>
-
-            {/* Quick Navigation Card */}
-            <div className="bg-white border border-neutral-200 rounded-[24px] p-6 flex flex-col gap-4 shadow-xs">
-              <span className="text-xs font-bold uppercase tracking-wider text-black/60">
-                IN THIS ARTICLE
-              </span>
-
-              <nav className="flex flex-col gap-2.5 text-sm font-semibold text-[#101E10]">
-                <a
-                  href="#section-01"
-                  className="hover:text-[#5AB900] transition-colors py-1 border-b border-neutral-100"
-                >
-                  01. Wet-State vs Applied Film
-                </a>
-                <a
-                  href="#section-02"
-                  className="hover:text-[#5AB900] transition-colors py-1 border-b border-neutral-100"
-                >
-                  02. Headspace Protection
-                </a>
-                <a
-                  href="#section-03"
-                  className="hover:text-[#5AB900] transition-colors py-1 border-b border-neutral-100"
-                >
-                  03. Extreme Humidity
-                </a>
-                <a
-                  href="#section-04"
-                  className="hover:text-[#5AB900] transition-colors py-1 border-b border-neutral-100"
-                >
-                  04. Active Comparison Matrix
-                </a>
-                <a
-                  href="#section-05"
-                  className="hover:text-[#5AB900] transition-colors py-1"
-                >
-                  05. Selection & Dosage Guide
-                </a>
-              </nav>
             </div>
           </aside>
         </div>

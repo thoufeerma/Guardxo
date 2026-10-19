@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Package, ShieldCheck, FileSpreadsheet, ArrowUpRight } from "lucide-react";
 
 export default function TechnicalUpdates() {
@@ -72,6 +73,17 @@ export default function TechnicalUpdates() {
       {/* Decorative ambient glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#5AB900]/10 rounded-full blur-3xl pointer-events-none" />
 
+      {/* Hexagon pattern at top-right */}
+      <div className="absolute -top-12 -right-12 w-80 h-80 pointer-events-none opacity-25">
+        <Image
+          src="/images/technical-expertise-hexagons.svg"
+          alt="Hexagon pattern"
+          width={320}
+          height={320}
+          className="w-full h-full object-contain"
+        />
+      </div>
+
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14 relative z-10">
         {/* Header */}
         <div className="flex flex-col gap-4 max-w-2xl">
@@ -93,10 +105,10 @@ export default function TechnicalUpdates() {
             return (
               <div
                 key={colIdx}
-                className="bg-[#1c2c1c] border border-white/10 rounded-[24px] p-6 sm:p-8 flex flex-col justify-between gap-8 shadow-xl"
+                className="flex flex-col gap-6"
               >
                 {/* Column Title Header */}
-                <div className="flex items-center gap-3.5 pb-2 border-b border-white/10">
+                <div className="flex items-center gap-3.5 pb-3 border-b border-white/10">
                   <div className="w-10 h-10 rounded-xl bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
                     <Icon size={20} />
                   </div>
@@ -106,7 +118,7 @@ export default function TechnicalUpdates() {
                 </div>
 
                 {/* Items in Column */}
-                <div className="flex flex-col gap-6 flex-1 justify-between">
+                <div className="flex flex-col gap-5 flex-1 justify-between">
                   {col.items.map((item, itemIdx) => (
                     <div
                       key={itemIdx}

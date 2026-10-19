@@ -5,6 +5,7 @@ import InCanHero from "@/components/incan/InCanHero";
 import WhatIsInCan from "@/components/incan/WhatIsInCan";
 import InCanProductRange from "@/components/incan/InCanProductRange";
 import Industries from "@/components/Industries";
+import AboutWhyUs from "@/components/about/AboutWhyUs";
 import InCanFAQ from "@/components/incan/InCanFAQ";
 import ConsultationCTA from "@/components/news/ConsultationCTA";
 import Footer from "@/components/Footer";
@@ -33,7 +34,7 @@ export default function InCanPreservativesPage() {
       {/* 02 In-Can Preservatives Hero Showcase */}
       <InCanHero />
 
-      {/* 03 What is an In-Can Preservative & 4 Failure Modes */}
+      {/* 03 What is an In-Can Preservative */}
       <WhatIsInCan />
 
       {/* 04 Complete In-Can Product Portfolio Range */}
@@ -42,7 +43,10 @@ export default function InCanPreservativesPage() {
       {/* 05 One Brand. Seven Demanding Industries */}
       <Industries videoSrc="/in-can-preservatives/industries we serve.mp4" />
 
-      {/* 06 In-Can Preservation FAQs */}
+      {/* 06 Why Manufacturers Choose to Work With Us Bento Grid */}
+      <AboutWhyUs />
+
+      {/* 07 In-Can Preservation FAQs */}
       <InCanFAQ />
 
       {/* 07 Technical Consultation & Sample Inquiry Form */}

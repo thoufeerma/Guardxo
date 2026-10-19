@@ -29,7 +29,7 @@ export default function FeaturedArticleSpotlight() {
 
             <div className="flex items-center gap-3">
               <span className="bg-[#C6F19D] text-[#101E10] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md">
-                FORMULATION
+                TECHNICAL INSIGHTS
               </span>
               <span className="text-xs font-semibold text-black/60">
                 18 Mar 2025 · 8 min read
@@ -62,14 +62,14 @@ export default function FeaturedArticleSpotlight() {
               </span>
             </div>
 
-            {/* CTA Button */}
+            {/* CTA Text Link */}
             <div className="pt-2">
               <a
                 href="/news/choosing-between-in-can-and-dry-film-preservatives"
-                className="w-fit inline-flex items-center gap-2 bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 text-base font-bold text-[#101E10] hover:text-[#5AB900] transition-colors group cursor-pointer"
               >
                 Read full article
-                <ArrowUpRight size={18} />
+                <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
           </div>

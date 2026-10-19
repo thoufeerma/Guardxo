@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, Building2, Clock, ArrowUpRight } from "lucide-react";
+import { Mail, Smartphone, Phone, Clock, ArrowUpRight } from "lucide-react";
 
 const CONTACT_WAYS = [
   {
@@ -16,7 +16,7 @@ const CONTACT_WAYS = [
     value: "+91 8130016160",
     action: "Call now",
     href: "tel:+918130016160",
-    icon: Phone,
+    icon: Smartphone,
   },
   {
     num: "03",
@@ -24,7 +24,7 @@ const CONTACT_WAYS = [
     value: "0124-2292222",
     action: "Call now",
     href: "tel:01242292222",
-    icon: Building2,
+    icon: Phone,
   },
   {
     num: "04",
@@ -92,7 +92,7 @@ export default function DirectContactWays() {
                       />
                     </a>
                   ) : (
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#101E10] bg-white px-3 py-1.5 rounded-lg border border-neutral-200 w-fit">
+                    <span className="text-sm font-semibold text-[#101E10] w-fit">
                       {way.action}
                     </span>
                   )}

@@ -20,7 +20,7 @@ export default function ContactFormSection() {
     phone: "",
     subject: "General Inquiry",
     message: "",
-    consent: true,
+    consent: false,
   });
 
   const [loading, setLoading] = useState(false);
@@ -82,7 +82,7 @@ export default function ContactFormSection() {
         phone: "",
         subject: "General Inquiry",
         message: "",
-        consent: true,
+        consent: false,
       });
     } catch (err: any) {
       setStatus({

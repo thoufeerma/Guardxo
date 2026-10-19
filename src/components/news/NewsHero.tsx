@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Search, ArrowUpRight } from "lucide-react";
 
 interface NewsHeroProps {
@@ -108,8 +109,16 @@ export default function NewsHero({
 
           {/* Right Column: Latest Press Callout Card */}
           <div className="lg:col-span-5 relative bg-[#C6F19D]/30 border border-[#C6F19D] rounded-[24px] p-8 sm:p-10 flex flex-col gap-8 shadow-sm overflow-hidden">
-            {/* Watermark shape */}
-            <div className="absolute right-0 bottom-0 w-64 h-64 bg-[#5AB900]/10 rounded-full blur-3xl pointer-events-none" />
+            {/* Hexagon line pattern */}
+            <div className="absolute -right-6 -bottom-6 w-56 h-56 pointer-events-none opacity-40">
+              <Image
+                src="/images/technical-expertise-hexagons.svg"
+                alt="Hexagon line pattern"
+                width={224}
+                height={224}
+                className="w-full h-full object-contain"
+              />
+            </div>
 
             {/* Header */}
             <div className="flex items-center justify-between relative z-10">
@@ -144,8 +153,9 @@ export default function NewsHero({
                       {item.title}
                     </h3>
                   </div>
-                  <div className="w-8 h-8 rounded-full bg-white/70 group-hover:bg-[#101E10] text-[#101E10] group-hover:text-[#C6F19D] flex items-center justify-center flex-none transition-all mt-1">
-                    <ArrowUpRight size={16} />
+                  {/* Filled dark circular arrow button */}
+                  <div className="w-8 h-8 rounded-full bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none transition-transform group-hover:scale-105 shadow-xs mt-1">
+                    <ArrowUpRight size={15} />
                   </div>
                 </a>
               ))}
