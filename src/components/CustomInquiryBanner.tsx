@@ -39,6 +39,10 @@ export default function CustomInquiryBanner() {
               <source src="/Home-page/inquiry-molecule.mp4" type="video/mp4" />
               <source src="/Home-page/Home-hero.mp4" type="video/mp4" />
             </video>
+
+            {/* Green Overlay covering the section */}
+            <div className="absolute inset-0 bg-[#EDF9DF]/50 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#EDF9DF] via-[#EDF9DF]/80 to-transparent pointer-events-none" />
           </div>
 
           {/* Foreground Narrative */}
