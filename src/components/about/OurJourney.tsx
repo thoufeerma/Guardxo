@@ -56,8 +56,8 @@ export default function OurJourney() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
           {MILESTONES.map((m) => (
             <div key={m.num} className="flex flex-col gap-3.5">
-              {/* Dark rounded rectangle number badge above card */}
-              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans w-fit">
+              {/* Dark rounded rectangle number badge with green number text matching Figma */}
+              <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-md bg-[#101E10] text-[#C6F19D] text-xs font-bold font-[family-name:var(--font-heading)] w-fit">
                 {m.num}
               </span>
 
