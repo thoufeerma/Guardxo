@@ -134,10 +134,10 @@ export default function ProductWhyChoose() {
         className="absolute top-0 right-0 w-96 h-96 opacity-20 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-right-top bg-contain"
       />
 
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-12 relative z-10">
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-12 relative z-10">
         {/* Header with Title and Toggle at Top-Right (No Subtitle) */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white leading-tight tracking-tight">
             Why choose GuardExo BT 20
           </h2>
 
@@ -168,7 +168,7 @@ export default function ProductWhyChoose() {
           </div>
         </div>
 
-        {/* 7-Card Bento Layout: Light-coloured cards, first card green with hexagon artwork, icons in black squares */}
+        {/* 7-Card Bento Layout: Light-coloured cards, first card green with uploaded broad spectrum control background */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
           {cards.map((card, idx) => {
             const Icon = card.icon;
@@ -179,17 +179,10 @@ export default function ProductWhyChoose() {
                 key={idx}
                 className={`rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all relative overflow-hidden shadow-sm ${
                   isGreen
-                    ? "bg-[#C6F19D] text-[#101E10] xl:col-span-2"
+                    ? "bg-[#C6F19D] bg-[url('/images/broad%20spectrum%20control.png')] bg-cover bg-right text-[#101E10] xl:col-span-2"
                     : "bg-[#F5F4F2] text-[#101E10]"
                 }`}
               >
-                {/* Hexagon artwork overlay on first green card */}
-                {isGreen && (
-                  <div
-                    className="absolute -right-8 -bottom-8 w-52 h-52 opacity-25 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-contain"
-                  />
-                )}
-
                 {/* Icon inside black square */}
                 <div className="w-11 h-11 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none shadow-xs">
                   <Icon size={20} />
@@ -208,35 +201,36 @@ export default function ProductWhyChoose() {
           })}
         </div>
 
-        {/* Documents Bar */}
-        <div className="bg-[#182618] border border-white/10 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-2">
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-bold uppercase tracking-wider text-[#C6F19D]">
-              Documents
-            </span>
-            <span className="hidden sm:inline text-white/30">•</span>
-            <span className="text-xs sm:text-sm text-white/70">
-              Download technical files for regulatory and formulation approval
-            </span>
+        {/* Documents Bar: Segmented Pill matching Figma design exactly */}
+        <div className="w-full bg-white rounded-2xl sm:rounded-[20px] overflow-hidden flex flex-col md:flex-row items-stretch shadow-md border border-white/10 mt-2">
+          {/* Segment 1: Documents */}
+          <div className="bg-[#C6F19D] text-[#101E10] px-7 lg:px-9 py-3.5 sm:py-4.5 flex items-center justify-center font-bold text-sm sm:text-base flex-none tracking-tight">
+            Documents
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 text-xs sm:text-sm font-bold text-white">
-            <a
-              href="#specs"
-              className="inline-flex items-center gap-1.5 hover:text-[#C6F19D] transition-colors"
-            >
-              Technical Data Sheet ↓
-            </a>
-            <span className="text-white/20">|</span>
-            <a
-              href="#specs"
-              className="inline-flex items-center gap-1.5 hover:text-[#C6F19D] transition-colors"
-            >
-              Safety Data Sheet ↓
-            </a>
-            <span className="text-white/20">|</span>
-            <span className="text-white/80">
-              Certificate of Analysis (with every batch)
+          {/* Segment 2: Technical Data Sheet */}
+          <a
+            href="#specs"
+            className="bg-white hover:bg-neutral-50 text-[#101E10] px-6 py-3.5 sm:py-4.5 flex-1 flex items-center justify-center gap-2 font-bold text-sm sm:text-base border-t md:border-t-0 md:border-l border-neutral-200 transition-colors group"
+          >
+            <span>Technical Data Sheet</span>
+            <Download size={17} strokeWidth={2.4} className="text-[#101E10] transition-transform group-hover:translate-y-0.5" />
+          </a>
+
+          {/* Segment 3: Safety Data Sheet */}
+          <a
+            href="#specs"
+            className="bg-white hover:bg-neutral-50 text-[#101E10] px-6 py-3.5 sm:py-4.5 flex-1 flex items-center justify-center gap-2 font-bold text-sm sm:text-base border-t md:border-t-0 md:border-l border-neutral-200 transition-colors group"
+          >
+            <span>Safety Data Sheet</span>
+            <Download size={17} strokeWidth={2.4} className="text-[#101E10] transition-transform group-hover:translate-y-0.5" />
+          </a>
+
+          {/* Segment 4: Certificate of Analysis with WITH EVERY BATCH badge */}
+          <div className="bg-white text-[#101E10] px-6 py-3.5 sm:py-4.5 flex-1 flex items-center justify-center gap-2.5 font-bold text-sm sm:text-base border-t md:border-t-0 md:border-l border-neutral-200">
+            <span>Certificate of Analysis</span>
+            <span className="bg-[#C6F19D] text-[#101E10] text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-sm">
+              WITH EVERY BATCH
             </span>
           </div>
         </div>

@@ -49,24 +49,24 @@ export default function RelatedProducts({
   viewAllText = "View all insights",
 }: RelatedProductsProps) {
   return (
-    <section className="w-full bg-white py-16 lg:py-24">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-10">
+    <section className="w-full bg-[#F5F4F2] py-16 lg:py-24 border-t border-neutral-200/80">
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="flex flex-col gap-2">
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+            <span className="text-[13px] sm:text-[14px] font-bold tracking-wider uppercase text-[#5AB900]">
               {tag}
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#101E10] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#101E10] leading-tight tracking-tight">
               {title}
             </h2>
           </div>
 
           <Link
             href={viewAllHref}
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit pb-1"
           >
-            {viewAllText}
+            <span>{viewAllText}</span>
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-1"
@@ -74,12 +74,12 @@ export default function RelatedProducts({
           </Link>
         </div>
 
-        {/* 4 Cards Grid - grey card backgrounds without borders */}
+        {/* 4 Cards Grid - White cards with subtle borders on grey section background */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {RELATED_PRODUCTS_DATA.map((product, idx) => (
             <div
               key={idx}
-              className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-md transition-all group border-0 shadow-none"
+              className="bg-white rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-md transition-all group border border-neutral-200/80 shadow-2xs"
             >
               <div className="flex flex-col gap-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-black/60">
@@ -94,12 +94,12 @@ export default function RelatedProducts({
                   {product.description}
                 </p>
 
-                {/* Tags */}
+                {/* Tags with enhanced font weight */}
                 <div className="flex flex-wrap gap-1.5 pt-2">
                   {product.tags.map((t, tIdx) => (
                     <span
                       key={tIdx}
-                      className="bg-[#C6F19D]/70 text-[#101E10] text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded"
+                      className="bg-[#C6F19D] text-[#101E10] text-[10.5px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-md"
                     >
                       {t}
                     </span>

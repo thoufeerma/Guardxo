@@ -104,13 +104,8 @@ export default function ProductSpecifications() {
 
           {/* Right Column: Two Bento Cards */}
           <div className="lg:col-span-6 flex flex-col gap-5 sm:gap-6 justify-between">
-            {/* Card 1: Green Recommended Dose Card with Progress Bar & Callout */}
-            <div className="bg-[#EEFBE2] rounded-[20px] sm:rounded-[24px] p-6 sm:p-7 text-[#101E10] relative overflow-hidden flex flex-col gap-4 border border-[#D4F0B7]/60 shadow-2xs">
-              {/* Hexagon Pattern Watermark */}
-              <div
-                className="absolute -right-8 -bottom-10 w-48 h-48 opacity-25 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-contain"
-              />
-
+            {/* Card 1: Green Recommended Dose Card with uploaded background image */}
+            <div className="bg-[#EBF7DC] bg-[url('/images/RECOMMENDED%20DOSE%20RANGE.png')] bg-cover bg-right rounded-[20px] sm:rounded-[24px] p-6 sm:p-7 text-[#101E10] relative overflow-hidden flex flex-col gap-4 border border-[#D4F0B7]/60 shadow-2xs">
               <div className="flex flex-col gap-1 relative z-10">
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#101E10]">
                   RECOMMENDED DOSE RANGE

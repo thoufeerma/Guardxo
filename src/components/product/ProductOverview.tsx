@@ -64,7 +64,7 @@ export default function ProductOverview() {
 
   return (
     <section className="w-full bg-[#F5F4F2] py-16 sm:py-20 lg:py-24 border-y border-neutral-200/60">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Overview Narrative & Unprotected Risks */}
           <div className="lg:col-span-6 flex flex-col gap-6">
