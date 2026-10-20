@@ -27,7 +27,7 @@ export default function ArticleHeader() {
     <section className="w-full bg-white pt-10 pb-8 sm:pt-14 sm:pb-12">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-8 sm:gap-10">
         {/* Centered Column with Left and Right Margins matching Figma */}
-        <div className="max-w-[1160px] mx-auto w-full flex flex-col items-start text-left gap-6">
+        <div className="max-w-[1360px] mx-auto w-full flex flex-col items-start text-left gap-6">
           {/* Back Link */}
           <Link
             href="/news"

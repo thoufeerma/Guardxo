@@ -16,10 +16,10 @@ export default function ArticleBody() {
 
   return (
     <section className="w-full bg-white py-12 lg:py-20">
-      <div className="max-w-[1160px] mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Main Article Content (8 Cols) */}
-          <article className="lg:col-span-8 flex flex-col gap-12 text-[#101E10]">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-12 xl:gap-14">
+          {/* Main Article Content */}
+          <article className="w-full lg:flex-1 max-w-[760px] flex flex-col gap-12 text-[#101E10]">
             {/* Lead Intro Paragraph */}
             <p className="text-[15px] sm:text-[16px] text-black/85 font-normal leading-[1.65]">
               Industrial water-borne emulsions, architectural wall paints, and composite
@@ -32,7 +32,7 @@ export default function ArticleBody() {
             {/* 01. Fundamental Difference */}
             <div id="section-01" className="flex flex-col gap-5 scroll-mt-28">
               <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
-                01. Fundamental Difference: Wet–State vs Applied Film
+                01. Fundamental Difference: Wet–State vs<br className="hidden sm:inline" /> Applied Film
               </h2>
 
               <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
@@ -312,22 +312,21 @@ export default function ArticleBody() {
             </div>
           </article>
 
-          {/* Sticky Sidebar (4 Cols) - "Have a question" card only, no TOC box */}
-          <aside className="lg:col-span-4 lg:sticky lg:top-28 flex flex-col gap-6">
+          {/* Sticky Sidebar (410px width) - "Have a question" card matching Figma */}
+          <aside className="w-full lg:w-[410px] xl:w-[420px] flex-none lg:sticky lg:top-28 flex flex-col gap-6">
             {/* Ask to Team Card matching Figma */}
-            <div className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-8 flex flex-col gap-5 border-0 shadow-none">
-              <h3 className="text-2xl sm:text-[28px] font-bold text-[#101E10] leading-tight">
-                Have a question about this topic?
+            <div className="bg-[#F5F4F2] rounded-[28px] p-8 sm:p-9 flex flex-col gap-4 sm:gap-5 border-0 shadow-none">
+              <h3 className="text-2xl sm:text-[28px] font-bold text-[#101E10] leading-[1.2] tracking-tight">
+                Have a question about<br className="hidden sm:inline" /> this topic?
               </h3>
 
-              <p className="text-sm sm:text-base text-black/75 font-normal leading-relaxed">
-                Submit your active system details for direct input from our analytical microbiology
-                lab.
+              <p className="text-[14px] text-black/75 font-normal leading-[1.5]">
+                Submit your active system details for direct input<br className="hidden sm:inline" /> from our analytical microbiology lab.
               </p>
 
               <a
                 href="#inquiry"
-                className="w-full inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1c331c] text-[#C6F19D] py-3.5 rounded-xl font-bold text-sm transition-all cursor-pointer active:scale-98"
+                className="w-full inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1c331c] text-[#C6F19D] py-3.5 sm:py-4 rounded-xl sm:rounded-[14px] font-bold text-sm sm:text-[15px] transition-all cursor-pointer active:scale-98 mt-1"
               >
                 Ask to team
               </a>
