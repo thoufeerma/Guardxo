@@ -70,7 +70,7 @@ export default function MoreInsights() {
                   <span className="bg-[#C6F19D]/70 text-[#101E10] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
                     {item.category}
                   </span>
-                  <span className="text-xs font-semibold text-black/60">
+                  <span className="text-xs font-bold text-black/75">
                     {item.date}
                   </span>
                 </div>

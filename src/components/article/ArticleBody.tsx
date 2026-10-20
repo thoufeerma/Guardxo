@@ -51,33 +51,39 @@ export default function ArticleBody() {
                 multi-year cycles.
               </p>
 
-              {/* Checkpoint Items - light green circle with dark checkmark, no grey enclosing box */}
-              <div className="flex flex-col gap-3.5 py-1">
-                <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
-                    <Check size={13} strokeWidth={3} />
+              {/* Checkpoint Items - light green circle with dark checkmark, bold text, exact Figma spacing */}
+              <div className="flex flex-col gap-5 sm:gap-6 my-2 sm:my-3">
+                <div className="flex items-start gap-4">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
+                    <Check size={16} strokeWidth={3} />
                   </div>
-                  <p className="text-sm sm:text-base text-[#101E10] leading-relaxed">
-                    <span className="font-bold">In–Can Duty Cycle:</span> Rapid bacterial kill
+                  <p className="text-[17px] sm:text-[18px] font-bold text-[#101E10] leading-snug">
+                    <span className="font-extrabold">In–Can Duty Cycle:</span> Rapid bacterial kill
                     kinetic, high water solubility, broad pH tolerance (6.0 to 11.5).
                   </p>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
-                    <Check size={13} strokeWidth={3} />
+                <div className="flex items-start gap-4">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
+                    <Check size={16} strokeWidth={3} />
                   </div>
-                  <p className="text-sm sm:text-base text-[#101E10] leading-relaxed">
-                    <span className="font-bold">Dry–Film Duty Cycle:</span> Controlled low leaching
+                  <p className="text-[17px] sm:text-[18px] font-bold text-[#101E10] leading-snug">
+                    <span className="font-extrabold">Dry–Film Duty Cycle:</span> Controlled low leaching
                     rate, UV photostability, specific antimycotic and antialgal spectrum.
                   </p>
                 </div>
               </div>
 
-              {/* Pull Quote - Plain grey background with upright text and no coloured border */}
-              <div className="bg-[#F5F4F2] rounded-2xl p-6 sm:p-8 flex items-start gap-4">
-                <Quote size={24} className="text-[#101E10] flex-none mt-1" strokeWidth={2.5} />
-                <p className="text-base sm:text-lg lg:text-xl font-bold text-[#101E10] leading-relaxed">
+              {/* Pull Quote - Plain grey background with upright text and double quote mark */}
+              <div className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-8 flex items-start gap-4 mt-2">
+                <svg
+                  className="w-6 h-6 text-[#101E10] flex-none mt-1"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <p className="text-lg sm:text-xl font-bold text-[#101E10] leading-snug">
                   &ldquo;Preservation is not merely a biocidal barrier; it is an active kinetic
                   equilibrium tailored to the vessel headspace, binder chemistry, and long-term film
                   exposure.&rdquo;
