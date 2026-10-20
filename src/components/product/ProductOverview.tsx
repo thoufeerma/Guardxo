@@ -3,66 +3,111 @@
 import React, { useState } from "react";
 import {
   AlertTriangle,
-  Biohazard,
-  Droplets,
-  Bug,
-  Gauge,
+  Wind,
+  Droplet,
   CheckCircle2,
 } from "lucide-react";
+
+function Dots3x3Icon({ className }: { className?: string }) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      className={className}
+    >
+      <circle cx="3" cy="3" r="1.3" />
+      <circle cx="8" cy="3" r="1.3" />
+      <circle cx="13" cy="3" r="1.3" />
+      <circle cx="3" cy="8" r="1.3" />
+      <circle cx="8" cy="8" r="1.3" />
+      <circle cx="13" cy="8" r="1.3" />
+      <circle cx="3" cy="13" r="1.3" />
+      <circle cx="8" cy="13" r="1.3" />
+      <circle cx="13" cy="13" r="1.3" />
+    </svg>
+  );
+}
 
 export default function ProductOverview() {
   const [activeTab, setActiveTab] = useState<"how-it-works" | "why-20">("how-it-works");
 
   const issues = [
     { label: "Go sour", icon: AlertTriangle },
-    { label: "Smell bad", icon: Biohazard },
-    { label: "Lose thickness", icon: Droplets },
-    { label: "Grow surface mould", icon: Bug },
-    { label: "Container gas pressure", icon: Gauge },
+    { label: "Smell bad", icon: Wind },
+    { label: "Lose thickness", icon: Droplet },
+    { label: "Grow surface mould", icon: Dots3x3Icon },
+    { label: "Container gas pressure", icon: AlertTriangle },
+  ];
+
+  const steps = [
+    {
+      step: "01",
+      title: "Enters the cell",
+      description:
+        "BIT molecules penetrate the microbial cellular barrier rapidly and react specifically with vital sulphur–containing (thiol) protein linkages.",
+    },
+    {
+      step: "02",
+      title: "Blocks the enzymes",
+      description:
+        "These sensitive groups are critical for respiratory metabolism and ATP synthesis. Deactivation halts cellular reproduction immediately, inducing cell death.",
+    },
+    {
+      step: "03",
+      title: "Hard to resist",
+      description:
+        "Because BIT neutralizes multiple metabolic enzyme cascades at once, cross–resistance among bacterial strains is virtually non–existent, ensuring uniform batch protection.",
+    },
   ];
 
   return (
-    <section className="w-full bg-white py-20 lg:py-28">
+    <section className="w-full bg-[#F5F4F2] py-16 sm:py-20 lg:py-24 border-y border-neutral-200/60">
       <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Narrative & Issue Chips */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
-            <div className="flex flex-col gap-4">
-              <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Overview Narrative & Unprotected Risks */}
+          <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="flex flex-col gap-3.5">
+              <span className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-[#5AB900]">
                 OVERVIEW
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101E10] leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#101E10] leading-[1.12] tracking-tight">
                 What is GuardExo BT 20?
               </h2>
-              <p className="text-base sm:text-lg text-black/85 font-medium leading-relaxed">
-                GuardExo BT 20 is an in-can preservative engineered for long-term liquid stabilization.
-                It acts as an impenetrable shield for water-based products during critical warehouse shelf
-                time and distribution logistics before application.
+            </div>
+
+            <div className="flex flex-col gap-4 text-sm sm:text-[15px] text-neutral-700 font-medium leading-relaxed">
+              <p>
+                GuardExo BT 20 is an in–can preservative engineered for long–term liquid stabilization. That
+                means it shields a water–based product during critical warehouse shelf time before
+                application. Any aqueous formula—such as paint, glue, or polymer latex—is prime fertile
+                territory for ambient microbes.
               </p>
-              <p className="text-base sm:text-lg text-black/80 font-medium leading-relaxed">
-                The active substance is <span className="font-bold text-[#101E10]">1,2-benzisothiazolin-3-one (BIT)</span>,
-                one of the world&apos;s most proven preservation chemistries. GuardExo BT 20 delivers this
-                in an ultra-stable 20% liquid solution in dipropylene glycol and water, eliminating cumbersome
-                solid powder handling, toxic dust inhalation risks, or complex plant dissolving steps.
+              <p>
+                The active substance is 1,2-benzisothiazolin–3–one (BIT), one of the world&apos;s most trusted
+                preservation chemistries. GuardExo BT 20 delivers this in a stable 20% solution in
+                dipropylene glycol and water, eliminating cumbersome solid handling, powder dust
+                inhalation risks, or complex dissolutions.
               </p>
             </div>
 
-            {/* Unprotected Risks Strip: All 5 issue chips in light green */}
-            <div className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-8 flex flex-col gap-4">
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-black/70">
-                Water-based batches face these failure risks when left unprotected:
-              </span>
+            {/* Unprotected Issues: Directly on background without grey box */}
+            <div className="flex flex-col gap-3 pt-2">
+              <p className="text-[15px] sm:text-base font-bold text-[#101E10]">
+                Water–based batches can face these issues when left unprotected:
+              </p>
 
-              <div className="flex flex-wrap items-center gap-2.5">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
                 {issues.map((issue, idx) => {
                   const Icon = issue.icon;
                   return (
                     <div
                       key={idx}
-                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-[#EEFBE2] text-[#101E10] border border-[#C6F19D]"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-[6px] text-xs sm:text-[13px] font-medium bg-[#C6F19D] text-[#101E10] transition-colors"
                     >
-                      <Icon size={16} className="text-[#5AB900]" />
-                      {issue.label}
+                      <Icon className="w-3.5 h-3.5 text-[#101E10] flex-none" />
+                      <span>{issue.label}</span>
                     </div>
                   );
                 })}
@@ -70,94 +115,63 @@ export default function ProductOverview() {
             </div>
           </div>
 
-          {/* Right Column: Interactive White Card with Two Tabs */}
-          <div className="lg:col-span-5 bg-white rounded-[28px] p-6 sm:p-8 border border-neutral-200/90 shadow-sm flex flex-col gap-6">
+          {/* Right Column: White Card with Segmented Tabs & 3-Step Mechanism */}
+          <div className="lg:col-span-6 bg-white rounded-[24px] sm:rounded-[28px] p-6 sm:p-9 shadow-sm border border-neutral-200/40 flex flex-col gap-7">
             {/* Tab Selector */}
-            <div className="flex items-center bg-[#F5F4F2] p-1.5 rounded-2xl gap-1">
+            <div className="flex items-center bg-[#F5F4F2] p-1 rounded-xl">
               <button
                 type="button"
                 onClick={() => setActiveTab("how-it-works")}
-                className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-center ${
+                className={`flex-1 py-2 px-4 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer text-center ${
                   activeTab === "how-it-works"
-                    ? "bg-white text-[#101E10] shadow-2xs"
-                    : "text-black/60 hover:text-[#101E10]"
+                    ? "bg-white text-[#101E10] shadow-xs"
+                    : "text-[#101E10]/70 hover:text-[#101E10]"
                 }`}
               >
-                How BIT Works
+                How BIT works
               </button>
               <button
                 type="button"
                 onClick={() => setActiveTab("why-20")}
-                className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer text-center ${
+                className={`flex-1 py-2 px-4 rounded-lg text-xs sm:text-sm font-bold transition-all cursor-pointer text-center ${
                   activeTab === "why-20"
-                    ? "bg-white text-[#101E10] shadow-2xs"
-                    : "text-black/60 hover:text-[#101E10]"
+                    ? "bg-white text-[#101E10] shadow-xs"
+                    : "text-[#101E10]/70 hover:text-[#101E10]"
                 }`}
               >
-                Why a 20% Solution?
+                Why a 20% solution?
               </button>
             </div>
 
-            {/* Tab 1 Content: Three Numbered Steps */}
+            {/* Tab 1 Content: Three Numbered Steps with Inline Badges */}
             {activeTab === "how-it-works" && (
-              <div className="flex flex-col gap-5 animate-in fade-in duration-200">
-                <div className="flex flex-col gap-4">
-                  {/* Step 1 */}
-                  <div className="flex items-start gap-4">
-                    <span className="w-8 h-8 rounded-full bg-[#101E10] text-[#C6F19D] text-xs font-bold flex items-center justify-center flex-none">
-                      01
-                    </span>
-                    <div className="flex flex-col gap-1">
-                      <h4 className="text-base font-bold text-[#101E10]">
-                        Enters the Cell
-                      </h4>
-                      <p className="text-sm text-black/75 font-medium leading-relaxed">
-                        Penetrates microbial cell walls and cytoplasmic membranes swiftly, reaching interior organelle structures.
-                      </p>
+              <div className="flex flex-col gap-6 pt-1 animate-in fade-in duration-200">
+                {steps.map((st, idx) => (
+                  <div key={idx} className="flex flex-col gap-2">
+                    <div className="flex items-center gap-3">
+                      <span className="bg-[#101E10] text-[#C6F19D] text-[11px] font-mono font-bold px-2 py-0.5 rounded-[5px] flex items-center justify-center leading-none">
+                        {st.step}
+                      </span>
+                      <h3 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
+                        {st.title}
+                      </h3>
                     </div>
+                    <p className="text-xs sm:text-[13.5px] text-neutral-600 font-medium leading-relaxed">
+                      {st.description}
+                    </p>
                   </div>
-
-                  {/* Step 2 */}
-                  <div className="flex items-start gap-4">
-                    <span className="w-8 h-8 rounded-full bg-[#101E10] text-[#C6F19D] text-xs font-bold flex items-center justify-center flex-none">
-                      02
-                    </span>
-                    <div className="flex flex-col gap-1">
-                      <h4 className="text-base font-bold text-[#101E10]">
-                        Blocks the Enzymes
-                      </h4>
-                      <p className="text-sm text-black/75 font-medium leading-relaxed">
-                        Reacts covalently with critical thiol (-SH) enzyme centers, permanently terminating metabolic respiration and energy synthesis.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="flex items-start gap-4">
-                    <span className="w-8 h-8 rounded-full bg-[#101E10] text-[#C6F19D] text-xs font-bold flex items-center justify-center flex-none">
-                      03
-                    </span>
-                    <div className="flex flex-col gap-1">
-                      <h4 className="text-base font-bold text-[#101E10]">
-                        Hard to Resist
-                      </h4>
-                      <p className="text-sm text-black/75 font-medium leading-relaxed">
-                        Multi-site intracellular biocidal attack prevents bacteria from evolving physiological tolerance or enzymatic immunity.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             )}
 
             {/* Tab 2 Content */}
             {activeTab === "why-20" && (
-              <div className="flex flex-col gap-4 animate-in fade-in duration-200">
+              <div className="flex flex-col gap-5 pt-1 animate-in fade-in duration-200">
                 <div className="bg-[#EEFBE2] rounded-xl p-4 border border-[#C6F19D]">
                   <span className="text-xs font-bold text-[#101E10] uppercase tracking-wider block mb-1">
                     Ready-To-Use Liquid Formulation
                   </span>
-                  <p className="text-sm text-black/80 font-medium leading-relaxed">
+                  <p className="text-xs sm:text-[13.5px] text-neutral-700 font-medium leading-relaxed">
                     Pure BIT is a difficult solid crystalline powder. Our 20% solution in dipropylene glycol guarantees zero dust hazard and instant homogeneous dispersion.
                   </p>
                 </div>
