@@ -1,76 +1,72 @@
 import React from "react";
 import Image from "next/image";
-import { Truck, MapPin, Navigation } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export default function ContactLocationMap() {
   return (
-    <section className="w-full bg-white py-20 lg:py-28 border-t border-[#EDE7EC]">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-14">
-        {/* Header */}
-        <div className="flex flex-col gap-3 max-w-3xl">
-          <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
-            OUR LOCATION
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
-            Visit us in Gurugram
-          </h2>
-        </div>
-
-        {/* 2-Column Location Display */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left Column Address & Logistics Details */}
-          <div className="lg:col-span-6 bg-[#F5F4F2] rounded-[24px] p-8 sm:p-10 flex flex-col justify-between gap-8">
-            <div className="flex flex-col gap-6">
-              {/* Facility Badge */}
-              <div className="w-fit bg-[#C6F19D]/50 border border-[#C6F19D] px-3 py-1 rounded-md text-xs font-bold text-[#101E10] uppercase tracking-wider">
-                Registered / Manufacturing & Corporate Office
-              </div>
-
-              {/* Company & Address */}
-              <div className="flex flex-col gap-2">
-                <h3 className="text-2xl sm:text-[28px] font-bold text-[#101E10] leading-snug">
-                  Chemtiver Speciality Pvt. Ltd.
-                </h3>
-                <div className="flex items-start gap-2.5 text-black/80 text-base leading-relaxed pt-1">
-                  <MapPin size={20} className="text-[#5AB900] flex-none mt-1" />
-                  <span>
-                    90B, Delhi–Jaipur Expressway, Sector 18, Gurugram, Haryana 122018, India
-                  </span>
-                </div>
-              </div>
-
-              {/* Logistics & Freight Connectivity Box */}
-              <div className="bg-white rounded-xl p-5 flex items-start gap-3.5 border border-neutral-200/60">
-                <div className="w-8 h-8 rounded-lg bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none">
-                  <Truck size={18} />
-                </div>
-                <p className="text-sm text-black/80 font-normal leading-relaxed">
-                  Prominently positioned on the Delhi–Jaipur Expressway arterial industrial corridor with
-                  seamless heavy freight connectivity directly to Nhava Sheva & Mundra commercial export ports.
-                </p>
-              </div>
+    <section id="our-location" className="w-full bg-white py-16 lg:py-24 scroll-mt-20">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-11 items-stretch">
+          {/* Left Column: Header + Info Card */}
+          <div className="flex flex-col gap-6 sm:gap-7 justify-between">
+            {/* Header */}
+            <div className="flex flex-col gap-2">
+              <span className="text-[13px] font-bold tracking-wider uppercase text-[#5AB900]">
+                OUR LOCATION
+              </span>
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#101E10] leading-tight tracking-tight">
+                Visit us in Gurugram
+              </h2>
             </div>
 
-            {/* Google Maps Direction Button */}
-            <a
-              href="https://maps.google.com/?q=Sector+18+Gurugram+Delhi+Jaipur+Expressway"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit inline-flex items-center gap-2 bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] px-7 py-3.5 rounded-xl font-bold text-base transition-all shadow-md active:scale-95"
-            >
-              Get Direction
-              <Navigation size={18} />
-            </a>
+            {/* Info Card */}
+            <div className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-8 lg:p-9 flex flex-col justify-between gap-6 flex-1 border-0 shadow-none">
+              <div className="flex flex-col gap-5">
+                {/* Facility Badge */}
+                <div className="w-fit bg-white px-3 py-1.5 rounded-[6px] text-[11px] font-semibold text-neutral-800 uppercase tracking-wider">
+                  REGISTERED / MANUFACTURING & CORPORATE OFFICE
+                </div>
+
+                {/* Company & Address */}
+                <div className="flex flex-col gap-1.5">
+                  <h3 className="text-2xl sm:text-[28px] font-bold text-[#101E10] leading-snug tracking-tight">
+                    Chemtiver Speciality Pvt. Ltd.
+                  </h3>
+                  <p className="text-xs sm:text-[13px] text-neutral-600 font-normal leading-relaxed">
+                    90B, Delhi–Jaipur Expressway, Sector 18, Gurugram, Haryana 122018, India
+                  </p>
+                </div>
+
+                {/* Logistics & Freight Connectivity Box */}
+                <div className="bg-white rounded-[16px] p-4 sm:p-5 flex items-start gap-3 border-0 shadow-none">
+                  <MapPin size={18} className="text-[#101E10] flex-none mt-0.5" />
+                  <p className="text-xs sm:text-[13px] text-neutral-700 font-normal leading-relaxed">
+                    Prominently positioned on the Delhi–Jaipur Expressway arterial industrial corridor with freight connectivity to Nhava Sheva &amp; Mundra.
+                  </p>
+                </div>
+              </div>
+
+              {/* Get Direction Button */}
+              <a
+                href="https://maps.google.com/?q=Sector+18+Gurugram+Delhi+Jaipur+Expressway"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-fit inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1a2e1a] text-[#C6F19D] px-6 py-3 rounded-[12px] font-bold text-xs sm:text-[13px] tracking-wide transition-all active:scale-95"
+              >
+                Get Direction
+              </a>
+            </div>
           </div>
 
-          {/* Right Column Map Photography with Location Marker */}
-          <div className="lg:col-span-6 relative w-full h-[360px] sm:h-[460px] rounded-[24px] overflow-hidden shadow-xl bg-[#101E10]">
+          {/* Right Column: Map (Spans from top of header to bottom of card) */}
+          <div className="relative w-full h-[360px] sm:h-[440px] lg:h-full min-h-[380px] lg:min-h-full rounded-[24px] overflow-hidden bg-[#101E10]">
             <Image
               src="/images/contact-gurugram-map.png"
               alt="Chemtiver Speciality Location on Delhi-Jaipur Expressway Gurugram"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-center"
+              priority
             />
           </div>
         </div>
