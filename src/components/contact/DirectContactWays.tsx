@@ -1,10 +1,10 @@
 import React from "react";
-import { Mail, Smartphone, Phone, Clock, ArrowUpRight } from "lucide-react";
+import { Mail, Smartphone, Phone, Clock, ArrowRight } from "lucide-react";
 
 const CONTACT_WAYS = [
   {
     num: "01",
-    label: "Sales & Inquiries Email",
+    label: "SALES & INQUIRIES EMAIL",
     value: "sales@chemtiver.com",
     action: "Send email",
     href: "mailto:sales@chemtiver.com",
@@ -12,7 +12,7 @@ const CONTACT_WAYS = [
   },
   {
     num: "02",
-    label: "Direct Mobile Line",
+    label: "DIRECT MOBILE LINE",
     value: "+91 8130016160",
     action: "Call now",
     href: "tel:+918130016160",
@@ -20,16 +20,16 @@ const CONTACT_WAYS = [
   },
   {
     num: "03",
-    label: "Gurugram Office Landline",
-    value: "0124-2292222",
+    label: "GURUGRAM OFFICE LANDLINE",
+    value: "0124–2292222",
     action: "Call now",
     href: "tel:01242292222",
     icon: Phone,
   },
   {
     num: "04",
-    label: "Operating Business Hours",
-    value: "09:00 - 18:30 IST",
+    label: "OPERATING BUSINESS HOURS",
+    value: "09:00 – 18:30 IST",
     action: "Monday To Saturday",
     href: "#",
     icon: Clock,
@@ -38,43 +38,43 @@ const CONTACT_WAYS = [
 
 export default function DirectContactWays() {
   return (
-    <section className="w-full bg-white py-20 lg:py-28 border-t border-[#EDE7EC]">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
+    <section id="direct-contact" className="w-full bg-white py-20 lg:py-28 scroll-mt-20">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column Narrative */}
           <div className="lg:col-span-5 flex flex-col gap-4">
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+            <span className="text-[13px] font-bold tracking-wider uppercase text-[#5AB900]">
               DIRECT CONTACT
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
-              Prefer to reach us directly?
+            <h2 className="text-4xl sm:text-5xl lg:text-[54px] font-bold text-[#101E10] leading-[1.08] tracking-tight">
+              Prefer to reach<br />us directly?
             </h2>
-            <p className="text-base text-black/80 font-normal leading-relaxed max-w-sm">
-              Call or email our team. We are happy to help you choose the right chemistry.
+            <p className="text-sm sm:text-base text-neutral-600 font-normal leading-relaxed max-w-sm">
+              Call or email our team. We are happy to help<br className="hidden sm:inline" /> you choose the right chemistry.
             </p>
           </div>
 
-          {/* Right Column: 4 Stacked Rows */}
-          <div className="lg:col-span-7 flex flex-col gap-4">
+          {/* Right Column: 4 Stacked Rows matching Figma */}
+          <div className="lg:col-span-7 flex flex-col gap-3.5">
             {CONTACT_WAYS.map((way) => {
               const Icon = way.icon;
               return (
                 <div
                   key={way.num}
-                  className="bg-white rounded-2xl p-6 sm:p-7 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200/80 shadow-xs hover:shadow-sm transition-shadow"
+                  className="bg-[#F5F4F2] rounded-[24px] py-4.5 px-6 sm:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-0 shadow-none hover:shadow-md transition-all duration-200"
                 >
                   <div className="flex items-center gap-4 sm:gap-5">
-                    <span className="inline-flex items-center justify-center px-2.5 py-1 rounded-md bg-[#101E10] text-white text-xs font-semibold font-sans flex-none">
+                    <span className="text-sm sm:text-base font-medium text-neutral-400 flex-none w-6 sm:w-7 text-center">
                       {way.num}
                     </span>
-                    <div className="w-12 h-12 rounded-2xl bg-[#C6F19D] flex items-center justify-center text-[#101E10] flex-none">
-                      <Icon size={22} />
+                    <div className="w-12 h-12 rounded-[16px] bg-[#C6F19D] flex items-center justify-center text-[#101E10] flex-none">
+                      <Icon size={20} strokeWidth={2} />
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-xs font-semibold text-black/70 uppercase tracking-wide">
+                      <span className="text-[11px] sm:text-xs font-semibold text-neutral-600 uppercase tracking-wider mb-1">
                         {way.label}
                       </span>
-                      <span className="text-lg sm:text-[22px] font-bold text-[#101E10] leading-snug">
+                      <span className="text-lg sm:text-[22px] font-bold text-[#101E10] leading-snug tracking-tight">
                         {way.value}
                       </span>
                     </div>
@@ -83,16 +83,16 @@ export default function DirectContactWays() {
                   {way.href !== "#" ? (
                     <a
                       href={way.href}
-                      className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit"
+                      className="inline-flex items-center gap-2 text-sm sm:text-[15px] font-bold text-[#101E10] hover:text-[#5AB900] group w-fit transition-colors flex-none"
                     >
-                      {way.action}
-                      <ArrowUpRight
-                        size={16}
-                        className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      <span>{way.action}</span>
+                      <ArrowRight
+                        size={17}
+                        className="transition-transform duration-200 group-hover:translate-x-1"
                       />
                     </a>
                   ) : (
-                    <span className="text-sm font-semibold text-[#101E10] w-fit">
+                    <span className="text-sm sm:text-[15px] font-bold text-[#101E10] w-fit flex-none">
                       {way.action}
                     </span>
                   )}
