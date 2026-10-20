@@ -47,9 +47,9 @@ export default function NewsHero({
   return (
     <section className="w-full bg-white pt-10 pb-16 lg:pt-14 lg:pb-20">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start">
           {/* Left Column: Headline, Search, Filter Pills */}
-          <div className="lg:col-span-7 flex flex-col gap-8">
+          <div className="lg:col-span-6 flex flex-col gap-8">
             <div className="flex flex-col gap-5">
               {/* NEWS & INSIGHTS Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ECFAE0] w-fit">
@@ -67,7 +67,7 @@ export default function NewsHero({
               </h1>
 
               {/* Description */}
-              <p className="text-[15px] sm:text-base text-gray-600 font-normal leading-relaxed max-w-[500px]">
+              <p className="text-[15px] sm:text-base text-gray-700 font-medium leading-relaxed max-w-[520px]">
                 Company announcements, technical insights, regulatory changes and product updates for
                 manufacturers who rely on biocides and preservatives.
               </p>
@@ -114,7 +114,7 @@ export default function NewsHero({
           </div>
 
           {/* Right Column: Latest Press Callout Card */}
-          <div className="lg:col-span-5 relative bg-[#ECFAE0] rounded-[28px] sm:rounded-[32px] p-7 sm:p-9 lg:p-10 flex flex-col justify-between overflow-hidden shadow-xs">
+          <div className="lg:col-span-6 relative bg-[#ECFAE0] rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] p-8 sm:p-10 lg:p-12 flex flex-col justify-between overflow-hidden shadow-xs min-h-[500px]">
             {/* Background Graphic with Hexagons matching shared image */}
             <Image
               src="/images/news-latest-card-bg.png"
@@ -125,13 +125,13 @@ export default function NewsHero({
             />
 
             {/* Header */}
-            <div className="flex items-center justify-between relative z-10 mb-8">
+            <div className="flex items-center justify-between relative z-10 mb-8 sm:mb-10">
               <span className="bg-white text-[#101E10] text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-[6px] shadow-2xs">
                 LATEST
               </span>
               <a
                 href="#press"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#101E10] hover:text-[#5AB900] group transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm sm:text-[15px] font-bold text-[#101E10] hover:text-[#5AB900] group transition-colors"
               >
                 View all press
                 <ArrowRight
@@ -141,25 +141,25 @@ export default function NewsHero({
               </a>
             </div>
 
-            {/* 3 Featured Press Items without divider lines */}
-            <div className="flex flex-col gap-8 relative z-10">
+            {/* 3 Featured Press Items */}
+            <div className="flex flex-col gap-9 sm:gap-11 lg:gap-12 relative z-10">
               {latestPress.map((item, idx) => (
                 <a
                   key={idx}
                   href={item.href}
-                  className="group flex items-start justify-between gap-4 transition-all"
+                  className="group flex items-start justify-between gap-6 transition-all"
                 >
-                  <div className="flex flex-col gap-1.5 max-w-[340px]">
+                  <div className="flex flex-col gap-1.5 flex-1 pr-2">
                     <span className="text-xs font-semibold text-[#101E10]/70 uppercase tracking-wider">
                       {item.date}
                     </span>
-                    <h3 className="text-lg sm:text-[19px] font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors">
+                    <h3 className="text-lg sm:text-[19px] lg:text-[20px] font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors">
                       {item.title}
                     </h3>
                   </div>
-                  {/* Filled dark circular arrow button */}
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none transition-transform group-hover:scale-105 shadow-xs mt-1">
-                    <ArrowRight size={16} />
+                  {/* Dark squircle arrow button matching Figma 48x48 rounded-16px */}
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-[16px] bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none transition-transform group-hover:scale-105 shadow-xs mt-1">
+                    <ArrowRight size={18} strokeWidth={2.2} />
                   </div>
                 </a>
               ))}
