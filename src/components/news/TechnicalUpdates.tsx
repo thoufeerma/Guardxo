@@ -2,27 +2,27 @@
 
 import React from "react";
 import Image from "next/image";
-import { Package, ShieldCheck, FileSpreadsheet, ArrowUpRight } from "lucide-react";
+import { FlaskConical, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 
 export default function TechnicalUpdates() {
   const updateColumns = [
     {
       category: "Product Update",
-      icon: Package,
+      icon: FlaskConical,
       items: [
         {
-          date: "10 Mar 2025",
+          date: "10 MAR 2025",
           title: "GuardExo BT 20P Reformulation for Low-VOC Compliance",
           excerpt:
             "Upgraded active carrier matrix reducing free volatile organic content by 40% while preserving benchmark antimicrobial efficacy.",
-          tags: ["Paints & Coatings", "Construction Chemicals"],
+          tags: ["PAINTS & COATINGS", "CONSTRUCTION CHEMICALS"],
         },
         {
-          date: "04 Dec 2024",
+          date: "04 DEC 2024",
           title: "Intermediate Bulk Container (IBC) Packaging Option Introduced",
           excerpt:
             "Standardized 1000kg UN-approved container options available for GuardExo CMT 15 industrial water cooling circuits.",
-          tags: ["Industrial Biocides"],
+          tags: [],
         },
       ],
     },
@@ -31,38 +31,38 @@ export default function TechnicalUpdates() {
       icon: ShieldCheck,
       items: [
         {
-          date: "22 Feb 2025",
+          date: "22 FEB 2025",
           title: "EU BPR Active Substance Review Milestone for Isothiazolinones",
           excerpt:
-            "Updated documentation guidelines, hazard statement protocols, and specific packaging concentration limits for export compliance.",
-          tags: ["BPR Compliance", "EU Dossier"],
+            "Updated documentation guidelines, hazard statement protocols, and specific packaging concentration limits.",
+          tags: [],
         },
         {
-          date: "18 Jan 2025",
+          date: "18 JAN 2025",
           title: "BIS Standard Formulation Harmonization Guidelines for Biocides",
           excerpt:
             "New conformity declaration formats released for chemical preservatives manufactured within Indian industrial hubs.",
-          tags: ["BIS Standard", "National Harmonization"],
+          tags: [],
         },
       ],
     },
     {
       category: "Technical Bulletin",
-      icon: FileSpreadsheet,
+      icon: FileText,
       items: [
         {
-          date: "28 Nov 2024",
+          date: "28 NOV 2024",
           title: "Elevated pH Compatibility Matrix for Carbamate Fungicides",
           excerpt:
             "Laboratory analytical data reviewing hydrolysis kinetics of IPBC across alkaline mortar and skim coat formulations.",
-          tags: ["Dry-Film", "Alkaline Chemistry"],
+          tags: [],
         },
         {
-          date: "15 Jan 2025",
+          date: "15 JAN 2025",
           title: "Microbiological In-Can Headspace Testing Protocol TB-2025-01",
           excerpt:
             "Recommended swab, incubation, and vapor-phase inoculation procedures to resolve intermittent spore contamination.",
-          tags: ["Adhesives", "In-Can Preservation"],
+          tags: ["ADHESIVES", "CONSTRUCTION CHEMICALS"],
         },
       ],
     },
@@ -100,7 +100,7 @@ export default function TechnicalUpdates() {
         </div>
 
         {/* 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {updateColumns.map((col, colIdx) => {
             const Icon = col.icon;
             return (
@@ -109,7 +109,7 @@ export default function TechnicalUpdates() {
                 className="flex flex-col gap-6"
               >
                 {/* Column Title Header */}
-                <div className="flex items-center gap-3.5 pb-3 border-b border-white/10">
+                <div className="flex items-center gap-3.5">
                   <div className="w-10 h-10 rounded-xl bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
                     <Icon size={20} />
                   </div>
@@ -119,44 +119,50 @@ export default function TechnicalUpdates() {
                 </div>
 
                 {/* Items in Column */}
-                <div className="flex flex-col gap-5 flex-1 justify-between">
+                <div className="flex flex-col gap-4">
                   {col.items.map((item, itemIdx) => (
                     <div
                       key={itemIdx}
-                      className="bg-white/95 rounded-2xl p-6 flex flex-col justify-between gap-4 text-[#101E10] hover:bg-white transition-colors group shadow-sm"
+                      className="bg-[#F5F4F2] rounded-2xl p-6 sm:p-7 flex flex-col justify-between gap-6 text-[#101E10] hover:bg-[#FAF9F6] transition-colors group shadow-2xs"
                     >
                       <div className="flex flex-col gap-2">
-                        <span className="text-xs font-semibold text-black/60 uppercase tracking-wide">
+                        <span className="text-xs font-bold text-black/60 uppercase tracking-wider">
                           {item.date}
                         </span>
-                        <h4 className="text-base sm:text-lg font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors">
+                        <h4 className="text-lg sm:text-[19px] font-bold text-[#101E10] group-hover:text-[#5AB900] leading-snug transition-colors">
                           {item.title}
                         </h4>
-                        <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed line-clamp-3">
+                        <p className="text-xs sm:text-sm text-black/75 font-normal leading-relaxed">
                           {item.excerpt}
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-between gap-2 pt-2 border-t border-black/10">
+                      <div className="flex flex-col gap-3">
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-1.5">
-                          {item.tags.map((t, tIdx) => (
-                            <span
-                              key={tIdx}
-                              className="text-[10px] font-bold uppercase tracking-wider bg-[#C6F19D]/60 text-[#101E10] px-2 py-0.5 rounded"
-                            >
-                              {t}
-                            </span>
-                          ))}
-                        </div>
+                        {item.tags && item.tags.length > 0 && (
+                          <div className="flex flex-wrap gap-2">
+                            {item.tags.map((t, tIdx) => (
+                              <span
+                                key={tIdx}
+                                className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-[#C6F19D] text-[#101E10] px-2.5 py-1 rounded-[5px]"
+                              >
+                                {t}
+                              </span>
+                            ))}
+                          </div>
+                        )}
 
                         {/* Detail Link */}
                         <a
                           href="#inquiry"
-                          className="inline-flex items-center gap-1 text-xs font-bold text-[#101E10] group-hover:text-[#5AB900] transition-colors flex-none"
+                          className="inline-flex items-center gap-1.5 text-xs sm:text-[13px] font-bold text-[#101E10] group-hover:text-[#5AB900] transition-colors w-fit"
                         >
                           Detail
-                          <ArrowUpRight size={14} />
+                          <ArrowRight
+                            size={14}
+                            strokeWidth={2.2}
+                            className="transition-transform group-hover:translate-x-0.5"
+                          />
                         </a>
                       </div>
                     </div>
