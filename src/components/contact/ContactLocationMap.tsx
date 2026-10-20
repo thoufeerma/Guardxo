@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 export default function ContactLocationMap() {
@@ -58,15 +57,18 @@ export default function ContactLocationMap() {
             </div>
           </div>
 
-          {/* Right Column: Map (Spans from top of header to bottom of card) */}
-          <div className="relative w-full h-[360px] sm:h-[440px] lg:h-full min-h-[380px] lg:min-h-full rounded-[24px] overflow-hidden bg-[#101E10]">
-            <Image
-              src="/images/contact-gurugram-map.png"
-              alt="Chemtiver Speciality Location on Delhi-Jaipur Expressway Gurugram"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
-              priority
+          {/* Right Column: Interactive Map (Spans from top of header to bottom of card) */}
+          <div className="relative w-full h-[380px] sm:h-[460px] lg:h-full min-h-[400px] lg:min-h-full rounded-[24px] overflow-hidden border border-neutral-200/80 shadow-xs bg-[#F5F4F2]">
+            <iframe
+              title="Chemtiver Speciality Office Location Map"
+              src="https://maps.google.com/maps?q=90B,+Delhi-Jaipur+Expressway,+Sector+18,+Gurugram,+Haryana+122018&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full min-h-[380px] lg:min-h-full"
             />
           </div>
         </div>
