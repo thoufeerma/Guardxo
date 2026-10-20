@@ -157,13 +157,18 @@ export default function ProductHero() {
             </div>
 
             {/* Green Key-Figures Bar */}
-            <div className="bg-[#E4F7C8] rounded-[20px] py-4 px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-5 gap-3 text-center my-1 border-0 shadow-none">
+            <div className="bg-[#E4F7C8] rounded-[20px] py-4 px-2 sm:px-4 lg:px-3 xl:px-5 grid grid-cols-2 sm:grid-cols-5 gap-1.5 sm:gap-2 lg:gap-2.5 text-center my-1 border-0 shadow-none">
               {keyFigures.map((fig, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <span className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-tight">
+                <div
+                  key={idx}
+                  className={`flex flex-col items-center justify-center ${
+                    idx === 4 ? "col-span-2 sm:col-span-1" : ""
+                  }`}
+                >
+                  <span className="text-[17px] sm:text-[18px] lg:text-[19px] xl:text-[20px] font-bold text-[#101E10] leading-tight whitespace-nowrap tracking-tight">
                     {fig.value}
                   </span>
-                  <span className="text-[11px] sm:text-xs font-normal text-[#101E10] pt-1">
+                  <span className="text-[11px] sm:text-xs font-normal text-[#101E10] pt-1 whitespace-nowrap">
                     {fig.label}
                   </span>
                 </div>
