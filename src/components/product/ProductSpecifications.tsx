@@ -1,68 +1,72 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Thermometer, ShieldCheck, Clock, PackageCheck } from "lucide-react";
+import { ArrowRight, Thermometer, Sunset, Lock, Calendar, Info } from "lucide-react";
 
 export const EIGHT_ROW_SPECS = [
   { parameter: "Active Ingredient", specification: "1,2-benzisothiazolin-3-one (BIT)" },
-  { parameter: "CAS Registry Number", specification: "2634-33-5" },
-  { parameter: "Active Content Assay", specification: "20.0% w/w (min. 19.5% by HPLC)" },
-  { parameter: "Physical Appearance", specification: "Clear yellow to light brown aqueous solution" },
-  { parameter: "pH (as supplied, 25°C)", specification: "11.0 – 13.5" },
-  { parameter: "Effective In-Use pH Window", specification: "Approx. 4.0 – 12.0" },
-  { parameter: "Specific Gravity (20°C)", specification: "1.12 – 1.16 g/cm³" },
-  { parameter: "Thermal Decomposition Limit", specification: "Stable up to 100°C (short-term to 120°C)" },
+  { parameter: "CAS Registry", specification: "2634-33-5" },
+  { parameter: "Active Content", specification: "20.0% w/w (min. 19.5%)" },
+  { parameter: "Appearance", specification: "Clear yellow to light brown liquid" },
+  { parameter: "pH (as supplied, 25 °C)", specification: "11.0 – 13.5" },
+  { parameter: "Effective pH Range in Use", specification: "Approx. 4.0 – 12.0" },
+  { parameter: "Specific Gravity (25 °C)", specification: "1.13 – 1.15 g/cm³" },
+  { parameter: "Shelf Life", specification: "24 months in unopened drum" },
 ];
 
 export default function ProductSpecifications() {
   return (
-    <section id="specs" className="w-full bg-white py-20 lg:py-28 border-t border-neutral-200/80 scroll-mt-24">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-10">
-        {/* Header with Top-Right TDS Link & No Subtitle */}
+    <section id="specs" className="w-full bg-white py-16 sm:py-20 lg:py-24 border-t border-neutral-200/80 scroll-mt-24">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-8 sm:gap-10">
+        {/* Header with Top-Right TDS Link */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="flex flex-col gap-2">
-            <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
+            <span className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-[#5AB900]">
               TECHNICAL SPECIFICATIONS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101E10] leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#101E10] leading-tight tracking-tight">
               Properties, dosage and storage
             </h2>
           </div>
 
           <a
             href="#inquiry"
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors group w-fit pb-1"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors group w-fit pb-1"
           >
-            Download full Technical Dossier (TDS)
+            <span>Download full Technical Dossier (TDS)</span>
             <ArrowRight
-              size={16}
+              size={15}
               className="transition-transform group-hover:translate-x-1"
             />
           </a>
         </div>
 
-        {/* 2-Column Layout: 8-Row Table on Left & 2 Cards on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: 8-Row Specification Table */}
-          <div className="lg:col-span-7 overflow-hidden rounded-[24px] border border-neutral-300 shadow-xs">
+        {/* 2-Column Layout: Table on Left & Two Bento Cards on Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+          {/* Left Column: 8-Row Specification Table with Zebra Striping */}
+          <div className="lg:col-span-6 overflow-hidden rounded-[20px] border border-neutral-800/20 bg-white">
             <div className="w-full overflow-x-auto">
-              <table className="w-full text-left text-sm sm:text-base">
-                <thead className="bg-[#101E10] text-[#C6F19D] uppercase text-xs font-bold tracking-wider">
+              <table className="w-full text-left text-xs sm:text-[13.5px]">
+                <thead className="bg-[#152215] text-white uppercase text-[11px] sm:text-xs font-bold tracking-wider">
                   <tr>
-                    <th className="py-4 px-6 sm:px-7 w-2/5">Parameter</th>
-                    <th className="py-4 px-6 sm:px-7 w-3/5">Specification Benchmark</th>
+                    <th className="py-3.5 px-5 sm:px-6 w-5/12 border-r border-white/10">
+                      Parameter
+                    </th>
+                    <th className="py-3.5 px-5 sm:px-6 w-7/12">
+                      Specification Benchmark
+                    </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-neutral-200 bg-white font-medium">
+                <tbody className="text-[#101E10]">
                   {EIGHT_ROW_SPECS.map((spec, idx) => (
                     <tr
                       key={idx}
-                      className="hover:bg-[#F5F4F2] transition-colors"
+                      className={idx % 2 === 1 ? "bg-[#F5F4F2]" : "bg-white"}
                     >
-                      <td className="py-3.5 px-6 sm:px-7 font-bold text-[#101E10]">
+                      <td className="py-3.5 px-5 sm:px-6 font-medium text-[#101E10]">
                         {spec.parameter}
                       </td>
-                      <td className="py-3.5 px-6 sm:px-7 text-black/80 font-normal">
+                      <td className="py-3.5 px-5 sm:px-6 text-neutral-800 font-medium">
                         {spec.specification}
                       </td>
                     </tr>
@@ -73,112 +77,100 @@ export default function ProductSpecifications() {
           </div>
 
           {/* Right Column: Two Bento Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            {/* Card 1: Green Recommended Dose Card with Progress Bar, Hexagons & ASTM/ISO Note */}
-            <div className="bg-[#C6F19D] rounded-[24px] p-7 sm:p-8 text-[#101E10] relative overflow-hidden flex flex-col gap-5 shadow-xs">
-              {/* Hexagon Pattern */}
+          <div className="lg:col-span-6 flex flex-col gap-5">
+            {/* Card 1: Green Recommended Dose Card with Progress Bar & Callout */}
+            <div className="bg-[#EEFBE2] rounded-[20px] sm:rounded-[24px] p-6 sm:p-7 text-[#101E10] relative overflow-hidden flex flex-col gap-4">
+              {/* Hexagon Pattern Watermark */}
               <div
-                className="absolute -right-6 -bottom-6 w-44 h-44 opacity-25 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-contain"
+                className="absolute -right-8 -bottom-10 w-48 h-48 opacity-25 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-contain"
               />
 
               <div className="flex flex-col gap-1 relative z-10">
-                <span className="text-xs font-extrabold uppercase tracking-wider text-[#101E10]/70">
-                  Recommended Dose Range
+                <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
+                  RECOMMENDED DOSE RANGE
                 </span>
-                <span className="text-3xl sm:text-4xl font-extrabold text-[#101E10]">
-                  0.05% – 0.25% <span className="text-base font-bold text-[#101E10]/70">w/w</span>
-                </span>
-                <span className="text-xs text-[#101E10]/80 font-medium pt-1">
-                  (0.5 kg to 2.5 kg per 1,000 kg finished formulation)
-                </span>
+                <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#101E10] tracking-tight leading-none pt-1">
+                  0.05% – 0.25%
+                </h3>
+                <p className="text-xs sm:text-[13px] font-medium text-[#101E10] pt-0.5">
+                  20% by weight in the final formulation.
+                </p>
               </div>
 
-              {/* Progress Bar */}
-              <div className="relative z-10 flex flex-col gap-1.5 pt-1">
-                <div className="w-full bg-[#101E10]/15 h-3 rounded-full overflow-hidden p-0.5">
-                  <div className="bg-[#101E10] h-full rounded-full w-[65%]" />
-                </div>
-                <div className="flex justify-between text-[11px] font-bold text-[#101E10]/70">
-                  <span>0.05% Min</span>
-                  <span>0.15% Typical</span>
-                  <span>0.25% Max</span>
-                </div>
-              </div>
-
-              {/* ASTM / ISO Note */}
-              <p className="text-xs text-[#101E10]/90 font-medium leading-relaxed relative z-10 pt-1 border-t border-[#101E10]/15">
-                Evaluated and confirmed under <span className="font-bold">ASTM E2180</span> and <span className="font-bold">ISO 22196</span> preservative challenge assays.
+              <p className="text-xs sm:text-[13px] text-[#101E10]/90 font-medium leading-relaxed relative z-10">
+                Water-based paints: 0.10% to 0.25% by weight (1 to 2.5 kg per metric tonne), which delivers 200 to 500 ppm of pure active BIT protection.
               </p>
+
+              {/* Progress Bar: Sleek white track with dark fill */}
+              <div className="w-full bg-white h-2 sm:h-2.5 rounded-full overflow-hidden relative z-10">
+                <div className="bg-[#101E10] h-full rounded-full w-[40%]" />
+              </div>
+
+              {/* White Callout Box with Info Icon */}
+              <div className="bg-white rounded-xl sm:rounded-2xl py-3 px-3.5 sm:px-4 flex items-center gap-2.5 shadow-2xs relative z-10">
+                <Info size={16} className="text-[#101E10] flex-none" />
+                <span className="text-xs sm:text-[12.5px] text-[#101E10] font-medium leading-tight">
+                  Confirm final operational level with an ASTM/ISO challenge test before plant scale-up.
+                </span>
+              </div>
             </div>
 
-            {/* Card 2: Safe Handling & Storage with Four Tiles */}
-            <div className="bg-[#F5F4F2] rounded-[24px] p-7 sm:p-8 flex flex-col gap-5 border border-neutral-200/80 shadow-xs">
-              <h3 className="text-xl font-bold text-[#101E10]">
-                Safe Handling & Storage
-              </h3>
+            {/* Card 2: Safe Handling & Storage with 4-Column Horizontal Tiles */}
+            <div className="bg-[#F5F4F2] rounded-[20px] sm:rounded-[24px] p-6 sm:p-7 flex flex-col gap-3.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
+                SAFE HANDLING & STORAGE
+              </span>
 
-              <div className="grid grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
                 {/* Tile 1 */}
-                <div className="bg-white rounded-xl p-4 flex flex-col gap-1 border border-neutral-200 shadow-2xs">
-                  <div className="flex items-center gap-2 text-[#5AB900]">
-                    <Thermometer size={16} />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
-                      Temp
+                <div className="bg-white rounded-xl p-3 sm:p-3.5 flex flex-col gap-1 shadow-2xs">
+                  <div className="flex items-center gap-1.5 text-[#101E10]">
+                    <Thermometer size={15} className="text-[#101E10] flex-none" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#101E10] whitespace-nowrap">
+                      5 °C to 40 °C
                     </span>
                   </div>
-                  <span className="text-base sm:text-lg font-extrabold text-[#101E10]">
-                    5°C to 40°C
-                  </span>
-                  <span className="text-[11px] text-black/60 font-medium">
-                    Store above freezing
+                  <span className="text-[11px] text-neutral-600 font-medium leading-tight">
+                    Optimal storage temp
                   </span>
                 </div>
 
                 {/* Tile 2 */}
-                <div className="bg-white rounded-xl p-4 flex flex-col gap-1 border border-neutral-200 shadow-2xs">
-                  <div className="flex items-center gap-2 text-[#5AB900]">
-                    <ShieldCheck size={16} />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
-                      Location
+                <div className="bg-white rounded-xl p-3 sm:p-3.5 flex flex-col gap-1 shadow-2xs">
+                  <div className="flex items-center gap-1.5 text-[#101E10]">
+                    <Sunset size={15} className="text-[#101E10] flex-none" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#101E10] whitespace-nowrap">
+                      Cool, shaded
                     </span>
                   </div>
-                  <span className="text-base sm:text-lg font-extrabold text-[#101E10]">
-                    Cool Shaded
-                  </span>
-                  <span className="text-[11px] text-black/60 font-medium">
-                    Well-ventilated hall
+                  <span className="text-[11px] text-neutral-600 font-medium leading-tight">
+                    Avoid direct sunlight
                   </span>
                 </div>
 
                 {/* Tile 3 */}
-                <div className="bg-white rounded-xl p-4 flex flex-col gap-1 border border-neutral-200 shadow-2xs">
-                  <div className="flex items-center gap-2 text-[#5AB900]">
-                    <PackageCheck size={16} />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
-                      Packaging
+                <div className="bg-white rounded-xl p-3 sm:p-3.5 flex flex-col gap-1 shadow-2xs">
+                  <div className="flex items-center gap-1.5 text-[#101E10]">
+                    <Lock size={15} className="text-[#101E10] flex-none" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#101E10] whitespace-nowrap">
+                      Original seal
                     </span>
                   </div>
-                  <span className="text-base sm:text-lg font-extrabold text-[#101E10]">
-                    Original Seal
-                  </span>
-                  <span className="text-[11px] text-black/60 font-medium">
-                    Keep tightly closed
+                  <span className="text-[11px] text-neutral-600 font-medium leading-tight">
+                    Closed container
                   </span>
                 </div>
 
                 {/* Tile 4 */}
-                <div className="bg-white rounded-xl p-4 flex flex-col gap-1 border border-neutral-200 shadow-2xs">
-                  <div className="flex items-center gap-2 text-[#5AB900]">
-                    <Clock size={16} />
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#101E10]">
-                      Validity
+                <div className="bg-white rounded-xl p-3 sm:p-3.5 flex flex-col gap-1 shadow-2xs">
+                  <div className="flex items-center gap-1.5 text-[#101E10]">
+                    <Calendar size={15} className="text-[#101E10] flex-none" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#101E10] whitespace-nowrap">
+                      24 Months
                     </span>
                   </div>
-                  <span className="text-base sm:text-lg font-extrabold text-[#101E10]">
-                    24 Months
-                  </span>
-                  <span className="text-[11px] text-black/60 font-medium">
-                    From batch DOM
+                  <span className="text-[11px] text-neutral-600 font-medium leading-tight">
+                    Certified stability
                   </span>
                 </div>
               </div>
