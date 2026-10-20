@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export const RELATED_PRODUCTS_DATA = [
   {
@@ -37,7 +37,7 @@ export const RELATED_PRODUCTS_DATA = [
 
 export default function RelatedProducts() {
   return (
-    <section className="w-full bg-white py-20 lg:py-28 border-t border-neutral-200/80">
+    <section className="w-full bg-white py-16 lg:py-24">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -51,23 +51,23 @@ export default function RelatedProducts() {
           </div>
 
           <Link
-            href="/#featured-products"
+            href="/news"
             className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit"
           >
-            View all products
-            <ArrowUpRight
+            View all insights
+            <ArrowRight
               size={16}
-              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="transition-transform group-hover:translate-x-1"
             />
           </Link>
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 4 Cards Grid - grey card backgrounds without borders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {RELATED_PRODUCTS_DATA.map((product, idx) => (
             <div
               key={idx}
-              className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-md transition-all group"
+              className="bg-[#F5F4F2] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between gap-6 hover:shadow-md transition-all group border-0 shadow-none"
             >
               <div className="flex flex-col gap-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-black/60">

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export const MORE_INSIGHTS_DATA = [
   {
@@ -33,7 +33,7 @@ export const MORE_INSIGHTS_DATA = [
 
 export default function MoreInsights() {
   return (
-    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28 border-t border-neutral-200/80">
+    <section className="w-full bg-[#F5F4F2] py-20 lg:py-28">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -51,9 +51,9 @@ export default function MoreInsights() {
             className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit"
           >
             View all insights
-            <ArrowUpRight
+            <ArrowRight
               size={16}
-              className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              className="transition-transform group-hover:translate-x-1"
             />
           </Link>
         </div>
@@ -63,7 +63,7 @@ export default function MoreInsights() {
           {MORE_INSIGHTS_DATA.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-[24px] p-7 flex flex-col justify-between gap-6 shadow-xs hover:shadow-md transition-all group"
+              className="bg-white rounded-[24px] p-7 flex flex-col justify-between gap-6 border-0 shadow-none hover:shadow-md transition-all group"
             >
               <div className="flex flex-col gap-3.5">
                 <div className="flex items-center justify-between gap-2">
