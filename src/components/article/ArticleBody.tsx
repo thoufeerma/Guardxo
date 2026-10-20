@@ -16,12 +16,12 @@ export default function ArticleBody() {
 
   return (
     <section className="w-full bg-white py-12 lg:py-20">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div className="max-w-[1160px] mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Main Article Content (8 Cols) */}
-          <article className="lg:col-span-8 flex flex-col gap-14 text-[#101E10]">
+          <article className="lg:col-span-8 flex flex-col gap-12 text-[#101E10]">
             {/* Lead Intro Paragraph */}
-            <p className="text-lg sm:text-xl text-black/85 font-normal leading-relaxed">
+            <p className="text-[15px] sm:text-[16px] text-black/85 font-normal leading-[1.65]">
               Industrial water-borne emulsions, architectural wall paints, and composite
               construction chemicals operate under continuous microbiological vulnerability.
               Specifying the wrong preservative mechanism—or conflating wet-state protection with
@@ -30,12 +30,12 @@ export default function ArticleBody() {
             </p>
 
             {/* 01. Fundamental Difference */}
-            <div id="section-01" className="flex flex-col gap-6 scroll-mt-28">
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
+            <div id="section-01" className="flex flex-col gap-5 scroll-mt-28">
+              <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
                 01. Fundamental Difference: Wet–State vs Applied Film
               </h2>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 In-can biocides (pot preservation) preserve the physical and microbiological
                 integrity of aqueous formulations within closed shipping and storage vessels. Their
                 kinetic duty focuses strictly on eliminating vegetative bacterial colonies
@@ -43,7 +43,7 @@ export default function ArticleBody() {
                 before the product reaches the end contractor.
               </p>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 Conversely, dry-film preservatives (fungicides and algaecides) remain intentionally
                 inert until the coating or sealant is applied, the volatile solvents evaporate, and
                 atmospheric weathering commences. They must withstand UV degradation, continuous
@@ -57,7 +57,7 @@ export default function ArticleBody() {
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={16} strokeWidth={3} />
                   </div>
-                  <p className="text-[17px] sm:text-[18px] font-bold text-[#101E10] leading-snug">
+                  <p className="text-[15px] sm:text-[16px] font-bold text-[#101E10] leading-snug">
                     <span className="font-extrabold">In–Can Duty Cycle:</span> Rapid bacterial kill
                     kinetic, high water solubility, broad pH tolerance (6.0 to 11.5).
                   </p>
@@ -67,7 +67,7 @@ export default function ArticleBody() {
                   <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={16} strokeWidth={3} />
                   </div>
-                  <p className="text-[17px] sm:text-[18px] font-bold text-[#101E10] leading-snug">
+                  <p className="text-[15px] sm:text-[16px] font-bold text-[#101E10] leading-snug">
                     <span className="font-extrabold">Dry–Film Duty Cycle:</span> Controlled low leaching
                     rate, UV photostability, specific antimycotic and antialgal spectrum.
                   </p>
@@ -83,7 +83,7 @@ export default function ArticleBody() {
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-lg sm:text-xl font-bold text-[#101E10] leading-snug">
+                <p className="text-base sm:text-lg font-bold text-[#101E10] leading-snug">
                   &ldquo;Preservation is not merely a biocidal barrier; it is an active kinetic
                   equilibrium tailored to the vessel headspace, binder chemistry, and long-term film
                   exposure.&rdquo;
@@ -92,12 +92,12 @@ export default function ArticleBody() {
             </div>
 
             {/* 02. Microbial Attack Vectors & In-Can Spoilage */}
-            <div id="section-02" className="flex flex-col gap-6 scroll-mt-28">
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
+            <div id="section-02" className="flex flex-col gap-5 scroll-mt-28">
+              <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
                 02. Microbial Attack Vectors & In–Can Spoilage
               </h2>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 Bacterial contamination in wet formulations predominantly originates from
                 Gram-negative species such as Pseudomonas aeruginosa, Burkholderia cepacia, and
                 Enterobacter. In conditions of poor ventilation or fluctuating ambient storage
@@ -113,7 +113,7 @@ export default function ArticleBody() {
                     TECHNICAL NOTE: HEADSPACE PROTECTION
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-black/80 font-normal leading-relaxed">
+                <p className="text-[13px] sm:text-[14px] text-black/80 font-normal leading-relaxed">
                   When ambient warehouse temperature fluctuates past ±12°C, condensed water
                   droplets in the drum headspace dilute the protective biocide concentration.
                   Formulations integrating slight volatile-phase biostatic activity (such as
@@ -130,7 +130,7 @@ export default function ArticleBody() {
                     SAFE HANDLING & STORAGE
                   </span>
                 </div>
-                <p className="text-sm sm:text-base text-black/80 font-normal leading-relaxed">
+                <p className="text-[13px] sm:text-[14px] text-black/80 font-normal leading-relaxed">
                   Liquid isothiazolinones (specifically CMIT/MIT complexes) are concentrated
                   sensitizers. Ensure automated closed-loop metering pumps are utilized in paint
                   tinting and base synthesis halls to keep operator dermal exposure at zero ppm.
@@ -138,7 +138,7 @@ export default function ArticleBody() {
               </div>
 
               {/* Microbiology Image without border */}
-              <div className="relative w-full h-[320px] sm:h-[420px] rounded-2xl overflow-hidden bg-[#101E10] mt-2">
+              <div className="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden bg-[#101E10] mt-2">
                 <Image
                   src="/article/mobility attack.jpg"
                   alt="Microbial challenge test and bacterial culture assay"
@@ -150,12 +150,12 @@ export default function ArticleBody() {
             </div>
 
             {/* 03. Dry-Film Protection */}
-            <div id="section-03" className="flex flex-col gap-6 scroll-mt-28">
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
+            <div id="section-03" className="flex flex-col gap-5 scroll-mt-28">
+              <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
                 03. Dry–Film Protection Under Extreme Humidity
               </h2>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 In exterior architectural finishes, coastal facade mortars, and elastomer roof
                 coatings across monsoon belts, the cured polymer matrix is attacked by filamentous
                 fungi (Aspergillus niger, Penicillium funiculosum) and single-celled algae
@@ -163,7 +163,7 @@ export default function ArticleBody() {
                 controlled-release carrier technology.
               </p>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 If the dry-film active possesses excessive water solubility, torrential rainfall
                 leaches 80% of the active fraction within 90 days. Encapsulated Octylisothiazolinone
                 (OIT) and Diuron complexes provide calibrated micro-diffusion, protecting facades for
@@ -172,12 +172,12 @@ export default function ArticleBody() {
             </div>
 
             {/* 04. Regulatory Thresholds & Matrix Table */}
-            <div id="section-04" className="flex flex-col gap-6 scroll-mt-28">
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
+            <div id="section-04" className="flex flex-col gap-5 scroll-mt-28">
+              <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
                 04. Regulatory Thresholds & Matrix Compatibility
               </h2>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 Global regulatory shifts under EU BPR Regulation 528/2012 and BIS national
                 guidelines mandate stringent classification thresholds for sensitisers like MIT
                 (&lt;15 ppm requires H317 hazard warnings). Formulators must pivot toward
@@ -258,19 +258,19 @@ export default function ArticleBody() {
             </div>
 
             {/* 05. Selection Matrix & Dosage Guide */}
-            <div id="section-05" className="flex flex-col gap-6 scroll-mt-28">
-              <h2 className="text-2xl sm:text-3xl lg:text-[32px] font-extrabold text-[#101E10] leading-snug">
+            <div id="section-05" className="flex flex-col gap-5 scroll-mt-28">
+              <h2 className="text-2xl sm:text-[28px] lg:text-[32px] font-bold text-[#101E10] leading-tight tracking-tight">
                 05. Selection Matrix & Dosage Formulation Guide
               </h2>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 When establishing dosage boundaries for an architectural emulsion, formulators must
                 never overdose in-can agents in the hope of conferring dry-film efficacy. In-can
                 actives migrate to the air–paint interface and evaporate or wash out during film
                 cure, leaving the binder defenseless within weeks.
               </p>
 
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-[14px] sm:text-[15px] text-black/80 font-normal leading-[1.65]">
                 A balanced regime combines 0.10% – 0.20% GuardExo BT 20P for vessel stability,
                 alongside 0.40% – 0.80% GuardExo BT 10 MW micro-dispersion for long-term dry film
                 resilience. Always confirm compatibility via 14-day oven aging (54°C) to monitor
