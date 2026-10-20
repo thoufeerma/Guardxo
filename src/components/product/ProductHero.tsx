@@ -63,14 +63,14 @@ export default function ProductHero() {
   ];
 
   return (
-    <section className="w-full bg-white pt-10 pb-16 lg:pt-14 lg:pb-24 border-b border-neutral-200/80">
-      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
+    <section className="w-full bg-white pt-8 pb-14 lg:pt-12 lg:pb-20 border-b border-neutral-200/80">
+      <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* 2-Column Product Showcase */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           {/* Left Column: Product Gallery */}
           <div className="lg:col-span-6 flex flex-col gap-4">
             {/* Main Stage */}
-            <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-white border border-neutral-200/80 shadow-md">
+            <div className="relative w-full h-[380px] sm:h-[480px] lg:h-[540px] xl:h-[580px] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-white border border-neutral-200/80 shadow-md">
               <Image
                 src={gallery[activeImage].src}
                 alt={gallery[activeImage].alt}
