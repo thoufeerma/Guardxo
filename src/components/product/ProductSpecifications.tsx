@@ -1,7 +1,32 @@
 "use client";
 
-import React from "react";
-import { ArrowRight, Thermometer, Sun, Lock, Calendar, Info } from "lucide-react";
+import { ArrowRight, Thermometer, Lock, Calendar, Info } from "lucide-react";
+
+function SunIcon({ size = 15, className }: { size?: number; className?: string }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  );
+}
 
 export const EIGHT_ROW_SPECS = [
   { parameter: "Active Ingredient", specification: "1,2-benzisothiazolin-3-one (BIT)" },
@@ -139,7 +164,7 @@ export default function ProductSpecifications() {
                 {/* Tile 2 */}
                 <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-3.5 flex flex-col gap-1 border border-neutral-200/60 shadow-2xs">
                   <div className="flex items-center gap-1.5 text-[#101E10]">
-                    <Sun size={15} className="text-[#101E10] flex-none" />
+                    <SunIcon size={15} className="text-[#101E10] flex-none" />
                     <span className="text-xs sm:text-[13px] font-bold text-[#101E10] whitespace-nowrap">
                       Cool, shaded
                     </span>
