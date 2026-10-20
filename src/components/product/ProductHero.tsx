@@ -5,11 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FileText,
-  Download,
-  ArrowRight,
-  ShieldCheck,
   Check,
-  CheckCircle2,
+  Microscope,
 } from "lucide-react";
 
 export default function ProductHero() {
@@ -31,17 +28,35 @@ export default function ProductHero() {
   ];
 
   const checklist = [
-    "20% w/w Active BIT",
-    "Works Across a Wide pH Range",
-    "Heat-Stable & Non-Volatile",
-    "Zero Formaldehyde",
-    "Low Dose",
-    "SDS/TDS/COA with Every Batch",
+    {
+      line1: "20% w/w active BIT (CAS",
+      line2: "2634-33-5)",
+    },
+    {
+      line1: "Works wide pH range",
+      line2: "(approx. 4 to 12)",
+    },
+    {
+      line1: "Heat-stable & non-volatile",
+      line2: "active",
+    },
+    {
+      line1: "Zero formaldehyde or",
+      line2: "releasers",
+    },
+    {
+      line1: "Low dose, cost-effective",
+      line2: "stability",
+    },
+    {
+      line1: "SDS, TDS & COA with every",
+      line2: "batch",
+    },
   ];
 
   const keyFigures = [
     { value: "20%", label: "Active BIT" },
-    { value: "pH 4–12", label: "Working Range" },
+    { value: "pH 4–12", label: "Range" },
     { value: "0.05–0.25%", label: "Typical Dose" },
     { value: "24 M", label: "Shelf Life" },
     { value: "25–1k kg", label: "Pack Size" },
@@ -97,54 +112,58 @@ export default function ProductHero() {
           </div>
 
           {/* Right Column: Narrative & Technical Specifications Summary */}
-          <div className="lg:col-span-6 flex flex-col gap-6">
+          <div className="lg:col-span-6 flex flex-col gap-5">
             {/* Badges */}
             <div className="flex items-center gap-3">
-              <span className="bg-[#C6F19D] text-[#101E10] text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-md">
+              <span className="bg-[#E4F7C8] text-[#101E10] text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
                 IN-CAN PRESERVATIVE
               </span>
-              <span className="text-xs font-mono font-bold text-black/60 bg-neutral-100 px-3 py-1 rounded-md border border-neutral-200">
+              <span className="text-xs font-mono font-bold text-neutral-800">
                 CAS 2634-33-5
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-extrabold text-[#101E10] leading-tight">
-              GuardExo BT 20 — 20% BIT In–Can Preservative
+            <h1 className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-[#101E10] leading-[1.12] tracking-tight">
+              GuardExo BT 20 — 20% BIT<br />In–Can Preservative
             </h1>
 
-            <p className="text-lg text-black/85 font-medium leading-relaxed">
-              Broad-spectrum, formaldehyde-free protection for water-based paints, adhesives,
-              emulsions, and industrial fluids.
+            <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
+              Broad-spectrum, formaldehyde-free protection for water-based paints,
+              adhesives, emulsions, and industrial fluids.
             </p>
 
-            <p className="text-sm sm:text-base text-black/75 font-normal leading-relaxed">
-              A ready-to-use 20% solution of 1,2-benzisothiazolin-3-one (BIT), preventing
-              bacteria, yeast, and mould from spoiling water-based formulations in the can, the drum,
-              or the warehouse. A small dose, usually 0.05% to 0.25%, keeps products fresh for its
-              full shelf life.
+            <p className="text-xs sm:text-[14px] text-neutral-600 font-normal leading-relaxed">
+              GuardExo BT 20 is a ready-to-use 20% solution of 1,2-benzisothiazolin-3-one (BIT), from
+              Chemtiver Speciality. It stops bacteria, yeast, and mould from spoiling water-based
+              products while they sit in the can, the drum, or the warehouse. A small dose, usually 0.05%
+              to 0.25%, keeps a product fresh for its full shelf life.
             </p>
 
-            {/* Six-point Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            {/* Six-point Checklist (3-column grid matching Figma screenshot) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-3.5 pt-1">
               {checklist.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
-                    <Check size={12} strokeWidth={3} />
+                <div key={idx} className="flex items-start gap-2.5">
+                  <div className="w-5 h-5 rounded-full bg-[#B8F086] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
+                    <Check size={12} strokeWidth={2.5} />
                   </div>
-                  <span className="text-sm font-semibold text-[#101E10]">{item}</span>
+                  <div className="text-[12px] sm:text-[13px] leading-snug text-[#101E10] font-normal">
+                    <span>{item.line1}</span>
+                    <br />
+                    <span>{item.line2}</span>
+                  </div>
                 </div>
               ))}
             </div>
 
             {/* Green Key-Figures Bar */}
-            <div className="bg-[#EEFBE2] rounded-2xl p-4 sm:p-5 grid grid-cols-2 sm:grid-cols-5 gap-4 text-center my-2 border border-[#C6F19D]/50">
+            <div className="bg-[#E4F7C8] rounded-[20px] py-4 px-4 sm:px-6 grid grid-cols-2 sm:grid-cols-5 gap-3 text-center my-1 border-0 shadow-none">
               {keyFigures.map((fig, idx) => (
                 <div key={idx} className="flex flex-col items-center">
-                  <span className="text-lg sm:text-xl font-extrabold text-[#101E10] leading-tight">
+                  <span className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-tight">
                     {fig.value}
                   </span>
-                  <span className="text-[11px] font-medium text-black/70 pt-0.5">
+                  <span className="text-[11px] sm:text-xs font-normal text-[#101E10] pt-1">
                     {fig.label}
                   </span>
                 </div>
@@ -155,25 +174,25 @@ export default function ProductHero() {
             <div className="flex flex-wrap items-center gap-6 pt-2">
               <a
                 href="#inquiry"
-                className="inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1c331c] text-[#C2EC9A] py-3.5 px-8 rounded-xl font-bold text-sm sm:text-base transition-all shadow-md active:scale-98"
+                className="inline-flex items-center justify-center bg-[#101E10] hover:bg-[#1a2e1a] text-[#C6F19D] py-3 px-7 rounded-[14px] font-bold text-sm transition-all shadow-xs active:scale-98"
               >
                 Request a Quote
               </a>
 
               <a
                 href="#specs"
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors"
               >
-                Download TDS
-                <ArrowRight size={16} />
+                <FileText size={18} />
+                <span>Download TDS</span>
               </a>
 
               <a
                 href="#inquiry"
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors"
               >
-                Request Sample
-                <ArrowRight size={16} />
+                <Microscope size={18} />
+                <span>Request Sample</span>
               </a>
             </div>
           </div>
