@@ -134,7 +134,7 @@ export default function ProductWhyChoose() {
         className="absolute top-0 right-0 w-96 h-96 opacity-20 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-right-top bg-contain"
       />
 
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12 relative z-10">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-12 relative z-10">
         {/* Header with Title and Toggle at Top-Right (No Subtitle) */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-white leading-tight">

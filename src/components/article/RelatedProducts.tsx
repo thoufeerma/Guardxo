@@ -35,26 +35,38 @@ export const RELATED_PRODUCTS_DATA = [
   },
 ];
 
-export default function RelatedProducts() {
+interface RelatedProductsProps {
+  tag?: string;
+  title?: string;
+  viewAllHref?: string;
+  viewAllText?: string;
+}
+
+export default function RelatedProducts({
+  tag = "RELATED PRODUCTS",
+  title = "Products related to this article.",
+  viewAllHref = "/news",
+  viewAllText = "View all insights",
+}: RelatedProductsProps) {
   return (
     <section className="w-full bg-white py-16 lg:py-24">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-10">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="flex flex-col gap-2">
             <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">
-              RELATED PRODUCTS
+              {tag}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#101E10] leading-tight">
-              Products related to this article.
+              {title}
             </h2>
           </div>
 
           <Link
-            href="/news"
+            href={viewAllHref}
             className="inline-flex items-center gap-1.5 text-sm font-bold text-[#101E10] hover:text-[#5AB900] group w-fit"
           >
-            View all insights
+            {viewAllText}
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-1"

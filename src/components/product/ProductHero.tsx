@@ -49,7 +49,7 @@ export default function ProductHero() {
 
   return (
     <section className="w-full bg-white pt-10 pb-16 lg:pt-14 lg:pb-24 border-b border-neutral-200/80">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8">
         {/* 2-Column Product Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Product Gallery */}

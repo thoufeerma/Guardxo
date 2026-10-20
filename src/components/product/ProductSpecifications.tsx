@@ -17,7 +17,7 @@ export const EIGHT_ROW_SPECS = [
 export default function ProductSpecifications() {
   return (
     <section id="specs" className="w-full bg-white py-20 lg:py-28 border-t border-neutral-200/80 scroll-mt-24">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-10">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-10">
         {/* Header with Top-Right TDS Link & No Subtitle */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div className="flex flex-col gap-2">

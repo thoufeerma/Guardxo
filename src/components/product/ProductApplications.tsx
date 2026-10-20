@@ -93,7 +93,7 @@ export default function ProductApplications() {
 
   return (
     <section className="w-full bg-white py-20 lg:py-28 border-t border-neutral-200/80">
-      <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+      <div className="max-w-[1360px] mx-auto px-6 lg:px-8 flex flex-col gap-12">
         {/* Header */}
         <div className="flex flex-col gap-3 max-w-3xl">
           <span className="text-[14px] font-semibold tracking-wider uppercase text-[#5AB900]">

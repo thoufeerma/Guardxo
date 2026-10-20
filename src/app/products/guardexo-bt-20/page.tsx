@@ -52,7 +52,12 @@ export default function ProductDetailPage() {
       <ProductFAQ />
 
       {/* 08 Related Chemical Products Grid */}
-      <RelatedProducts />
+      <RelatedProducts
+        tag="RELATED PRODUCTS"
+        title="Products related to GuardExo BT 20"
+        viewAllHref="/#featured-products"
+        viewAllText="View all products"
+      />
 
       {/* 09 Technical Consultation & Sample Inquiry Form */}
       <ConsultationCTA />
