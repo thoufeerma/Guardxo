@@ -102,7 +102,7 @@ export default function ProductApplications() {
           <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101E10] leading-tight">
             Wherever a water–based product needs to stay fresh.
           </h2>
-          <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-black/80 font-medium leading-relaxed">
             GuardExo BT 20 is specified globally across demanding chemical formulations.
             Select an industry below to review compatibility and performance:
           </p>

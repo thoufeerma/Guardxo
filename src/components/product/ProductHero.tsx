@@ -128,12 +128,12 @@ export default function ProductHero() {
               GuardExo BT 20 — 20% BIT<br />In–Can Preservative
             </h1>
 
-            <p className="text-base sm:text-lg text-neutral-700 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg text-neutral-800 font-medium leading-relaxed">
               Broad-spectrum, formaldehyde-free protection for water-based paints,
               adhesives, emulsions, and industrial fluids.
             </p>
 
-            <p className="text-xs sm:text-[14px] text-neutral-600 font-normal leading-relaxed">
+            <p className="text-xs sm:text-[14px] text-neutral-700 font-medium leading-relaxed">
               GuardExo BT 20 is a ready-to-use 20% solution of 1,2-benzisothiazolin-3-one (BIT), from
               Chemtiver Speciality. It stops bacteria, yeast, and mould from spoiling water-based
               products while they sit in the can, the drum, or the warehouse. A small dose, usually 0.05%
@@ -147,7 +147,7 @@ export default function ProductHero() {
                   <div className="w-5 h-5 rounded-full bg-[#B8F086] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
                     <Check size={12} strokeWidth={2.5} />
                   </div>
-                  <div className="text-[12px] sm:text-[13px] leading-snug text-[#101E10] font-normal">
+                  <div className="text-[12px] sm:text-[13px] leading-snug text-[#101E10] font-medium">
                     <span>{item.line1}</span>
                     <br />
                     <span>{item.line2}</span>

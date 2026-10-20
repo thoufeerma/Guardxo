@@ -51,7 +51,7 @@ export default function ProductFAQ() {
             <h2 className="text-3xl sm:text-4xl lg:text-[48px] font-bold text-[#101E10] leading-tight">
               Frequently asked questions
             </h2>
-            <p className="text-base text-black/80 font-normal leading-relaxed">
+            <p className="text-base text-black/80 font-medium leading-relaxed">
               Everything buyers usually ask before their first order — and if it isn&apos;t covered here, we&apos;re one
               message away.
             </p>
@@ -60,7 +60,7 @@ export default function ProductFAQ() {
             <div className="mt-4 bg-[#101E10] text-white rounded-[24px] p-8 flex flex-col gap-6 shadow-xl">
               <div className="flex flex-col gap-2">
                 <h4 className="text-2xl font-bold text-white">Still have a question?</h4>
-                <p className="text-sm text-white/80 font-normal leading-relaxed">
+                <p className="text-sm text-white/80 font-medium leading-relaxed">
                   Our technical team is happy to help with product selection, dosing and documentation.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function ProductFAQ() {
                   </button>
 
                   {isOpen && (
-                    <div className="pt-4 text-sm sm:text-base text-neutral-700 font-normal leading-relaxed animate-in fade-in duration-200">
+                    <div className="pt-4 text-sm sm:text-base text-neutral-700 font-medium leading-relaxed animate-in fade-in duration-200">
                       {faq.answer}
                     </div>
                   )}

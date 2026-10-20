@@ -199,7 +199,7 @@ export default function ProductWhyChoose() {
                   <h3 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-black/75 font-normal leading-relaxed">
+                  <p className="text-sm text-black/75 font-medium leading-relaxed">
                     {card.description}
                   </p>
                 </div>

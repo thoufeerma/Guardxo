@@ -34,12 +34,12 @@ export default function ProductOverview() {
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#101E10] leading-tight">
                 What is GuardExo BT 20?
               </h2>
-              <p className="text-base sm:text-lg text-black/85 font-normal leading-relaxed">
+              <p className="text-base sm:text-lg text-black/85 font-medium leading-relaxed">
                 GuardExo BT 20 is an in-can preservative engineered for long-term liquid stabilization.
                 It acts as an impenetrable shield for water-based products during critical warehouse shelf
                 time and distribution logistics before application.
               </p>
-              <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed">
+              <p className="text-base sm:text-lg text-black/80 font-medium leading-relaxed">
                 The active substance is <span className="font-bold text-[#101E10]">1,2-benzisothiazolin-3-one (BIT)</span>,
                 one of the world&apos;s most proven preservation chemistries. GuardExo BT 20 delivers this
                 in an ultra-stable 20% liquid solution in dipropylene glycol and water, eliminating cumbersome
@@ -111,7 +111,7 @@ export default function ProductOverview() {
                       <h4 className="text-base font-bold text-[#101E10]">
                         Enters the Cell
                       </h4>
-                      <p className="text-sm text-black/75 font-normal leading-relaxed">
+                      <p className="text-sm text-black/75 font-medium leading-relaxed">
                         Penetrates microbial cell walls and cytoplasmic membranes swiftly, reaching interior organelle structures.
                       </p>
                     </div>
@@ -126,7 +126,7 @@ export default function ProductOverview() {
                       <h4 className="text-base font-bold text-[#101E10]">
                         Blocks the Enzymes
                       </h4>
-                      <p className="text-sm text-black/75 font-normal leading-relaxed">
+                      <p className="text-sm text-black/75 font-medium leading-relaxed">
                         Reacts covalently with critical thiol (-SH) enzyme centers, permanently terminating metabolic respiration and energy synthesis.
                       </p>
                     </div>
@@ -141,7 +141,7 @@ export default function ProductOverview() {
                       <h4 className="text-base font-bold text-[#101E10]">
                         Hard to Resist
                       </h4>
-                      <p className="text-sm text-black/75 font-normal leading-relaxed">
+                      <p className="text-sm text-black/75 font-medium leading-relaxed">
                         Multi-site intracellular biocidal attack prevents bacteria from evolving physiological tolerance or enzymatic immunity.
                       </p>
                     </div>
@@ -157,7 +157,7 @@ export default function ProductOverview() {
                   <span className="text-xs font-bold text-[#101E10] uppercase tracking-wider block mb-1">
                     Ready-To-Use Liquid Formulation
                   </span>
-                  <p className="text-sm text-black/80 font-normal leading-relaxed">
+                  <p className="text-sm text-black/80 font-medium leading-relaxed">
                     Pure BIT is a difficult solid crystalline powder. Our 20% solution in dipropylene glycol guarantees zero dust hazard and instant homogeneous dispersion.
                   </p>
                 </div>
