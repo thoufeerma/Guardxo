@@ -149,7 +149,7 @@ export default function ProductOverview() {
                 {steps.map((st, idx) => (
                   <div key={idx} className="flex flex-col gap-2">
                     <div className="flex items-center gap-3">
-                      <span className="bg-[#101E10] text-[#C6F19D] text-[11px] font-mono font-bold px-2 py-0.5 rounded-[5px] flex items-center justify-center leading-none">
+                      <span className="bg-[#101E10] text-[#C6F19D] text-xs font-bold px-2 py-0.5 rounded-[5px] flex items-center justify-center leading-none">
                         {st.step}
                       </span>
                       <h3 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">

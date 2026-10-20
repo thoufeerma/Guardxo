@@ -118,7 +118,7 @@ export default function ProductHero() {
               <span className="bg-[#E4F7C8] text-[#101E10] text-[11px] font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full">
                 IN-CAN PRESERVATIVE
               </span>
-              <span className="text-xs font-mono font-bold text-neutral-800">
+              <span className="text-xs font-bold text-neutral-800">
                 CAS 2634-33-5
               </span>
             </div>
