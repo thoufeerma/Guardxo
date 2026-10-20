@@ -26,8 +26,8 @@ export default function ArticleHeader() {
   return (
     <section className="w-full bg-white pt-10 pb-8 sm:pt-14 sm:pb-12">
       <div className="max-w-[1520px] mx-auto px-6 lg:px-12 flex flex-col gap-8 sm:gap-10">
-        {/* Top Content: Back Link, Tag, Title, Subtitle, and Author Box */}
-        <div className="w-full flex flex-col items-start text-left gap-6">
+        {/* Centered Column with Left and Right Margins matching Figma */}
+        <div className="max-w-[1160px] mx-auto w-full flex flex-col items-start text-left gap-6">
           {/* Back Link */}
           <Link
             href="/news"
@@ -52,12 +52,12 @@ export default function ArticleHeader() {
           </h1>
 
           {/* Introduction: Exactly 2 lines */}
-          <p className="text-base sm:text-lg lg:text-[19px] text-black/80 font-normal leading-relaxed max-w-[1220px]">
-            How to assess wet–state bacterial risks versus applied film fungal/algal threats in demanding climates. A comprehensive guide for paint<br className="hidden lg:inline" />
+          <p className="text-base sm:text-lg text-black/80 font-normal leading-relaxed max-w-full">
+            How to assess wet–state bacterial risks versus applied film fungal/algal threats in demanding climates. A comprehensive guide for paint<br className="hidden sm:inline" />
             {" "}and construction chemical formulators.
           </p>
 
-          {/* Author/share box: full-width light green bar with larger avatar & social icons */}
+          {/* Author/share box: centered with generous margins matching Figma */}
           <div className="w-full bg-[#ECFAE0] rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6 text-left border-0 shadow-2xs">
             {/* Author Details */}
             <div className="flex items-center gap-4">
