@@ -141,13 +141,13 @@ export default function ProductHero() {
             </p>
 
             {/* Six-point Checklist (3-column grid matching Figma screenshot) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-3.5 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-5 sm:gap-x-6 gap-y-4 sm:gap-y-4.5 pt-1">
               {checklist.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#B8F086] text-[#101E10] flex items-center justify-center flex-none mt-0.5">
-                    <Check size={12} strokeWidth={2.5} />
+                <div key={idx} className="flex items-center gap-3">
+                  <div className="w-[27px] h-[27px] rounded-full bg-[#C6F19D] text-[#101E10] flex items-center justify-center flex-none">
+                    <Check size={15} strokeWidth={2.4} />
                   </div>
-                  <div className="text-[12px] sm:text-[13px] leading-snug text-[#101E10] font-medium">
+                  <div className="text-[13px] sm:text-[13.5px] leading-[1.25] text-[#101E10] font-medium">
                     <span>{item.line1}</span>
                     <br />
                     <span>{item.line2}</span>
