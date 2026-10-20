@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export const APPLICATIONS_LIST = [
@@ -149,24 +148,33 @@ export default function ProductApplications() {
             })}
           </div>
 
-          {/* Right: Paint-brush photo inside light grey container with frosted caption card without APPLICATION FOCUS */}
+          {/* Right: Paint roller application video inside light grey container with frosted caption card */}
           <div className="lg:col-span-6 lg:sticky lg:top-28 bg-[#F5F4F2] rounded-[28px] p-4 sm:p-5 shadow-xs">
             <div className="relative w-full h-[420px] sm:h-[480px] rounded-[22px] overflow-hidden bg-[#101E10]">
-              <Image
-                src="/images/product-application-paint.jpg"
-                alt={current.name}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20" />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source
+                  src="/Product-detail/APPLICATIONS%20%26%20INDUSTRIES.mp4"
+                  type="video/mp4"
+                />
+                <source
+                  src="/Product-detail/APPLICATIONS & INDUSTRIES.mp4"
+                  type="video/mp4"
+                />
+              </video>
+              <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
-              {/* Frosted Caption Card Positioned Over Photo */}
-              <div className="absolute inset-x-5 bottom-5 sm:inset-x-6 sm:bottom-6 bg-white/80 backdrop-blur-md rounded-[20px] p-6 shadow-xl border border-white/60 flex flex-col items-start text-left gap-2 pointer-events-none">
+              {/* Frosted Caption Card Positioned Over Video */}
+              <div className="absolute inset-x-5 bottom-5 sm:inset-x-6 sm:bottom-6 bg-white/85 backdrop-blur-md rounded-[20px] p-6 shadow-xl border border-white/60 flex flex-col items-start text-left gap-2 pointer-events-none">
                 <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
                   {current.name}
                 </h4>
-                <p className="text-xs sm:text-[14px] text-neutral-800 leading-relaxed font-normal">
+                <p className="text-xs sm:text-[14px] text-neutral-800 leading-relaxed font-medium">
                   {current.description}
                 </p>
               </div>

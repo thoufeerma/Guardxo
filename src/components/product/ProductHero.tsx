@@ -14,16 +14,16 @@ export default function ProductHero() {
 
   const gallery = [
     {
-      src: "/in-can-preservatives/can image.png",
-      alt: "GuardExo BT 20 front canister view",
+      src: "/Product-detail/IN-CAN PRESERVATIVE.png",
+      alt: "GuardExo BT 20 20% BIT In-Can Preservative canister front view",
     },
     {
-      src: "/in-can-preservatives/can image.png",
-      alt: "GuardExo BT 20 angle view",
+      src: "/Product-detail/IN-CAN PRESERVATIVE.png",
+      alt: "GuardExo BT 20 industrial packaging angle view",
     },
     {
-      src: "/in-can-preservatives/can image.png",
-      alt: "GuardExo BT 20 warehouse view",
+      src: "/Product-detail/IN-CAN PRESERVATIVE.png",
+      alt: "GuardExo BT 20 warehouse logistics view",
     },
   ];
 
