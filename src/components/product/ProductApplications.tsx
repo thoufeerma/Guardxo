@@ -76,6 +76,14 @@ export const APPLICATIONS_LIST = [
     description:
       "Spin finishes, textile sizing agents, and leather fatliquor emulsions. Neutral color ensures zero discoloration on sensitive white and pastel substrates.",
   },
+  {
+    id: "agrochemicals",
+    num: "10",
+    name: "Agrochemical slurries",
+    dosage: "0.05% – 0.15% w/w",
+    description:
+      "Suspension concentrates (SC) and flowable seed treatment formulations. Preserves organic suspension aids and xanthan gum rheology modifiers over multi-year warehouse storage.",
+  },
 ];
 
 export default function ProductApplications() {
@@ -100,7 +108,7 @@ export default function ProductApplications() {
 
         {/* 2-Column Interactive Navigator */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          {/* Left: 9 Numbered Rows exactly matching Figma design */}
+          {/* Left: 10 Numbered Rows exactly matching Figma design */}
           <div className="lg:col-span-6 flex flex-col gap-2.5 sm:gap-3">
             {APPLICATIONS_LIST.map((app, idx) => {
               const isSelected = selectedApp === idx;
@@ -147,10 +155,10 @@ export default function ProductApplications() {
             })}
           </div>
 
-          {/* Right: Video Card + Bottom Dosage Strip matching Figma */}
-          <div className="lg:col-span-6 lg:sticky lg:top-28 flex flex-col gap-4">
+          {/* Right: Grey Outer Panel containing Video Card + White Dosage Card matching Figma */}
+          <div className="lg:col-span-6 lg:sticky lg:top-28 bg-[#F5F4F2] rounded-[28px] sm:rounded-[32px] p-4 sm:p-5 flex flex-col gap-4 shadow-xs">
             {/* Top Video Stage with Centered Caption Overlay Card */}
-            <div className="relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] rounded-[24px] sm:rounded-[28px] overflow-hidden bg-[#101E10] flex items-center justify-center p-6 sm:p-8 shadow-xs border border-neutral-200/60">
+            <div className="relative w-full h-[380px] sm:h-[440px] lg:h-[480px] rounded-[20px] sm:rounded-[24px] overflow-hidden bg-[#101E10] flex items-center justify-center p-6 sm:p-8">
               <video
                 autoPlay
                 muted
@@ -170,7 +178,7 @@ export default function ProductApplications() {
               <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
               {/* Centered Frosted Caption Card Over Video */}
-              <div className="relative z-10 max-w-md w-full bg-[#F5F4F2]/92 backdrop-blur-md rounded-[20px] p-6 sm:p-7 shadow-lg border border-white/60 flex flex-col gap-2.5 pointer-events-none">
+              <div className="relative z-10 max-w-md w-full bg-[#F5F4F2]/90 backdrop-blur-md rounded-[20px] p-6 sm:p-7 shadow-lg border border-white/60 flex flex-col gap-2.5 pointer-events-none">
                 <h4 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
                   {current.name}
                 </h4>
@@ -180,10 +188,10 @@ export default function ProductApplications() {
               </div>
             </div>
 
-            {/* Bottom Card: Typical Industry Dosage + Discuss Link */}
-            <div className="bg-[#F5F4F2] rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-neutral-200/50 shadow-2xs">
+            {/* Bottom Card: White Card with Typical Industry Dosage + Discuss Link */}
+            <div className="bg-white rounded-[20px] p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-2xs border-0">
               <div className="flex flex-col gap-1">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-neutral-500">
+                <span className="text-xs font-bold uppercase tracking-wider text-neutral-500">
                   TYPICAL INDUSTRY DOSAGE
                 </span>
                 <span className="text-2xl sm:text-[28px] font-bold text-[#101E10] tracking-tight">
@@ -193,11 +201,11 @@ export default function ProductApplications() {
 
               <a
                 href="#inquiry"
-                className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#101E10] hover:text-[#5AB900] transition-colors group"
+                className="inline-flex items-center gap-2 text-sm sm:text-[15px] font-bold text-[#101E10] hover:text-[#5AB900] transition-colors group"
               >
                 <span>Discuss this application</span>
                 <ArrowRight
-                  size={16}
+                  size={17}
                   className="transition-transform group-hover:translate-x-1"
                 />
               </a>
