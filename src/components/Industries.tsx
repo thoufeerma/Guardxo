@@ -98,10 +98,10 @@ export default function Industries({
                   key={ind.num}
                   type="button"
                   onClick={() => setSelectedIdx(idx)}
-                  className={`w-full flex items-center justify-between py-3.5 px-5 sm:px-6 rounded-2xl text-left transition-all duration-200 cursor-pointer ${
+                  className={`w-full flex items-center justify-between py-3.5 sm:py-4 px-5 sm:px-6 rounded-2xl text-left transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? "bg-[#E2F7C5] shadow-xs"
-                      : "bg-[#F4F3F0] hover:bg-[#EAE8E3]"
+                      ? "bg-[#E3F8CE] shadow-xs"
+                      : "bg-[#F5F4F2] hover:bg-[#EAE8E3]"
                   }`}
                 >
                   <div className="flex items-center gap-3.5 sm:gap-4">
@@ -113,10 +113,8 @@ export default function Industries({
                       {ind.num}
                     </span>
                     <span
-                      className={`text-[15px] sm:text-base ${
-                        isSelected
-                          ? "font-bold text-[#5AB900]"
-                          : "font-semibold text-black"
+                      className={`text-[15px] sm:text-base font-bold ${
+                        isSelected ? "text-[#5AB900]" : "text-[#101E10]"
                       }`}
                     >
                       {ind.name}
@@ -133,7 +131,7 @@ export default function Industries({
             })}
           </div>
 
-          {/* Right Column: Photo/Video with Centered Caption Card matching Figma */}
+          {/* Right Column: Photo/Video with Left-Aligned Frosted Caption Card matching Figma */}
           <div className="lg:col-span-6 relative w-full h-[420px] sm:h-[480px] rounded-[28px] overflow-hidden shadow-lg bg-[#101E10]">
             <video
               key={videoSrc}
@@ -149,9 +147,9 @@ export default function Industries({
             {/* Subtle overlay for depth */}
             <div className="absolute inset-0 bg-black/20" />
 
-            {/* Centered Caption Card (without SECTOR FOCUS label) matching Figma */}
-            <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-8 pointer-events-none">
-              <div className="bg-white/70 backdrop-blur-md rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 shadow-xl border border-white/50 flex flex-col items-start text-left gap-2.5 max-w-md w-full">
+            {/* Frosted Caption Card positioned on the left side of the video matching Figma */}
+            <div className="absolute inset-0 flex items-center justify-start p-6 sm:p-8 md:p-10 pointer-events-none">
+              <div className="backdrop-blur-md bg-white/50 border border-white/60 rounded-[22px] sm:rounded-[26px] p-6 sm:p-8 shadow-xl flex flex-col items-start text-left gap-2.5 max-w-sm sm:max-w-md w-full">
                 <h5 className="text-xl sm:text-[22px] font-bold text-[#101E10] tracking-tight">
                   {activeIndustry.headline}
                 </h5>

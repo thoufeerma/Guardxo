@@ -159,21 +159,26 @@ export default function ProductWhyChoose() {
       </div>
 
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-12 relative z-10">
-        {/* Header with Title and Toggle at Top-Right (No Subtitle) */}
+        {/* Header with Title and Toggle at Top-Right */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white leading-tight tracking-tight">
-            Why choose GuardExo BT 20
-          </h2>
+          <div className="flex flex-col gap-2">
+            <span className="text-xs sm:text-[13px] font-bold tracking-wider uppercase text-white/80">
+              WHY GUARDEXO BT 20
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold text-white leading-tight tracking-tight">
+              Why choose GuardExo BT 20
+            </h2>
+          </div>
 
-          {/* Toggle at Top-Right */}
-          <div className="flex items-center bg-[#182618] border border-white/10 p-1.5 rounded-2xl w-fit">
+          {/* Toggle at Top-Right: Matching Figma design exactly */}
+          <div className="flex items-center bg-[#C6F19D] p-[5px] rounded-[14px] w-fit gap-0">
             <button
               type="button"
               onClick={() => setActiveToggle("benefits")}
-              className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`py-[10px] px-5 sm:px-6 rounded-[10px] text-sm sm:text-[14.5px] font-bold transition-all cursor-pointer ${
                 activeToggle === "benefits"
-                  ? "bg-[#C6F19D] text-[#101E10] shadow-sm"
-                  : "text-white/70 hover:text-white"
+                  ? "bg-[#101E10] text-white border border-white/80"
+                  : "bg-transparent text-[#101E10]"
               }`}
             >
               Product benefits
@@ -181,10 +186,10 @@ export default function ProductWhyChoose() {
             <button
               type="button"
               onClick={() => setActiveToggle("chemtiver")}
-              className={`py-2 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+              className={`py-[10px] px-5 sm:px-6 rounded-[10px] text-sm sm:text-[14.5px] font-bold transition-all cursor-pointer ${
                 activeToggle === "chemtiver"
-                  ? "bg-[#C6F19D] text-[#101E10] shadow-sm"
-                  : "text-white/70 hover:text-white"
+                  ? "bg-[#101E10] text-white border border-white/80"
+                  : "bg-transparent text-[#101E10]"
               }`}
             >
               Why buy from Chemtiver
