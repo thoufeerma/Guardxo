@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   ShieldCheck,
   Scale,
@@ -129,10 +130,16 @@ export default function ProductWhyChoose() {
 
   return (
     <section className="w-full bg-[#101E10] py-20 lg:py-28 text-white relative overflow-hidden">
-      {/* Hexagon Pattern at top-right of dark section */}
-      <div
-        className="absolute top-0 right-0 w-96 h-96 opacity-20 pointer-events-none bg-[url('/images/technical-expertise-hexagons.svg')] bg-no-repeat bg-right-top bg-contain"
-      />
+      {/* Top-Right Hexagon Artwork from Why choose GuardExo BT 20.png */}
+      <div className="absolute top-0 right-0 w-full max-w-[1024px] h-[342px] pointer-events-none select-none z-0">
+        <Image
+          src="/images/Why choose GuardExo BT 20.png"
+          alt="Why choose GuardExo BT 20 background hexagons"
+          fill
+          className="object-contain object-right-top"
+          priority
+        />
+      </div>
 
       <div className="max-w-[1520px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-12 relative z-10">
         {/* Header with Title and Toggle at Top-Right (No Subtitle) */}
