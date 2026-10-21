@@ -4,12 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   ShieldCheck,
-  Scale,
-  Flame,
-  Wind,
+  Thermometer,
+  Lock,
   Leaf,
-  Layers,
-  Sparkles,
+  Droplet,
   Download,
   FileText,
   Award,
@@ -19,57 +17,76 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+function InterlockingCirclesIcon({ className, size = 22 }: { className?: string; size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <circle cx="8.5" cy="12" r="5" />
+      <circle cx="15.5" cy="12" r="5" />
+    </svg>
+  );
+}
+
 export default function ProductWhyChoose() {
   const [activeToggle, setActiveToggle] = useState<"benefits" | "chemtiver">("benefits");
 
   const productBenefits = [
     {
-      title: "Broad-spectrum Control",
+      title: "Broad–spectrum control",
       description:
-        "Highly effective against Gram-negative motile rods (Pseudomonas, Burkholderia) and Gram-positive vegetative colonies, protecting formulations from batch foul-outs.",
+        "Strong against bacteria, including Pseudomonas, plus yeasts and many fungi in the can.",
       icon: ShieldCheck,
       isGreen: true,
     },
     {
-      title: "Handles Alkaline Products",
+      title: "Handles alkaline products",
       description:
-        "Retains maximum biocidal efficacy across a wide pH range of 4.0 to 12.0. Ideal for highly alkaline polymer emulsions, mortars, and mineral finishes.",
-      icon: Scale,
+        "Works in high–pH paints and emulsions where some other biocides break down.",
+      icon: FlaskConical,
       isGreen: false,
     },
     {
       title: "Heat-stable",
       description:
-        "Withstands elevated processing temperatures up to 100°C without chemical breakdown. Safe for direct addition during high-speed grinding cycles.",
-      icon: Flame,
+        "Survives hot processing steps, so you can dose early in production.",
+      icon: Thermometer,
       isGreen: false,
     },
     {
-      title: "Non-volatile",
+      title: "Non–volatile",
       description:
-        "Stays within the liquid product instead of evaporating into headspace air, guaranteeing sustained preservative activity across years of storage.",
-      icon: Wind,
+        "Stays in the product instead of escaping into the air, giving long protection.",
+      icon: Lock,
       isGreen: false,
     },
     {
-      title: "Formaldehyde-free",
+      title: "Formaldehyde–free",
       description:
-        "Zero formaldehyde or formaldehyde-releasing donors. Helps manufacturers achieve stringent low-VOC and global eco-label accreditations.",
+        "No formaldehyde or formaldehyde releasers. Helps you meet low–VOC and green–label goals.",
       icon: Leaf,
       isGreen: false,
     },
     {
-      title: "Works with Amines",
+      title: "Works with amines",
       description:
-        "Chemically stable in formulations containing secondary and tertiary amines, without degradation or discoloration over time.",
-      icon: Layers,
+        "Stable in amine-neutralised systems, common in paints and emulsions.",
+      icon: Droplet,
       isGreen: false,
     },
     {
-      title: "Blends Well",
+      title: "Blends well",
       description:
-        "Fully miscible in water and glycols. Disperses homogeneously without excessive shear, air entrapment, or phase separation.",
-      icon: Sparkles,
+        "Can be paired with MIT, CMIT/MIT or dry–film fungicides when you need wider or faster action.",
+      icon: InterlockingCirclesIcon,
       isGreen: false,
     },
   ];
@@ -175,8 +192,8 @@ export default function ProductWhyChoose() {
           </div>
         </div>
 
-        {/* 7-Card Bento Layout: Light-coloured cards, first card green with uploaded broad spectrum control background */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 items-stretch">
+        {/* 7-Card Bento Layout: 4 columns, Top row: 2+1+1, Bottom row: 1+1+1+1 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 items-stretch">
           {cards.map((card, idx) => {
             const Icon = card.icon;
             const isGreen = card.isGreen;
@@ -184,22 +201,22 @@ export default function ProductWhyChoose() {
             return (
               <div
                 key={idx}
-                className={`rounded-[24px] p-7 flex flex-col justify-between gap-6 transition-all relative overflow-hidden shadow-sm ${
+                className={`rounded-[24px] p-6 sm:p-7 flex flex-col justify-between min-h-[220px] sm:min-h-[240px] gap-6 transition-all relative overflow-hidden shadow-sm ${
                   isGreen
-                    ? "bg-[#C6F19D] bg-[url('/images/broad%20spectrum%20control.png')] bg-cover bg-right text-[#101E10] xl:col-span-2"
-                    : "bg-[#F5F4F2] text-[#101E10]"
+                    ? "bg-[#C6F19D] bg-[url('/images/broad%20spectrum%20control.png')] bg-cover bg-right text-[#101E10] md:col-span-2 lg:col-span-2"
+                    : "bg-[#F5F4F2] text-[#101E10] col-span-1"
                 }`}
               >
-                {/* Icon inside black square */}
-                <div className="w-11 h-11 rounded-xl bg-[#101E10] text-[#C6F19D] flex items-center justify-center flex-none shadow-xs">
-                  <Icon size={20} />
+                {/* Icon inside black rounded container */}
+                <div className="w-12 h-12 rounded-[14px] bg-[#101E10] text-[#76D127] flex items-center justify-center flex-none shadow-xs">
+                  <Icon size={22} />
                 </div>
 
-                <div className="flex flex-col gap-2 relative z-10">
-                  <h3 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug">
+                <div className="flex flex-col gap-2 relative z-10 mt-auto">
+                  <h3 className="text-xl sm:text-[22px] font-bold text-[#101E10] leading-snug tracking-tight">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-black/75 font-medium leading-relaxed">
+                  <p className="text-xs sm:text-[13.5px] lg:text-[14px] text-neutral-800 font-medium leading-relaxed">
                     {card.description}
                   </p>
                 </div>
