@@ -109,22 +109,22 @@ export default function ProductApplications() {
                   key={app.id}
                   type="button"
                   onClick={() => setSelectedApp(idx)}
-                  className={`w-full flex items-center justify-between py-3.5 sm:py-4 px-5 sm:px-6 rounded-[14px] sm:rounded-[16px] text-left transition-all cursor-pointer ${
+                  className={`w-full flex items-center justify-between py-4 sm:py-4.5 px-5 sm:px-6 rounded-[16px] text-left transition-all cursor-pointer ${
                     isSelected
                       ? "bg-[#E4F7C8] text-[#428B00] shadow-2xs"
                       : "bg-[#F5F4F2] hover:bg-[#ECEBE8] text-[#101E10]"
                   }`}
                 >
-                  <div className="flex items-center gap-3.5 sm:gap-4">
+                  <div className="flex items-center gap-4 sm:gap-5">
                     <span
-                      className={`text-sm sm:text-base font-bold flex-none w-6 ${
+                      className={`text-base sm:text-lg font-bold flex-none w-7 sm:w-8 ${
                         isSelected ? "text-[#428B00]" : "text-neutral-400"
                       }`}
                     >
                       {app.num}
                     </span>
                     <span
-                      className={`text-sm sm:text-[15px] ${
+                      className={`text-base sm:text-[17px] lg:text-[18px] ${
                         isSelected
                           ? "font-bold text-[#428B00]"
                           : "font-bold text-[#101E10]"
@@ -135,10 +135,10 @@ export default function ProductApplications() {
                   </div>
 
                   <ArrowRight
-                    size={18}
+                    size={20}
                     className={`flex-none transition-transform ${
                       isSelected
-                        ? "text-[#428B00] translate-x-0.5"
+                        ? "text-[#428B00] translate-x-1"
                         : "text-[#101E10]/70"
                     }`}
                   />
