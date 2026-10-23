@@ -21,6 +21,14 @@ import {
   FileText,
 } from "lucide-react";
 
+export const instant = false;
+
+export async function generateStaticParams() {
+  return PRODUCTS_CATALOGUE.map((p) => ({
+    slug: p.slug,
+  }));
+}
+
 interface Props {
   params: Promise<{ slug: string }>;
 }

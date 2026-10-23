@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import {
   ArrowRight,
-  LifeBuoy,
+  Award,
   FlaskConical,
   FileText,
   BadgeCheck,
@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const CERTIFICATES = [
-  { icon: LifeBuoy, line1: "ISO", line2: "Certification" },
+  { icon: Award, line1: "ISO", line2: "Certification" },
   { icon: FlaskConical, line1: "REACH", line2: "Readiness" },
   { icon: FileText, line1: "Documentation", line2: "" },
   { icon: BadgeCheck, line1: "Quality", line2: "Management" },
